@@ -1,0 +1,23 @@
+.button {
+    display: inline-block;
+    padding: 1.2em 1.4em;
+    margin-top: .8em;
+    box-shadow: 3px 3px rgba(125,125,125,0.2);
+    background-color: #B92C2C;
+    /* font-size: 1.3rem; */
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffffd3;
+    text-transform: uppercase;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    position: relative;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif !important;
+
+}
+
+.button:hover {
+    opacity: .5;
+}
