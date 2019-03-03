@@ -1,0 +1,41 @@
+.FoundingWebDevs {
+    width: 100vw;
+    height: auto;
+    background: #B92C2C;
+    /* display: flex; */
+    box-sizing: border-box;
+    padding: 10px 0px;
+    margin: auto;
+    text-align: center;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 0.2em;
+    color: white;
+    font-size: 28.8px;
+}
+
+.cardsContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    max-width: 1400px;
+    padding: 0 20px;
+    margin: auto;
+    /* padding: 10px; */
+    /* max-height: 300px; */
+    
+    box-sizing: border-box;
+    /* margin-bottom: 20px; */
+}
+
+@media only screen and (max-width: 999px) {
+    .cardsContainer {
+        flex-wrap: wrap;
+    }
+
+  }
+
+

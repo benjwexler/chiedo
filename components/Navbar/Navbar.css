@@ -1,13 +1,99 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
 .navbar {
-    width: 100vw;
-    /* height: 50px; */
-    background: #333333;
-    border-bottom: 3px #B92C2C solid;
-    display: flex;
-    /* font-size: 1.6rem; */
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
-    src: url('https://fonts.googleapis.com/css?family=Open+Sans')
+  width: 100vw;
+  background: #333333;
+
+  display: flex;
+  font-weight: 300;
+  position: relative;
+
+  /* border-bottom: 0px; */
+  /* box-sizing: border-box; */
+  min-height: 41px;
+}
+.hamburgerMenu {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 10px 3%;
+  cursor: pointer;
+}
+
+.mobileNav {
+  width: 100vw;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  /* border-bottom: 3px #b92c2c solid; */
+  overflow: hidden;
+  border-bottom: 0px;
+  transition: max-height  1s;
+  
+}
+
+.showMobileDropDown {
+    max-height: 600px;
+    /* border-bottom: 3px #b92c2c solid; */
+   
+}
+
+.showBorderBottom {
+    border-bottom: 3px #b92c2c solid;
+}
+
+.hideBorderBottom {
+    border-bottom: 0px; 
+}
+
+.hideMobileDropDown{
+    max-height: 0; 
+
+}
+
+
+
+.mobileNavLink {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 100;
+  color: #ffffffb7;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media only screen and (min-width: 851px) {
+  .hamburgerMenu,
+  .mobileNav {
+    display: none;
+  }
+
+
+  .navbar {
+    border-bottom: 3px #b92c2c solid;
+    /* background: #333333; */
+  }
+}
+
+.navLink {
+  /* background: #B92C2C; */
+  text-transform: uppercase;
+  /* font-weight: 300; */
+  /* color: rgb(255, 255, 255); */
+  color: #ffffffbe;
+  padding: 10px 40px;
+  white-space: nowrap;
+  text-decoration: none;
+  /* font-size: 16px; */
+}
+
+@media only screen and (max-width: 850px) {
+  .navLink {
+    display: none;
+  }
+}
+
+.navLink:hover {
+  background: #b92c2c;
 }

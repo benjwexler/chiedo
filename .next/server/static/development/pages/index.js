@@ -176,24 +176,143 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Button_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Button.css */ "./components/Button/Button.css");
-/* harmony import */ var _Button_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Button_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Button_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Button.css */ "./components/Button/Button.css");
+/* harmony import */ var _Button_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Button_css__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/Button/Button.js";
 
 
 
+
 var Button = function Button(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    class: _Button_css__WEBPACK_IMPORTED_MODULE_1___default.a.button,
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     },
     __self: this
-  }, props.text);
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: props.href,
+    style: props.style,
+    class: _Button_css__WEBPACK_IMPORTED_MODULE_2___default.a.button,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, props.text));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Button);
+
+/***/ }),
+
+/***/ "./components/FoundingWebDevs/FoundingWebDevs.css":
+/*!********************************************************!*\
+  !*** ./components/FoundingWebDevs/FoundingWebDevs.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"FoundingWebDevs": "FoundingWebDevs___3HVVq",
+	"sectionTitle": "sectionTitle___Twqi3",
+	"cardsContainer": "cardsContainer___39VkT"
+};
+
+/***/ }),
+
+/***/ "./components/FoundingWebDevs/FoundingWebDevs.js":
+/*!*******************************************************!*\
+  !*** ./components/FoundingWebDevs/FoundingWebDevs.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FoundingWebDevs.css */ "./components/FoundingWebDevs/FoundingWebDevs.css");
+/* harmony import */ var _FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ProfileCard/ProfileCard.js */ "./components/ProfileCard/ProfileCard.js");
+/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Button/Button.js */ "./components/Button/Button.js");
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/FoundingWebDevs/FoundingWebDevs.js";
+
+
+
+
+
+var FoundingWebDevs = function FoundingWebDevs(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_1___default.a.FoundingWebDevs,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_1___default.a.sectionTitle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "OUR FOUNDING WEB DEVELOPERS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_1___default.a.cardsContainer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    name: "Chiedo",
+    jobDescription: "Founder, Solutions Architect",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    name: "Ricardo",
+    jobDescription: "ReactJS / Front-End Master",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    name: "Eric",
+    jobDescription: "Ruby on Rails / Back-end Pro",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    name: "Don",
+    jobDescription: "NodeJS / Full Stack Expert",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    href: "https://labs.chiedo.com/page/contact/",
+    style: {
+      background: "#3d4952"
+    },
+    text: "Get A Quote",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FoundingWebDevs);
 
 /***/ }),
 
@@ -275,6 +394,149 @@ var Header = function Header(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./components/HireOurTeam/HireOurTeam.css":
+/*!************************************************!*\
+  !*** ./components/HireOurTeam/HireOurTeam.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"FullWidth": "FullWidth___V7UDA",
+	"hireOurTeam": "hireOurTeam___5oxrW",
+	"sectionTitle": "sectionTitle___1698l",
+	"listItem": "listItem___1z-w5",
+	"listContainer": "listContainer___3ty9S"
+};
+
+/***/ }),
+
+/***/ "./components/HireOurTeam/HireOurTeam.js":
+/*!***********************************************!*\
+  !*** ./components/HireOurTeam/HireOurTeam.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HireOurTeam.css */ "./components/HireOurTeam/HireOurTeam.css");
+/* harmony import */ var _HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _listItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./listItem */ "./components/HireOurTeam/listItem.js");
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/HireOurTeam/HireOurTeam.js";
+
+
+
+
+var HireOurTeam = function HireOurTeam(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: props.classNames,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+    rel: "stylesheet",
+    id: "google-fonts-css",
+    href: "//fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300%2C800&ver=5.0.3",
+    type: "text/css",
+    media: "all",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }), props.children, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1___default.a.sectionTitle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "Hire our team to:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1___default.a.listContainer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Build and maintain:",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Web applications",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Web back-ends",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Web front-ends",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_listItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: "Custom websites",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HireOurTeam);
+
+/***/ }),
+
+/***/ "./components/HireOurTeam/listItem.js":
+/*!********************************************!*\
+  !*** ./components/HireOurTeam/listItem.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HireOurTeam.css */ "./components/HireOurTeam/HireOurTeam.css");
+/* harmony import */ var _HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/HireOurTeam/listItem.js";
+
+
+
+var listItem = function listItem(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: _HireOurTeam_css__WEBPACK_IMPORTED_MODULE_1___default.a.listItem,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, props.text);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (listItem);
 
 /***/ }),
 
@@ -363,6 +625,7 @@ var MainSection = function MainSection(props) {
     },
     __self: this
   }, props.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    href: "https://labs.chiedo.com/page/contact/",
     text: "Get A Quote",
     __source: {
       fileName: _jsxFileName,
@@ -376,23 +639,10 @@ var MainSection = function MainSection(props) {
 
 /***/ }),
 
-/***/ "./components/NavLink/NavLink.css":
-/*!****************************************!*\
-  !*** ./components/NavLink/NavLink.css ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = {
-	"navLink": "navLink___WQSHE"
-};
-
-/***/ }),
-
-/***/ "./components/NavLink/NavLink.js":
-/*!***************************************!*\
-  !*** ./components/NavLink/NavLink.js ***!
-  \***************************************/
+/***/ "./components/Navbar/NavLink.js":
+/*!**************************************!*\
+  !*** ./components/Navbar/NavLink.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -402,10 +652,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _NavLink_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavLink.css */ "./components/NavLink/NavLink.css");
-/* harmony import */ var _NavLink_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_NavLink_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/NavLink/NavLink.js";
-
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/Navbar/NavLink.js";
 
 
 
@@ -418,7 +665,7 @@ var NavLink = function NavLink(props) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://labs.chiedo.com/" + props.url,
-    className: _NavLink_css__WEBPACK_IMPORTED_MODULE_2___default.a.navLink,
+    className: props.style,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -439,7 +686,15 @@ var NavLink = function NavLink(props) {
 /***/ (function(module, exports) {
 
 module.exports = {
-	"navbar": "navbar___1D1Io"
+	"navbar": "navbar___1D1Io",
+	"hamburgerMenu": "hamburgerMenu___3SwrA",
+	"mobileNav": "mobileNav___3ZoxQ",
+	"showMobileDropDown": "showMobileDropDown___b0Zg-",
+	"showBorderBottom": "showBorderBottom___33mHM",
+	"hideBorderBottom": "hideBorderBottom___2aUxy",
+	"hideMobileDropDown": "hideMobileDropDown___3gYMS",
+	"mobileNavLink": "mobileNavLink___1hbER",
+	"navLink": "navLink___3yIhK"
 };
 
 /***/ }),
@@ -453,69 +708,389 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Navbar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar.css */ "./components/Navbar/Navbar.css");
-/* harmony import */ var _Navbar_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Navbar_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _NavLink_NavLink_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../NavLink/NavLink.js */ "./components/NavLink/NavLink.js");
-var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/Navbar/Navbar.js";
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Navbar_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Navbar.css */ "./components/Navbar/Navbar.css");
+/* harmony import */ var _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_Navbar_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./NavLink */ "./components/Navbar/NavLink.js");
 
+
+
+
+
+
+
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/Navbar/Navbar.js";
 // import Link from "next/link";
 
 
 
-var Navbar = function Navbar(props) {
+
+var Navbar =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Navbar, _Component);
+
+  function Navbar(props) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Navbar);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Navbar).call(this, props));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
+      showMobileDropDown: false,
+      showBorderBottom: false
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "toggleMobileNav", function () {
+      console.log("Mobile Nav");
+
+      if (!_this.state.showMobileDropDown) {
+        _this.setState({
+          showBorderBottom: true
+        });
+      }
+
+      _this.setState({
+        showMobileDropDown: !_this.state.showMobileDropDown
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "removeBorderBottom", function () {
+      if (!_this.state.showMobileDropDown) {
+        console.log("removing border!");
+
+        _this.setState({
+          showBorderBottom: false
+        });
+      }
+    });
+
+    _this.myRef = react__WEBPACK_IMPORTED_MODULE_7___default.a.createRef();
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Navbar, [{
+    key: "render",
+    value: function render() {
+      return (// const Navbar = props => (
+        react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          className: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.OuterNavContainer,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          onClick: this.toggleMobileNav,
+          className: "".concat(_Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.navbar, " ").concat(_Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.regNav),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "About Us",
+          url: "page/about/",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.navLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "Portfolio",
+          url: "case-studies/",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.navLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "What We Do",
+          url: "#what-we-do",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.navLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "Who We Serve",
+          url: "#who-we-serve",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.navLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "Contact Us",
+          url: "page/contact/",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.navLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+          className: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.hamburgerMenu,
+          src: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/mob-trig.png",
+          alt: "Mobile menu hamburger icon",
+          title: "Mobile menu icon",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57
+          },
+          __self: this
+        })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          ref: this.myRef,
+          onTransitionEnd: this.removeBorderBottom,
+          className: "".concat(_Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.mobileNav, " \n          ").concat(this.state.showMobileDropDown ? _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.showMobileDropDown : _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.hideMobileDropDown, "\n          ").concat(this.state.showBorderBottom ? _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.showBorderBottom : _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.hideBorderBottom, "\n          "),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "About Us",
+          url: "page/about/",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.mobileNavLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 80
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "Portfolio",
+          url: "case-studies/",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.mobileNavLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 85
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "What We Do",
+          url: "#what-we-do",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.mobileNavLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "Who We Serve",
+          url: "#who-we-serve",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.mobileNavLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_NavLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          name: "Contact Us",
+          url: "page/contact/",
+          style: _Navbar_css__WEBPACK_IMPORTED_MODULE_8___default.a.mobileNavLink,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100
+          },
+          __self: this
+        })))
+      );
+    }
+  }]);
+
+  return Navbar;
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+
+/***/ }),
+
+/***/ "./components/ProfileCard/ProfileCard.css":
+/*!************************************************!*\
+  !*** ./components/ProfileCard/ProfileCard.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"ProfileCard": "ProfileCard___1F_ap",
+	"profilePic": "profilePic___3JgnL",
+	"profileDescription": "profileDescription___1uw31",
+	"profileName": "profileName___4-gG6",
+	"jobDescription": "jobDescription___147gM"
+};
+
+/***/ }),
+
+/***/ "./components/ProfileCard/ProfileCard.js":
+/*!***********************************************!*\
+  !*** ./components/ProfileCard/ProfileCard.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ProfileCard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProfileCard.css */ "./components/ProfileCard/ProfileCard.css");
+/* harmony import */ var _ProfileCard_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ProfileCard_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Button/Button.js */ "./components/Button/Button.js");
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/ProfileCard/ProfileCard.js";
+
+
+
+
+var ProfileCard = function ProfileCard(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _Navbar_css__WEBPACK_IMPORTED_MODULE_1___default.a.navbar,
+    className: _ProfileCard_css__WEBPACK_IMPORTED_MODULE_1___default.a.ProfileCard,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: _ProfileCard_css__WEBPACK_IMPORTED_MODULE_1___default.a.profilePic,
+    src: "https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavLink_NavLink_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: "About Us",
-    url: "page/about/",
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _ProfileCard_css__WEBPACK_IMPORTED_MODULE_1___default.a.profileDescription,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavLink_NavLink_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: "Portfolio",
-    url: "case-studies/",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _ProfileCard_css__WEBPACK_IMPORTED_MODULE_1___default.a.profileName,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavLink_NavLink_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: "What We Do",
-    url: "#what-we-do",
+  }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _ProfileCard_css__WEBPACK_IMPORTED_MODULE_1___default.a.jobDescription,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavLink_NavLink_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: "Who We Serve",
-    url: "#who-we-serve",
+  }, props.jobDescription)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProfileCard);
+
+/***/ }),
+
+/***/ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css":
+/*!******************************************************************!*\
+  !*** ./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"WhatWeDo": "WhatWeDo___2vTr8",
+	"flexReverse": "flexReverse___3Eyl9",
+	"pic": "pic___2m8bn",
+	"halfContainer": "halfContainer___3O4fV",
+	"what": "what___1Cgkn",
+	"sectionTitle": "sectionTitle___1zpzf",
+	"paragraph": "paragraph___15buV",
+	"flexNormal": "flexNormal___fEdA1",
+	"highlightedWords": "highlightedWords___VrcVw"
+};
+
+/***/ }),
+
+/***/ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.js":
+/*!*****************************************************************!*\
+  !*** ./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TwoColumnEvenWithPic.css */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css");
+/* harmony import */ var _TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Button/Button.js */ "./components/Button/Button.js");
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.js";
+
+
+
+
+var TwoColumnEvenWithPic = function TwoColumnEvenWithPic(props) {
+  var backgroundImageCSS = {
+    background: "url(".concat(props.picUrl, ")")
+  };
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: props.style,
+    className: "".concat(_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1___default.a.WhatWeDo, " ").concat(props.flexClass),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: backgroundImageCSS,
+    className: _TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1___default.a.pic,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1___default.a.halfContainer,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavLink_NavLink_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: "Contact Us",
-    url: "page/contact/",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: _TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1___default.a.sectionTitle,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: _TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1___default.a.what,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, props.titleFirstWord), " ", props.restOfTitle), props.restOfText, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    href: "https://labs.chiedo.com/page/contact/",
+    text: "Get A Quote",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Navbar);
+/* harmony default export */ __webpack_exports__["default"] = (TwoColumnEvenWithPic);
 
 /***/ }),
 
@@ -581,6 +1156,152 @@ var Video = function Video(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Video);
+
+/***/ }),
+
+/***/ "./components/WhatWeDo/WhatWeDo.js":
+/*!*****************************************!*\
+  !*** ./components/WhatWeDo/WhatWeDo.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../TwoColumnEvenWithPic/TwoColumnEvenWithPic.js */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.js");
+/* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../TwoColumnEvenWithPic/TwoColumnEvenWithPic.css */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css");
+/* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/WhatWeDo/WhatWeDo.js";
+
+// import Link from "next/link";
+
+
+
+var WhatWeDo = function WhatWeDo(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TwoColumnEvenWithPic_TwoColumnEvenWithPic_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    picUrl: "https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg",
+    titleFirstWord: "WHAT",
+    restOfTitle: "WE D0",
+    flexClass: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.flexNormal,
+    restOfText: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, "We build and maintain:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, "Web Front-ends with HTML, CSS, and a library called React."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, "Web Back-ends using NodeJS, Ruby on Rails, PHP, MySQL, AWS, and Heroku."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, "Custom Websites from the ground up as opposed to using pre-existing templates.")),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (WhatWeDo);
+
+/***/ }),
+
+/***/ "./components/WhoWeServe/WhoWeServe.js":
+/*!*********************************************!*\
+  !*** ./components/WhoWeServe/WhoWeServe.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../TwoColumnEvenWithPic/TwoColumnEvenWithPic.js */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.js");
+/* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../TwoColumnEvenWithPic/TwoColumnEvenWithPic.css */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css");
+/* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/WhoWeServe/WhoWeServe.js";
+
+// import Link from "next/link";
+
+
+
+var WhoWeServe = function WhoWeServe(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TwoColumnEvenWithPic_TwoColumnEvenWithPic_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    picUrl: "https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg",
+    titleFirstWord: "WHO",
+    restOfTitle: "WE SERVE",
+    flexClass: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.flexReverse,
+    restOfText: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.highlightedWords,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, "Enterprise customers"), " hire us to build and maintain the web apps critical to their operations."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.highlightedWords,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, "Tech startups"), " partner with us to build and maintain the web front-ends and back-ends at the core of their business.")),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (WhoWeServe);
 
 /***/ }),
 
@@ -861,6 +1582,36 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
 }
 
 /***/ }),
@@ -1773,6 +2524,753 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 /***/ }),
 
+/***/ "./node_modules/string-hash/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/string-hash/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function hash(str) {
+  var hash = 5381,
+      i    = str.length;
+
+  while(i) {
+    hash = (hash * 33) ^ str.charCodeAt(--i);
+  }
+
+  /* JavaScript does bitwise operations (like XOR, above) on 32-bit signed
+   * integers. Since we want the results to be always positive, convert the
+   * signed int to an unsigned by doing an unsigned bitshift. */
+  return hash >>> 0;
+}
+
+module.exports = hash;
+
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/lib/stylesheet.js":
+/*!********************************************************!*\
+  !*** ./node_modules/styled-jsx/dist/lib/stylesheet.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/*
+Based on Glamor's sheet
+https://github.com/threepointone/glamor/blob/667b480d31b3721a905021b26e1290ce92ca2879/src/sheet.js
+*/
+var isProd = process.env && "development" === 'production';
+
+var isString = function isString(o) {
+  return Object.prototype.toString.call(o) === '[object String]';
+};
+
+var StyleSheet =
+/*#__PURE__*/
+function () {
+  function StyleSheet() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$name = _ref.name,
+        name = _ref$name === void 0 ? 'stylesheet' : _ref$name,
+        _ref$optimizeForSpeed = _ref.optimizeForSpeed,
+        optimizeForSpeed = _ref$optimizeForSpeed === void 0 ? isProd : _ref$optimizeForSpeed,
+        _ref$isBrowser = _ref.isBrowser,
+        isBrowser = _ref$isBrowser === void 0 ? typeof window !== 'undefined' : _ref$isBrowser;
+
+    _classCallCheck(this, StyleSheet);
+
+    invariant(isString(name), '`name` must be a string');
+    this._name = name;
+    this._deletedRulePlaceholder = "#".concat(name, "-deleted-rule____{}");
+    invariant(typeof optimizeForSpeed === 'boolean', '`optimizeForSpeed` must be a boolean');
+    this._optimizeForSpeed = optimizeForSpeed;
+    this._isBrowser = isBrowser;
+    this._serverSheet = undefined;
+    this._tags = [];
+    this._injected = false;
+    this._rulesCount = 0;
+    var node = this._isBrowser && document.querySelector('meta[property="csp-nonce"]');
+    this._nonce = node ? node.getAttribute('content') : null;
+  }
+
+  _createClass(StyleSheet, [{
+    key: "setOptimizeForSpeed",
+    value: function setOptimizeForSpeed(bool) {
+      invariant(typeof bool === 'boolean', '`setOptimizeForSpeed` accepts a boolean');
+      invariant(this._rulesCount === 0, 'optimizeForSpeed cannot be when rules have already been inserted');
+      this.flush();
+      this._optimizeForSpeed = bool;
+      this.inject();
+    }
+  }, {
+    key: "isOptimizeForSpeed",
+    value: function isOptimizeForSpeed() {
+      return this._optimizeForSpeed;
+    }
+  }, {
+    key: "inject",
+    value: function inject() {
+      var _this = this;
+
+      invariant(!this._injected, 'sheet already injected');
+      this._injected = true;
+
+      if (this._isBrowser && this._optimizeForSpeed) {
+        this._tags[0] = this.makeStyleTag(this._name);
+        this._optimizeForSpeed = 'insertRule' in this.getSheet();
+
+        if (!this._optimizeForSpeed) {
+          if (!isProd) {
+            console.warn('StyleSheet: optimizeForSpeed mode not supported falling back to standard mode.');
+          }
+
+          this.flush();
+          this._injected = true;
+        }
+
+        return;
+      }
+
+      this._serverSheet = {
+        cssRules: [],
+        insertRule: function insertRule(rule, index) {
+          if (typeof index === 'number') {
+            _this._serverSheet.cssRules[index] = {
+              cssText: rule
+            };
+          } else {
+            _this._serverSheet.cssRules.push({
+              cssText: rule
+            });
+          }
+
+          return index;
+        },
+        deleteRule: function deleteRule(index) {
+          _this._serverSheet.cssRules[index] = null;
+        }
+      };
+    }
+  }, {
+    key: "getSheetForTag",
+    value: function getSheetForTag(tag) {
+      if (tag.sheet) {
+        return tag.sheet;
+      } // this weirdness brought to you by firefox
+
+
+      for (var i = 0; i < document.styleSheets.length; i++) {
+        if (document.styleSheets[i].ownerNode === tag) {
+          return document.styleSheets[i];
+        }
+      }
+    }
+  }, {
+    key: "getSheet",
+    value: function getSheet() {
+      return this.getSheetForTag(this._tags[this._tags.length - 1]);
+    }
+  }, {
+    key: "insertRule",
+    value: function insertRule(rule, index) {
+      invariant(isString(rule), '`insertRule` accepts only strings');
+
+      if (!this._isBrowser) {
+        if (typeof index !== 'number') {
+          index = this._serverSheet.cssRules.length;
+        }
+
+        this._serverSheet.insertRule(rule, index);
+
+        return this._rulesCount++;
+      }
+
+      if (this._optimizeForSpeed) {
+        var sheet = this.getSheet();
+
+        if (typeof index !== 'number') {
+          index = sheet.cssRules.length;
+        } // this weirdness for perf, and chrome's weird bug
+        // https://stackoverflow.com/questions/20007992/chrome-suddenly-stopped-accepting-insertrule
+
+
+        try {
+          sheet.insertRule(rule, index);
+        } catch (error) {
+          if (!isProd) {
+            console.warn("StyleSheet: illegal rule: \n\n".concat(rule, "\n\nSee https://stackoverflow.com/q/20007992 for more info"));
+          }
+
+          return -1;
+        }
+      } else {
+        var insertionPoint = this._tags[index];
+
+        this._tags.push(this.makeStyleTag(this._name, rule, insertionPoint));
+      }
+
+      return this._rulesCount++;
+    }
+  }, {
+    key: "replaceRule",
+    value: function replaceRule(index, rule) {
+      if (this._optimizeForSpeed || !this._isBrowser) {
+        var sheet = this._isBrowser ? this.getSheet() : this._serverSheet;
+
+        if (!rule.trim()) {
+          rule = this._deletedRulePlaceholder;
+        }
+
+        if (!sheet.cssRules[index]) {
+          // @TBD Should we throw an error?
+          return index;
+        }
+
+        sheet.deleteRule(index);
+
+        try {
+          sheet.insertRule(rule, index);
+        } catch (error) {
+          if (!isProd) {
+            console.warn("StyleSheet: illegal rule: \n\n".concat(rule, "\n\nSee https://stackoverflow.com/q/20007992 for more info"));
+          } // In order to preserve the indices we insert a deleteRulePlaceholder
+
+
+          sheet.insertRule(this._deletedRulePlaceholder, index);
+        }
+      } else {
+        var tag = this._tags[index];
+        invariant(tag, "old rule at index `".concat(index, "` not found"));
+        tag.textContent = rule;
+      }
+
+      return index;
+    }
+  }, {
+    key: "deleteRule",
+    value: function deleteRule(index) {
+      if (!this._isBrowser) {
+        this._serverSheet.deleteRule(index);
+
+        return;
+      }
+
+      if (this._optimizeForSpeed) {
+        this.replaceRule(index, '');
+      } else {
+        var tag = this._tags[index];
+        invariant(tag, "rule at index `".concat(index, "` not found"));
+        tag.parentNode.removeChild(tag);
+        this._tags[index] = null;
+      }
+    }
+  }, {
+    key: "flush",
+    value: function flush() {
+      this._injected = false;
+      this._rulesCount = 0;
+
+      if (this._isBrowser) {
+        this._tags.forEach(function (tag) {
+          return tag && tag.parentNode.removeChild(tag);
+        });
+
+        this._tags = [];
+      } else {
+        // simpler on server
+        this._serverSheet.cssRules = [];
+      }
+    }
+  }, {
+    key: "cssRules",
+    value: function cssRules() {
+      var _this2 = this;
+
+      if (!this._isBrowser) {
+        return this._serverSheet.cssRules;
+      }
+
+      return this._tags.reduce(function (rules, tag) {
+        if (tag) {
+          rules = rules.concat(_this2.getSheetForTag(tag).cssRules.map(function (rule) {
+            return rule.cssText === _this2._deletedRulePlaceholder ? null : rule;
+          }));
+        } else {
+          rules.push(null);
+        }
+
+        return rules;
+      }, []);
+    }
+  }, {
+    key: "makeStyleTag",
+    value: function makeStyleTag(name, cssString, relativeToTag) {
+      if (cssString) {
+        invariant(isString(cssString), 'makeStyleTag acceps only strings as second parameter');
+      }
+
+      var tag = document.createElement('style');
+      if (this._nonce) tag.setAttribute('nonce', this._nonce);
+      tag.type = 'text/css';
+      tag.setAttribute("data-".concat(name), '');
+
+      if (cssString) {
+        tag.appendChild(document.createTextNode(cssString));
+      }
+
+      var head = document.head || document.getElementsByTagName('head')[0];
+
+      if (relativeToTag) {
+        head.insertBefore(tag, relativeToTag);
+      } else {
+        head.appendChild(tag);
+      }
+
+      return tag;
+    }
+  }, {
+    key: "length",
+    get: function get() {
+      return this._rulesCount;
+    }
+  }]);
+
+  return StyleSheet;
+}();
+
+exports.default = StyleSheet;
+
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error("StyleSheet: ".concat(message, "."));
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/style.js":
+/*!***********************************************!*\
+  !*** ./node_modules/styled-jsx/dist/style.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.flush = flush;
+exports.default = void 0;
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _stylesheetRegistry = _interopRequireDefault(__webpack_require__(/*! ./stylesheet-registry */ "./node_modules/styled-jsx/dist/stylesheet-registry.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var styleSheetRegistry = new _stylesheetRegistry.default();
+
+var JSXStyle =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(JSXStyle, _Component);
+
+  function JSXStyle(props) {
+    var _this;
+
+    _classCallCheck(this, JSXStyle);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(JSXStyle).call(this, props));
+    _this.prevProps = {};
+    return _this;
+  }
+
+  _createClass(JSXStyle, [{
+    key: "shouldComponentUpdate",
+    // probably faster than PureComponent (shallowEqual)
+    value: function shouldComponentUpdate(otherProps) {
+      return this.props.id !== otherProps.id || // We do this check because `dynamic` is an array of strings or undefined.
+      // These are the computed values for dynamic styles.
+      String(this.props.dynamic) !== String(otherProps.dynamic);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      styleSheetRegistry.remove(this.props);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      // This is a workaround to make the side effect async safe in the "render" phase.
+      // See https://github.com/zeit/styled-jsx/pull/484
+      if (this.shouldComponentUpdate(this.prevProps)) {
+        // Updates
+        if (this.prevProps.id) {
+          styleSheetRegistry.remove(this.prevProps);
+        }
+
+        styleSheetRegistry.add(this.props);
+        this.prevProps = this.props;
+      }
+
+      return null;
+    }
+  }], [{
+    key: "dynamic",
+    value: function dynamic(info) {
+      return info.map(function (tagInfo) {
+        var baseId = tagInfo[0];
+        var props = tagInfo[1];
+        return styleSheetRegistry.computeId(baseId, props);
+      }).join(' ');
+    }
+  }]);
+
+  return JSXStyle;
+}(_react.Component);
+
+exports.default = JSXStyle;
+
+function flush() {
+  var cssRules = styleSheetRegistry.cssRules();
+  styleSheetRegistry.flush();
+  return cssRules;
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/stylesheet-registry.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/styled-jsx/dist/stylesheet-registry.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _stringHash = _interopRequireDefault(__webpack_require__(/*! string-hash */ "./node_modules/string-hash/index.js"));
+
+var _stylesheet = _interopRequireDefault(__webpack_require__(/*! ./lib/stylesheet */ "./node_modules/styled-jsx/dist/lib/stylesheet.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var sanitize = function sanitize(rule) {
+  return rule.replace(/\/style/gi, '\\/style');
+};
+
+var StyleSheetRegistry =
+/*#__PURE__*/
+function () {
+  function StyleSheetRegistry() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$styleSheet = _ref.styleSheet,
+        styleSheet = _ref$styleSheet === void 0 ? null : _ref$styleSheet,
+        _ref$optimizeForSpeed = _ref.optimizeForSpeed,
+        optimizeForSpeed = _ref$optimizeForSpeed === void 0 ? false : _ref$optimizeForSpeed,
+        _ref$isBrowser = _ref.isBrowser,
+        isBrowser = _ref$isBrowser === void 0 ? typeof window !== 'undefined' : _ref$isBrowser;
+
+    _classCallCheck(this, StyleSheetRegistry);
+
+    this._sheet = styleSheet || new _stylesheet.default({
+      name: 'styled-jsx',
+      optimizeForSpeed: optimizeForSpeed
+    });
+
+    this._sheet.inject();
+
+    if (styleSheet && typeof optimizeForSpeed === 'boolean') {
+      this._sheet.setOptimizeForSpeed(optimizeForSpeed);
+
+      this._optimizeForSpeed = this._sheet.isOptimizeForSpeed();
+    }
+
+    this._isBrowser = isBrowser;
+    this._fromServer = undefined;
+    this._indices = {};
+    this._instancesCounts = {};
+    this.computeId = this.createComputeId();
+    this.computeSelector = this.createComputeSelector();
+  }
+
+  _createClass(StyleSheetRegistry, [{
+    key: "add",
+    value: function add(props) {
+      var _this = this;
+
+      if (undefined === this._optimizeForSpeed) {
+        this._optimizeForSpeed = Array.isArray(props.children);
+
+        this._sheet.setOptimizeForSpeed(this._optimizeForSpeed);
+
+        this._optimizeForSpeed = this._sheet.isOptimizeForSpeed();
+      }
+
+      if (this._isBrowser && !this._fromServer) {
+        this._fromServer = this.selectFromServer();
+        this._instancesCounts = Object.keys(this._fromServer).reduce(function (acc, tagName) {
+          acc[tagName] = 0;
+          return acc;
+        }, {});
+      }
+
+      var _this$getIdAndRules = this.getIdAndRules(props),
+          styleId = _this$getIdAndRules.styleId,
+          rules = _this$getIdAndRules.rules; // Deduping: just increase the instances count.
+
+
+      if (styleId in this._instancesCounts) {
+        this._instancesCounts[styleId] += 1;
+        return;
+      }
+
+      var indices = rules.map(function (rule) {
+        return _this._sheet.insertRule(rule);
+      }) // Filter out invalid rules
+      .filter(function (index) {
+        return index !== -1;
+      });
+      this._indices[styleId] = indices;
+      this._instancesCounts[styleId] = 1;
+    }
+  }, {
+    key: "remove",
+    value: function remove(props) {
+      var _this2 = this;
+
+      var _this$getIdAndRules2 = this.getIdAndRules(props),
+          styleId = _this$getIdAndRules2.styleId;
+
+      invariant(styleId in this._instancesCounts, "styleId: `".concat(styleId, "` not found"));
+      this._instancesCounts[styleId] -= 1;
+
+      if (this._instancesCounts[styleId] < 1) {
+        var tagFromServer = this._fromServer && this._fromServer[styleId];
+
+        if (tagFromServer) {
+          tagFromServer.parentNode.removeChild(tagFromServer);
+          delete this._fromServer[styleId];
+        } else {
+          this._indices[styleId].forEach(function (index) {
+            return _this2._sheet.deleteRule(index);
+          });
+
+          delete this._indices[styleId];
+        }
+
+        delete this._instancesCounts[styleId];
+      }
+    }
+  }, {
+    key: "update",
+    value: function update(props, nextProps) {
+      this.add(nextProps);
+      this.remove(props);
+    }
+  }, {
+    key: "flush",
+    value: function flush() {
+      this._sheet.flush();
+
+      this._sheet.inject();
+
+      this._fromServer = undefined;
+      this._indices = {};
+      this._instancesCounts = {};
+      this.computeId = this.createComputeId();
+      this.computeSelector = this.createComputeSelector();
+    }
+  }, {
+    key: "cssRules",
+    value: function cssRules() {
+      var _this3 = this;
+
+      var fromServer = this._fromServer ? Object.keys(this._fromServer).map(function (styleId) {
+        return [styleId, _this3._fromServer[styleId]];
+      }) : [];
+
+      var cssRules = this._sheet.cssRules();
+
+      return fromServer.concat(Object.keys(this._indices).map(function (styleId) {
+        return [styleId, _this3._indices[styleId].map(function (index) {
+          return cssRules[index].cssText;
+        }).join(_this3._optimizeForSpeed ? '' : '\n')];
+      }) // filter out empty rules
+      .filter(function (rule) {
+        return Boolean(rule[1]);
+      }));
+    }
+    /**
+     * createComputeId
+     *
+     * Creates a function to compute and memoize a jsx id from a basedId and optionally props.
+     */
+
+  }, {
+    key: "createComputeId",
+    value: function createComputeId() {
+      var cache = {};
+      return function (baseId, props) {
+        if (!props) {
+          return "jsx-".concat(baseId);
+        }
+
+        var propsToString = String(props);
+        var key = baseId + propsToString; // return `jsx-${hashString(`${baseId}-${propsToString}`)}`
+
+        if (!cache[key]) {
+          cache[key] = "jsx-".concat((0, _stringHash.default)("".concat(baseId, "-").concat(propsToString)));
+        }
+
+        return cache[key];
+      };
+    }
+    /**
+     * createComputeSelector
+     *
+     * Creates a function to compute and memoize dynamic selectors.
+     */
+
+  }, {
+    key: "createComputeSelector",
+    value: function createComputeSelector() {
+      var selectoPlaceholderRegexp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : /__jsx-style-dynamic-selector/g;
+      var cache = {};
+      return function (id, css) {
+        // Sanitize SSR-ed CSS.
+        // Client side code doesn't need to be sanitized since we use
+        // document.createTextNode (dev) and the CSSOM api sheet.insertRule (prod).
+        if (!this._isBrowser) {
+          css = sanitize(css);
+        }
+
+        var idcss = id + css;
+
+        if (!cache[idcss]) {
+          cache[idcss] = css.replace(selectoPlaceholderRegexp, id);
+        }
+
+        return cache[idcss];
+      };
+    }
+  }, {
+    key: "getIdAndRules",
+    value: function getIdAndRules(props) {
+      var _this4 = this;
+
+      var css = props.children,
+          dynamic = props.dynamic,
+          id = props.id;
+
+      if (dynamic) {
+        var styleId = this.computeId(id, dynamic);
+        return {
+          styleId: styleId,
+          rules: Array.isArray(css) ? css.map(function (rule) {
+            return _this4.computeSelector(styleId, rule);
+          }) : [this.computeSelector(styleId, css)]
+        };
+      }
+
+      return {
+        styleId: this.computeId(id),
+        rules: Array.isArray(css) ? css : [css]
+      };
+    }
+    /**
+     * selectFromServer
+     *
+     * Collects style tags from the document with id __jsx-XXX
+     */
+
+  }, {
+    key: "selectFromServer",
+    value: function selectFromServer() {
+      var elements = Array.prototype.slice.call(document.querySelectorAll('[id^="__jsx-"]'));
+      return elements.reduce(function (acc, element) {
+        var id = element.id.slice(2);
+        acc[id] = element;
+        return acc;
+      }, {});
+    }
+  }]);
+
+  return StyleSheetRegistry;
+}();
+
+exports.default = StyleSheetRegistry;
+
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error("StyleSheetRegistry: ".concat(message, "."));
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/style.js":
+/*!******************************************!*\
+  !*** ./node_modules/styled-jsx/style.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/style */ "./node_modules/styled-jsx/dist/style.js")
+
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -1782,12 +3280,28 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header/Header */ "./components/Header/Header.js");
-/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Navbar/Navbar */ "./components/Navbar/Navbar.js");
-/* harmony import */ var _components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MainSection/MainSection */ "./components/MainSection/MainSection.js");
-/* harmony import */ var _components_App_App_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/App/App.js */ "./components/App/App.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header/Header */ "./components/Header/Header.js");
+/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Navbar/Navbar */ "./components/Navbar/Navbar.js");
+/* harmony import */ var _components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MainSection/MainSection */ "./components/MainSection/MainSection.js");
+/* harmony import */ var _components_Button_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Button/Button */ "./components/Button/Button.js");
+/* harmony import */ var _components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam */ "./components/HireOurTeam/HireOurTeam.js");
+/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam.css */ "./components/HireOurTeam/HireOurTeam.css");
+/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_TwoColumnEvenWithPic_TwoColumnEvenWithPic__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/TwoColumnEvenWithPic/TwoColumnEvenWithPic */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.js");
+/* harmony import */ var _components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/WhatWeDo/WhatWeDo */ "./components/WhatWeDo/WhatWeDo.js");
+/* harmony import */ var _components_WhoWeServe_WhoWeServe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/WhoWeServe/WhoWeServe */ "./components/WhoWeServe/WhoWeServe.js");
+/* harmony import */ var _components_TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css");
+/* harmony import */ var _components_TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/FoundingWebDevs/FoundingWebDevs */ "./components/FoundingWebDevs/FoundingWebDevs.js");
+/* harmony import */ var _components_FoundingWebDevs_FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/FoundingWebDevs/FoundingWebDevs.css */ "./components/FoundingWebDevs/FoundingWebDevs.css");
+/* harmony import */ var _components_FoundingWebDevs_FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_FoundingWebDevs_FoundingWebDevs_css__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! next-server/head */ "next-server/head");
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _components_App_App_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/App/App.js */ "./components/App/App.js");
 var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js";
 
 
@@ -1795,44 +3309,128 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js";
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 var Index = function Index() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "jsx-850852382",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 17
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_14___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
+    className: "jsx-850852382",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, "Chiedo Labs: Custom Web Development - Node.js | React | Rails | PHP"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
+    name: "viewport",
+    content: "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no",
+    className: "jsx-850852382",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
+    rel: "shortcut icon",
+    href: "https://labs.chiedo.com/wp-content/themes/chiedolabs/favicon.ico?v=2",
+    className: "jsx-850852382",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
+    rel: "stylesheet",
+    href: "https://use.fontawesome.com/releases/v5.7.2/css/all.css",
+    integrity: "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr",
+    crossorigin: "anonymous",
+    className: "jsx-850852382",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "850852382",
+    __self: this
+  }, "body{font-family:\"Open Sans\",sans-serif;color:#2c343b;background-color:#f2f2f2;box-sizing:\"border-box\";}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9id2V4bGVyL0Rlc2t0b3AvV0RGL2NoaWVkb0xhYnMvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBb0N1QixBQUc2QyxtQ0FDdEIsY0FDVyx5QkFDRCx3QkFDMUIiLCJmaWxlIjoiL1VzZXJzL2J3ZXhsZXIvRGVza3RvcC9XREYvY2hpZWRvTGFicy9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkZXIgZnJvbSBcIi4uL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlclwiO1xuaW1wb3J0IE5hdmJhciBmcm9tIFwiLi4vY29tcG9uZW50cy9OYXZiYXIvTmF2YmFyXCI7XG5pbXBvcnQgTWFpblNlY3Rpb24gZnJvbSBcIi4uL2NvbXBvbmVudHMvTWFpblNlY3Rpb24vTWFpblNlY3Rpb25cIjtcbmltcG9ydCBCdXR0b24gZnJvbSBcIi4uL2NvbXBvbmVudHMvQnV0dG9uL0J1dHRvblwiO1xuaW1wb3J0IEhpcmVPdXJUZWFtIGZyb20gXCIuLi9jb21wb25lbnRzL0hpcmVPdXJUZWFtL0hpcmVPdXJUZWFtXCI7XG5pbXBvcnQgSGlyZU91clRlYW1Dc3MgZnJvbSBcIi4uL2NvbXBvbmVudHMvSGlyZU91clRlYW0vSGlyZU91clRlYW0uY3NzXCI7XG5pbXBvcnQgVHdvQ29sdW1uRXZlbldpdGhQaWMgZnJvbSBcIi4uL2NvbXBvbmVudHMvVHdvQ29sdW1uRXZlbldpdGhQaWMvVHdvQ29sdW1uRXZlbldpdGhQaWNcIjtcbmltcG9ydCBXaGF0V2VEbyBmcm9tIFwiLi4vY29tcG9uZW50cy9XaGF0V2VEby9XaGF0V2VEb1wiO1xuaW1wb3J0IFdob1dlU2VydmUgZnJvbSBcIi4uL2NvbXBvbmVudHMvV2hvV2VTZXJ2ZS9XaG9XZVNlcnZlXCI7XG5pbXBvcnQgVHdvQ29sdW1uRXZlbldpdGhQaWNDc3MgZnJvbSBcIi4uL2NvbXBvbmVudHMvVHdvQ29sdW1uRXZlbldpdGhQaWMvVHdvQ29sdW1uRXZlbldpdGhQaWMuY3NzXCI7XG5pbXBvcnQgRm91bmRpbmdXZWJEZXZzIGZyb20gXCIuLi9jb21wb25lbnRzL0ZvdW5kaW5nV2ViRGV2cy9Gb3VuZGluZ1dlYkRldnNcIjtcbmltcG9ydCBGb3VuZGluZ1dlYkRldnNDc3MgZnJvbSBcIi4uL2NvbXBvbmVudHMvRm91bmRpbmdXZWJEZXZzL0ZvdW5kaW5nV2ViRGV2cy5jc3NcIjtcbmltcG9ydCBIZWFkIGZyb20gXCJuZXh0L2hlYWRcIjtcbmltcG9ydCBBcHAgZnJvbSBcIi4uL2NvbXBvbmVudHMvQXBwL0FwcC5qc1wiO1xuXG5jb25zdCBJbmRleCA9ICgpID0+IChcbiAgPGRpdj5cbiAgICA8SGVhZD5cbiAgICAgIDx0aXRsZT5cbiAgICAgICAgQ2hpZWRvIExhYnM6IEN1c3RvbSBXZWIgRGV2ZWxvcG1lbnQgLSBOb2RlLmpzIHwgUmVhY3QgfCBSYWlscyB8IFBIUFxuICAgICAgPC90aXRsZT5cbiAgICAgIDxtZXRhXG4gICAgICAgIG5hbWU9XCJ2aWV3cG9ydFwiXG4gICAgICAgIGNvbnRlbnQ9XCJtaW5pbXVtLXNjYWxlPTEsIGluaXRpYWwtc2NhbGU9MSwgd2lkdGg9ZGV2aWNlLXdpZHRoLCBzaHJpbmstdG8tZml0PW5vXCJcbiAgICAgIC8+XG4gICAgICA8bGlua1xuICAgICAgICByZWw9XCJzaG9ydGN1dCBpY29uXCJcbiAgICAgICAgaHJlZj1cImh0dHBzOi8vbGFicy5jaGllZG8uY29tL3dwLWNvbnRlbnQvdGhlbWVzL2NoaWVkb2xhYnMvZmF2aWNvbi5pY28/dj0yXCJcbiAgICAgIC8+XG4gICAgICA8bGlua1xuICAgICAgICByZWw9XCJzdHlsZXNoZWV0XCJcbiAgICAgICAgaHJlZj1cImh0dHBzOi8vdXNlLmZvbnRhd2Vzb21lLmNvbS9yZWxlYXNlcy92NS43LjIvY3NzL2FsbC5jc3NcIlxuICAgICAgICBpbnRlZ3JpdHk9XCJzaGEzODQtZm5tT0NxYlRsV0lsajhMeVRqbzdtT1VTdGpzS0M0cE9wUWJxeWk3UnJoTjd1ZGk5UndoS2tNSHB2TGJIRzlTclwiXG4gICAgICAgIGNyb3Nzb3JpZ2luPVwiYW5vbnltb3VzXCJcbiAgICAgIC8+XG4gICAgPC9IZWFkPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHtcbiAgICAgICAgZm9udC1mYW1pbHk6IFwiT3BlbiBTYW5zXCIsIHNhbnMtc2VyaWY7XG4gICAgICAgIGNvbG9yOiAjMmMzNDNiO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyO1xuICAgICAgICBib3gtc2l6aW5nOiBcImJvcmRlci1ib3hcIjtcbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gICAgPEhlYWRlciBpbWFnZVVybD1cImh0dHBzOi8vbGFicy5jaGllZG8uY29tL3dwLWNvbnRlbnQvdGhlbWVzL2NoaWVkb2xhYnMvaW1nL2ItbG9nby13aGl0ZS5wbmc/dmVyPTEuMTFcIiAvPlxuXG4gICAgPE5hdmJhciAvPlxuICAgIDxNYWluU2VjdGlvblxuICAgICAgdGFnbGluZT17XG4gICAgICAgIDxkaXY+XG4gICAgICAgICAgWW91ciBOZXdcbiAgICAgICAgICA8YnIgLz5cbiAgICAgICAgICBXZWIgRGV2ZWxvcGVyc1xuICAgICAgICA8L2Rpdj5cbiAgICAgIH1cbiAgICAgIGRlc2NyaXB0aW9uPVwiV2XigJlyZSBhIHRlYW0gb2Ygd2ViIGRldmVsb3BlcnMgcGFzc2lvbmF0ZSBhYm91dCBidWlsZGluZyBzdGFibGUsIG1haW50YWluYWJsZSBzb2Z0d2FyZSBmb3IgdGVjaCBzdGFydHVwcyBhbmQgZW50ZXJwcmlzZSBjdXN0b21lcnMuXCJcbiAgICAvPlxuICAgIDxIaXJlT3VyVGVhbVxuICAgICAgY2xhc3NOYW1lcz17YCR7SGlyZU91clRlYW1Dc3MuRnVsbFdpZHRofSAke0hpcmVPdXJUZWFtQ3NzLmhpcmVPdXJUZWFtfWB9XG4gICAgLz5cbiAgICA8V2hhdFdlRG8gLz5cbiAgICA8Rm91bmRpbmdXZWJEZXZzIC8+XG4gICAgPFdob1dlU2VydmUgLz5cbiAgPC9kaXY+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBJbmRleDtcbiJdfQ== */\n/*@ sourceURL=/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     imageUrl: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/b-logo-white.png?ver=1.11",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 45
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 47
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    tagline: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    tagline: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "jsx-850852382",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 50
       },
       __self: this
-    }, "Your New", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    }, "Your New", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+      className: "jsx-850852382",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 52
       },
       __self: this
     }), "Web Developers"),
     description: "We\u2019re a team of web developers passionate about building stable, maintainable software for tech startups and enterprise customers.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 48
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    classNames: "".concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_7___default.a.FullWidth, " ").concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_7___default.a.hireOurTeam),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_WhoWeServe_WhoWeServe__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
     },
     __self: this
   }));
@@ -1972,6 +3570,17 @@ module.exports = require("next-server/dist/lib/router/router");
 /***/ (function(module, exports) {
 
 module.exports = require("next-server/dist/lib/utils");
+
+/***/ }),
+
+/***/ "next-server/head":
+/*!***********************************!*\
+  !*** external "next-server/head" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next-server/head");
 
 /***/ }),
 
