@@ -10,6 +10,14 @@ import WhoWeServe from "../components/WhoWeServe/WhoWeServe";
 import TwoColumnEvenWithPicCss from "../components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css";
 import FoundingWebDevs from "../components/FoundingWebDevs/FoundingWebDevs";
 import FoundingWebDevsCss from "../components/FoundingWebDevs/FoundingWebDevs.css";
+
+import TitleTextPicButton from "../components/TitleTextPicButton/TitleTextPicButton";
+import StartupCulture from "../components/StartupCulture/StartupCulture";
+import FeaturedPost from "../components/FeaturedPost/FeaturedPost";
+import TitleTextPicButtonCss from "../components/TitleTextPicButton/TitleTextPicButton.css";
+
+import cssMiscellaneous from "../css-miscellaneous/css-miscellaneous.css";
+
 import Head from "next/head";
 import App from "../components/App/App.js";
 
@@ -61,6 +69,12 @@ const Index = () => (
     <WhatWeDo />
     <FoundingWebDevs />
     <WhoWeServe />
+    <div className={cssMiscellaneous.startupCultureFeaturedPostContainer} 
+    // style={{ display: "flex", width: "100vw" }}
+    >
+      <StartupCulture />
+      <FeaturedPost title="How to Upgrade PHP in a MAMP Environment" />
+    </div>
   </div>
 );
 
