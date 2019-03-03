@@ -11,14 +11,14 @@ const WhatWeDo= props => (
         <React.Fragment>
           <p className={css.paragraph}>We build and maintain:</p>
           <p className={css.paragraph}>
-            Web Front-ends with HTML, CSS, and a library called React.
+            <span className={css.underline}>Web Front-ends</span> with HTML, CSS, and a library called React.
           </p>
           <p className={css.paragraph}>
-            Web Back-ends using NodeJS, Ruby on Rails, PHP, MySQL, AWS, and
+          <span className={css.underline}>Web Back-ends</span> using NodeJS, Ruby on Rails, PHP, MySQL, AWS, and
             Heroku.
           </p>
           <p className={css.paragraph}>
-            Custom Websites from the ground up as opposed to using pre-existing
+          <span className={css.underline}>Custom Websites</span> from the ground up as opposed to using pre-existing
             templates.
           </p>
         </React.Fragment>
