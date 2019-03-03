@@ -13,7 +13,7 @@ const FoundingWebDevs = props => (
     </div>
     <Button
     href="https://labs.chiedo.com/page/contact/"
-    style={{background: "#3d4952"}}
+    style={{background: "#3d4952", fontSize: "13px"}}
     text="Get A Quote" />
   </div>
 );

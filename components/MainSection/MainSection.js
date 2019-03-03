@@ -1,4 +1,3 @@
-import Link from "next/link";
 import css from "./MainSection.css";
 import Video from "../Video/Video.js";
 import Button from "../Button/Button.js";

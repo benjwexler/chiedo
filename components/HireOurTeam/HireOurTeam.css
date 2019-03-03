@@ -1,59 +1,63 @@
 .FullWidth {
-    width: 100vw;
-    /* height: 100px; */
-    /* background: grey; */
-    padding-bottom: 100px;
+  width: 100vw;
+  padding-bottom: 100px;
 }
 
 .hireOurTeam {
-    background: #333;
-    height: auto;
-    color: #fff;
-    padding: 100px 0;
-    /* padding-bottom: 150px; */
-    /* display: flex; */
-    /* border: 5px solid yellow; */
+  background: #333;
+  height: auto;
+  color: #fff;
+  padding: 100px 0;
 }
 
 .sectionTitle {
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Open Sans', sans-serif !important;
-    font-weight: 100;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 100;
+  margin-bottom: 20px;
 }
 
 .listItem {
-    display: flex;
-    text-align: center;
-    margin: auto;
-    color: #B92C2C;
-    font-weight: bold;
-    font-size: 19px;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  color: #b92c2c;
+  font-weight: bold;
+  font-size: 19px;
 
-    padding: 0px 10px;
-    overflow-wrap: break-word
+  padding: 0px 10px;
+  overflow-wrap: break-word;
+  
 }
 
-.listContainer {
-    display: flex;
-    margin: auto;
-    text-align: center;
-    max-width: 960px;
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 19px;
-    flex-wrap: wrap;
-    padding: 0 10px;
+.listItem:hover {
+    /* filter: blur(.5px) */
+    /* text-shadow: 2px 2px black; */
+    /* text-shadow: 2px 2px rgb(43, 27, 27); */
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.226);
+    cursor: default;
     
 }
 
-@media only screen and (max-width: 949px) {
-    .listContainer  {
-      flex-direction: column;
-    }
+.listContainer {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  max-width: 960px;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 19px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
 
-    .FullWidth {
-        padding: 50px 0px;
-        padding-bottom: 58px;
-    }
+@media only screen and (max-width: 949px) {
+  .listContainer {
+    flex-direction: column;
   }
+
+  .FullWidth {
+    padding: 50px 0px;
+    padding-bottom: 58px;
+  }
+}

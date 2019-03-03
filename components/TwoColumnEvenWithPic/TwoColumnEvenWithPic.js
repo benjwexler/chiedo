@@ -18,6 +18,7 @@ const TwoColumnEvenWithPic = props => {
         <Button
           href="https://labs.chiedo.com/page/contact/"
           text="Get A Quote"
+          style={{fontSize: "13px"}}
         />
       </div>
     </div>

@@ -1,5 +1,4 @@
 import css from "./ProfileCard.css";
-import Button from "../Button/Button.js";
 
 const ProfileCard = props => (
   <div className={css.ProfileCard}>
