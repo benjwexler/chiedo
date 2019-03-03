@@ -1,0 +1,70 @@
+.WhatWeDo {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+    /* flex-direction: row-reverse; */
+}
+
+.flexReverse{
+    flex-direction: row-reverse;
+}
+
+
+
+.pic {
+    width: 50%;
+    min-height: 100%;
+    border: 1px solid black;
+    /* background: url("https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg") */
+}
+
+.halfContainer {
+    width: 50%;
+    height: 100%;
+    padding: 50px;
+    font-family: "Open Sans", sans-serif;
+  color: #2c343b;
+  font-weight: 300;
+  /* font-size: 1.5em */
+  /* font-size: 30px; */
+  /* font-size: 30px; */
+}
+
+.what {
+    color: #B92C2C;
+    font-weight: 900;
+}
+
+.sectionTitle {
+    margin-bottom: 40px;
+    font-weight: 100;
+    font-size: 30px;
+}
+.paragraph {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+@media (max-width: 850px) {    
+    .pic {
+    height: 22px;
+    width: 100%;
+    }
+
+    .flexNormal {
+        flex-direction: column !important;
+    }
+    .flexReverse{
+        flex-direction: column-reverse !important
+    }
+
+    .halfContainer {
+        width: 100%;
+    }
+}
+
+.highlightedWords {
+    color: #B92C2C;
+    font-weight: bold
+}

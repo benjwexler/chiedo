@@ -10,7 +10,9 @@ const MainSection = props => (
       <div className={css.inner}>
         <h1 className={css.tagline}>{props.tagline}</h1>
         <p className={css.description}>{props.description}</p>
-        <Button text="Get A Quote"/>
+        <Button
+        href="https://labs.chiedo.com/page/contact/"
+        text="Get A Quote"/>
       </div>
     </div>
   </div>

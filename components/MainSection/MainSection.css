@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 
 * {
     box-sizing: border-box;
@@ -8,8 +8,13 @@
     position: relative;
     width: 100vw;
     height: 541.781px;
-    /* border: 1px solid black; */
 }
+
+@media only screen and (max-width: 1170px) {
+    .MainSection {
+      display: none;
+    }
+  }
 
 .content {
     padding: 100px;
@@ -17,18 +22,12 @@
     z-index: 23333;
     height: 100%;
     width: 100%;
-    /* padding-top: 90px; */
-    /* z-index: 9999999999999; */
 }
 
-.content::before {
-    z-index: 23333;
-}
 
 .inner {
     height: 100%;
     width: 100%;
-    /* border: 2px solid yellow; */
     text-align: center;
     z-index: 9999;
 }
@@ -63,7 +62,6 @@
     line-height: 1.2;
     margin: 0 auto 14px;
     margin-bottom: 20px;
-    /* color: #ffffff; */
     width: 90%;
     position: relative;
     font-size: 20px;
