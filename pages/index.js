@@ -1,25 +1,17 @@
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import MainSection from "../components/MainSection/MainSection";
-import Button from "../components/Button/Button";
 import HireOurTeam from "../components/HireOurTeam/HireOurTeam";
 import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css";
-import TwoColumnEvenWithPic from "../components/TwoColumnEvenWithPic/TwoColumnEvenWithPic";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 import WhoWeServe from "../components/WhoWeServe/WhoWeServe";
-import TwoColumnEvenWithPicCss from "../components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css";
 import FoundingWebDevs from "../components/FoundingWebDevs/FoundingWebDevs";
-import FoundingWebDevsCss from "../components/FoundingWebDevs/FoundingWebDevs.css";
-
-import TitleTextPicButton from "../components/TitleTextPicButton/TitleTextPicButton";
 import StartupCulture from "../components/StartupCulture/StartupCulture";
 import FeaturedPost from "../components/FeaturedPost/FeaturedPost";
-import TitleTextPicButtonCss from "../components/TitleTextPicButton/TitleTextPicButton.css";
-
 import cssMiscellaneous from "../css-miscellaneous/css-miscellaneous.css";
-
+import CaseStudies from "../components/CaseStudies/CaseStudies";
+import PortfolioItem from "../components/CaseStudies/PortfolioItem";
 import Head from "next/head";
-import App from "../components/App/App.js";
 
 const Index = () => (
   <div>
@@ -69,12 +61,23 @@ const Index = () => (
     <WhatWeDo />
     <FoundingWebDevs />
     <WhoWeServe />
-    <div className={cssMiscellaneous.startupCultureFeaturedPostContainer} 
-    // style={{ display: "flex", width: "100vw" }}
-    >
+    <div className={cssMiscellaneous.startupCultureFeaturedPostContainer}>
       <StartupCulture />
       <FeaturedPost title="How to Upgrade PHP in a MAMP Environment" />
     </div>
+
+    <CaseStudies>
+      <PortfolioItem />
+      <PortfolioItem />
+      <PortfolioItem />
+      <PortfolioItem />
+      <PortfolioItem />
+      <PortfolioItem />
+      <PortfolioItem />
+      <PortfolioItem />
+      <PortfolioItem />
+      <PortfolioItem />
+    </CaseStudies>
   </div>
 );
 

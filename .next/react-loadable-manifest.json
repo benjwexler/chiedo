@@ -9,13 +9,19 @@
   ],
   "undefined": [
     {
-      "id": 2,
+      "id": 8,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
       "id": 4,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 12,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -33,19 +39,31 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 7,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
       "id": 3,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 8,
+      "id": 7,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 11,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 2,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 13,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -63,44 +81,8 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 11,
+      "id": 14,
       "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 12,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 13,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "./Header.css": [
-    {
-      "id": "./components/Header/Header.css",
-      "name": "./components/Header/Header.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "./Video.css": [
-    {
-      "id": "./components/Video/Video.css",
-      "name": "./components/Video/Video.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../components/FoundingWebDevs/FoundingWebDevs.css": [
-    {
-      "id": "./components/FoundingWebDevs/FoundingWebDevs.css",
-      "name": "./components/FoundingWebDevs/FoundingWebDevs.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -113,34 +95,10 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "./ProfileCard.css": [
+  "./CaseStudies.css": [
     {
-      "id": "./components/ProfileCard/ProfileCard.css",
-      "name": "./components/ProfileCard/ProfileCard.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "./MainSection.css": [
-    {
-      "id": "./components/MainSection/MainSection.css",
-      "name": "./components/MainSection/MainSection.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../components/TitleTextPicButton/TitleTextPicButton.css": [
-    {
-      "id": "./components/TitleTextPicButton/TitleTextPicButton.css",
-      "name": "./components/TitleTextPicButton/TitleTextPicButton.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    }
-  ],
-  "../components/HireOurTeam/HireOurTeam.css": [
-    {
-      "id": "./components/HireOurTeam/HireOurTeam.css",
-      "name": "./components/HireOurTeam/HireOurTeam.css",
+      "id": "./components/CaseStudies/CaseStudies.css",
+      "name": "./components/CaseStudies/CaseStudies.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -153,6 +111,38 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
+  "./FoundingWebDevs.css": [
+    {
+      "id": "./components/FoundingWebDevs/FoundingWebDevs.css",
+      "name": "./components/FoundingWebDevs/FoundingWebDevs.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "./Header.css": [
+    {
+      "id": "./components/Header/Header.css",
+      "name": "./components/Header/Header.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../components/HireOurTeam/HireOurTeam.css": [
+    {
+      "id": "./components/HireOurTeam/HireOurTeam.css",
+      "name": "./components/HireOurTeam/HireOurTeam.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "./MainSection.css": [
+    {
+      "id": "./components/MainSection/MainSection.css",
+      "name": "./components/MainSection/MainSection.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
   "./Navbar.css": [
     {
       "id": "./components/Navbar/Navbar.css",
@@ -161,18 +151,42 @@
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../css-miscellaneous/css-miscellaneous.css": [
+  "./ProfileCard.css": [
     {
-      "id": "./css-miscellaneous/css-miscellaneous.css",
-      "name": "./css-miscellaneous/css-miscellaneous.css",
+      "id": "./components/ProfileCard/ProfileCard.css",
+      "name": "./components/ProfileCard/ProfileCard.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
   ],
-  "../components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css": [
+  "./TitleTextPicButton.css": [
+    {
+      "id": "./components/TitleTextPicButton/TitleTextPicButton.css",
+      "name": "./components/TitleTextPicButton/TitleTextPicButton.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../TwoColumnEvenWithPic/TwoColumnEvenWithPic.css": [
     {
       "id": "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css",
       "name": "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "./Video.css": [
+    {
+      "id": "./components/Video/Video.css",
+      "name": "./components/Video/Video.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../css-miscellaneous/css-miscellaneous.css": [
+    {
+      "id": "./css-miscellaneous/css-miscellaneous.css",
+      "name": "./css-miscellaneous/css-miscellaneous.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
