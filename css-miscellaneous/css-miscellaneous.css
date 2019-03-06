@@ -3,10 +3,48 @@
      width: 100vw
 }
 
+.bottomSectionContainer {
+   display: flex;
+    flex-direction: row-reverse;
+    width: 100vw  
+}
+
+.founderCopyrightContainer {
+    /* display: flex; */
+    width: 75%;
+    /* flex-direction: column; */
+    /* width: 100vw  */
+}
+
+.copyrightFooter {
+    width: 100%;
+    color: #ccc;
+    background: #111;
+    padding: 10px;
+    text-align: center;
+
+}
+
 @media only screen and (max-width: 1200px) {
 
     .startupCultureFeaturedPostContainer {
         flex-direction: column;
+    }
+
+    .bottomSectionContainer {
+        flex-direction: column;
+    }
+
+    .founderCopyrightContainer {
+
+        width: 100%;
+
+    }
+
+    .copyrightFooter {
+
+        display: none;
+
     }
    
 

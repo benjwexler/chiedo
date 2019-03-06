@@ -1,0 +1,77 @@
+.container {
+  width: 25%;
+  height: auto;
+  text-align: center;
+  padding: 50px 0;
+  text-align: center;
+  background: #e2e2e2;
+  min-height: 410px;
+
+  /* align-items: center;
+    justify-content: center;  */
+
+  /* border: 5px solid black; */
+}
+
+.sectionTitle {
+  /* text-align: center; */
+  font-size: 40px;
+  /* margin-bottom: 15px; */
+}
+
+.firstWord {
+  font-weight: 900;
+  color: #b92c2c;
+  text-transform: uppercase;
+  padding: 0 50px;
+  text-align: center;
+  display: inline-block;
+}
+
+.linksContainer {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.aTag {
+  display: block;
+  text-decoration: none;
+  color: rgb(44, 52, 59);
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+
+
+}
+
+.aTag:hover {
+  opacity: 0.5;
+}
+
+.companyName {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.copyrightMobile {
+    display: none;
+    color: #2c343b;
+    padding: 4px 0px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+  .copyrightMobile {
+    display: block;
+}
+
+}

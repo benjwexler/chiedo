@@ -1,18 +1,30 @@
 import css from "./CaseStudies.css";
 import Link from "next/link";
 
-const PortfolioItem = props => (
-    <Link href="https://www.husel.com/">
-  <a target="_blank" className={css.itemContainer}>
+
+const PortfolioItem = props => {
+
+  let typeOfProduct = props.typeOfProduct.map((item, index) => {
+    return <div key={index}>{item.name}</div>
+  })
+
+  let techUsedDivs = props.techUsedArray.map((item, index) => {
+    return <div key={index}>{item.name}</div>
+  })
+
+  return (
+    <Link href={props.linkToSite}>
+  <a style={{background: `url(${props.bgImgUrl}) center no-repeat`, backgroundSize: "100%"}} target="_blank" className={css.itemContainer}>
     <div className={css.textContainer}>
-      <h4 className={css.itemTitle}>BirgeWate Collegeedeeeeeeeeeeeeeeeefrhnf8in</h4>
+      <h4 className={css.itemTitle}>{props.name}</h4>
       <div className={css.techUsedContainer}>
-        <div>web-app</div>
-        <div>php</div>
+        {typeOfProduct}
+        {techUsedDivs}
       </div>
     </div>
   </a>
   </Link>
-);
+  )
+}
 
 export default PortfolioItem;

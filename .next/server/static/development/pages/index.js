@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -159,6 +159,7 @@ var Button = function Button(props) {
 module.exports = {
 	"sectionContainer": "sectionContainer___2Yayf",
 	"itemContainer": "itemContainer___1vmTD",
+	"disabled": "disabled___1bkTs",
 	"textContainer": "textContainer___3eMX7",
 	"techUsedContainer": "techUsedContainer___k8v3A",
 	"itemTitle": "itemTitle___2Xvha"
@@ -179,19 +180,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CaseStudies.css */ "./components/CaseStudies/CaseStudies.css");
 /* harmony import */ var _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_CaseStudies_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _PortfolioItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PortfolioItem */ "./components/CaseStudies/PortfolioItem.js");
 var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/CaseStudies/CaseStudies.js";
 
 
 
+
 var CaseStudies = function CaseStudies(props) {
+  var portfolioItems = props.caseStudiesArray.map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PortfolioItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      name: item.title.rendered,
+      bgImgUrl: item._embedded["wp:featuredmedia"][0].source_url,
+      linkToSite: item.meta_box.labs_linkdirectlytowebsiteurl,
+      typeOfProduct: item._embedded["wp:term"][1],
+      techUsedArray: item._embedded["wp:term"][0],
+      key: index,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    });
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.sectionContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 17
     },
     __self: this
-  }, props.children);
+  }, portfolioItems);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CaseStudies);
@@ -219,55 +237,67 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/CaseStudies
 
 
 var PortfolioItem = function PortfolioItem(props) {
+  var typeOfProduct = props.typeOfProduct.map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: index,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, item.name);
+  });
+  var techUsedDivs = props.techUsedArray.map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: index,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, item.name);
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "https://www.husel.com/",
+    href: props.linkToSite,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    style: {
+      background: "url(".concat(props.bgImgUrl, ") center no-repeat"),
+      backgroundSize: "100%"
+    },
     target: "_blank",
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.itemContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.textContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.itemTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 19
     },
     __self: this
-  }, "BirgeWate Collegeedeeeeeeeeeeeeeeeefrhnf8in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.techUsedContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 20
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, "web-app"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, "php")))));
+  }, typeOfProduct, techUsedDivs))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PortfolioItem);
@@ -304,7 +334,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FeaturedPost_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FeaturedPost.css */ "./components/FeaturedPost/FeaturedPost.css");
 /* harmony import */ var _FeaturedPost_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_FeaturedPost_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Button/Button.js */ "./components/Button/Button.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/FeaturedPost/FeaturedPost.js";
+
 
 
 
@@ -314,31 +347,38 @@ var FeaturedPost = function FeaturedPost(props) {
     className: _FeaturedPost_css__WEBPACK_IMPORTED_MODULE_1___default.a.container,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _FeaturedPost_css__WEBPACK_IMPORTED_MODULE_1___default.a.sectionTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: _FeaturedPost_css__WEBPACK_IMPORTED_MODULE_1___default.a.firstWord,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     },
     __self: this
-  }, "FEATURED"), " Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+  }, "FEATURED"), " Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: props.href,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: _FeaturedPost_css__WEBPACK_IMPORTED_MODULE_1___default.a.articleTitleContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
-  }, props.title));
+  }, props.title)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FeaturedPost);
@@ -406,6 +446,7 @@ var FoundingWebDevs = function FoundingWebDevs(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: "Chiedo",
     jobDescription: "Founder, Solutions Architect",
+    picSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/team-chiedo-new.jpg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -414,6 +455,7 @@ var FoundingWebDevs = function FoundingWebDevs(props) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: "Ricardo",
     jobDescription: "ReactJS / Front-End Master",
+    picSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/team-ricardo-fearing.jpg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -422,6 +464,7 @@ var FoundingWebDevs = function FoundingWebDevs(props) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: "Eric",
     jobDescription: "Ruby on Rails / Back-end Pro",
+    picSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/team-eric-duvon.jpg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -430,6 +473,7 @@ var FoundingWebDevs = function FoundingWebDevs(props) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfileCard_ProfileCard_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: "Don",
     jobDescription: "NodeJS / Full Stack Expert",
+    picSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/team-don-townsend.jpg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -774,6 +818,270 @@ var MainSection = function MainSection(props) {
 
 /***/ }),
 
+/***/ "./components/MeetOurFounder/MeetOurFounder.css":
+/*!******************************************************!*\
+  !*** ./components/MeetOurFounder/MeetOurFounder.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"container": "container___3OSou",
+	"rightHalfContainer": "rightHalfContainer___1jasy",
+	"image": "image___2OWon",
+	"tagline": "tagline___2gnNc",
+	"text": "text___1fupI"
+};
+
+/***/ }),
+
+/***/ "./components/MeetOurFounder/MeetOurFounder.js":
+/*!*****************************************************!*\
+  !*** ./components/MeetOurFounder/MeetOurFounder.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MeetOurFounder_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MeetOurFounder.css */ "./components/MeetOurFounder/MeetOurFounder.css");
+/* harmony import */ var _MeetOurFounder_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_MeetOurFounder_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Button/Button.js */ "./components/Button/Button.js");
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/MeetOurFounder/MeetOurFounder.js";
+
+
+
+
+var MeetOurFounder = function MeetOurFounder(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MeetOurFounder_css__WEBPACK_IMPORTED_MODULE_1___default.a.container,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: _MeetOurFounder_css__WEBPACK_IMPORTED_MODULE_1___default.a.image,
+    src: props.imgSrc,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MeetOurFounder_css__WEBPACK_IMPORTED_MODULE_1___default.a.rightHalfContainer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MeetOurFounder_css__WEBPACK_IMPORTED_MODULE_1___default.a.tagline,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, props.tagline), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MeetOurFounder_css__WEBPACK_IMPORTED_MODULE_1___default.a.text,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, props.text), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button_Button_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    href: props.buttonHref,
+    text: props.buttonText,
+    style: props.buttonStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MeetOurFounder);
+
+/***/ }),
+
+/***/ "./components/MoreLinks/FooterLink.js":
+/*!********************************************!*\
+  !*** ./components/MoreLinks/FooterLink.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MoreLinks_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MoreLinks.css */ "./components/MoreLinks/MoreLinks.css");
+/* harmony import */ var _MoreLinks_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_MoreLinks_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/MoreLinks/FooterLink.js";
+
+
+
+
+var FooterLink = function FooterLink(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: props.href,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: _MoreLinks_css__WEBPACK_IMPORTED_MODULE_1___default.a.aTag,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, props.text));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FooterLink);
+
+/***/ }),
+
+/***/ "./components/MoreLinks/MoreLinks.css":
+/*!********************************************!*\
+  !*** ./components/MoreLinks/MoreLinks.css ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"container": "container___SbMY6",
+	"sectionTitle": "sectionTitle___3FDKT",
+	"firstWord": "firstWord___1EPja",
+	"linksContainer": "linksContainer___2_QeO",
+	"aTag": "aTag___1fUG2",
+	"companyName": "companyName___11gLW",
+	"copyrightMobile": "copyrightMobile___1dGUx"
+};
+
+/***/ }),
+
+/***/ "./components/MoreLinks/MoreLinks.js":
+/*!*******************************************!*\
+  !*** ./components/MoreLinks/MoreLinks.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _FooterLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterLink */ "./components/MoreLinks/FooterLink.js");
+/* harmony import */ var _MoreLinks_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MoreLinks.css */ "./components/MoreLinks/MoreLinks.css");
+/* harmony import */ var _MoreLinks_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_MoreLinks_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Button/Button.js */ "./components/Button/Button.js");
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/MoreLinks/MoreLinks.js";
+
+// Components
+ // CSS
+
+
+
+
+var MoreLinks = function MoreLinks(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MoreLinks_css__WEBPACK_IMPORTED_MODULE_2___default.a.container,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MoreLinks_css__WEBPACK_IMPORTED_MODULE_2___default.a.sectionTitle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: _MoreLinks_css__WEBPACK_IMPORTED_MODULE_2___default.a.firstWord,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "More Links")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MoreLinks_css__WEBPACK_IMPORTED_MODULE_2___default.a.linksContainer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FooterLink__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    text: "Blog",
+    href: "https://labs.chiedo.com/page/blog/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FooterLink__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    text: "Join the Team",
+    href: "https://labs.chiedo.com/page/blog/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FooterLink__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    text: "Facebook",
+    href: "https://labs.chiedo.com/page/blog/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FooterLink__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    text: "Twiter",
+    href: "https://labs.chiedo.com/page/blog/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MoreLinks_css__WEBPACK_IMPORTED_MODULE_2___default.a.companyName,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, "CHIE", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      color: "#B92C2C"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, "DO"), " LABS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _MoreLinks_css__WEBPACK_IMPORTED_MODULE_2___default.a.copyrightMobile,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "Copyright 2019 \xA9 Chiedo Labs, LLC."));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MoreLinks);
+
+/***/ }),
+
 /***/ "./components/Navbar/NavLink.js":
 /*!**************************************!*\
   !*** ./components/Navbar/NavLink.js ***!
@@ -1097,7 +1405,7 @@ var ProfileCard = function ProfileCard(props) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: _ProfileCard_css__WEBPACK_IMPORTED_MODULE_1___default.a.profilePic,
-    src: "https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg",
+    src: props.picSrc,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -1149,7 +1457,7 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/StartupCult
 
 var StartupCulture = function StartupCulture(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TitleTextPicButton_TitleTextPicButton_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    imgSrc: "https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg",
+    imgSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/img-ricardo-monicle.jpg",
     tagline: "Start-up Culture, Corporate-Grade Service.",
     text: "We create an atmosphere that fosters creativity and professionalism. In this way, we allow our team to hone your vision with our digital strategy and build realities that will take your business to the next level.",
     buttonHref: "https://labs.chiedo.com/page/contact/",
@@ -1300,7 +1608,7 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/TwoColumnEv
 
 var TwoColumnEvenWithPic = function TwoColumnEvenWithPic(props) {
   var backgroundImageCSS = {
-    background: "url(".concat(props.picUrl, ")")
+    background: "url(".concat(props.picUrl, ") right center")
   };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: props.style,
@@ -1311,7 +1619,7 @@ var TwoColumnEvenWithPic = function TwoColumnEvenWithPic(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: backgroundImageCSS,
+    style: props.backgroundCSS,
     className: _TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_1___default.a.pic,
     __source: {
       fileName: _jsxFileName,
@@ -1444,63 +1752,66 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/WhatWeDo/Wh
 
 var WhatWeDo = function WhatWeDo(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TwoColumnEvenWithPic_TwoColumnEvenWithPic_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    picUrl: "https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg",
+    picUrl: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/code.png",
+    backgroundCSS: {
+      background: "url(https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/code.png)"
+    },
     titleFirstWord: "WHAT",
     restOfTitle: "WE D0",
     flexClass: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.flexNormal,
     restOfText: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 12
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 13
       },
       __self: this
     }, "We build and maintain:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 14
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.underline,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 15
       },
       __self: this
     }, "Web Front-ends"), " with HTML, CSS, and a library called React."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 17
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.underline,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 18
       },
       __self: this
     }, "Web Back-ends"), " using NodeJS, Ruby on Rails, PHP, MySQL, AWS, and Heroku."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 21
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.underline,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 22
       },
       __self: this
     }, "Custom Websites"), " from the ground up as opposed to using pre-existing templates.")),
@@ -1538,42 +1849,45 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/WhoWeServe/
 
 var WhoWeServe = function WhoWeServe(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TwoColumnEvenWithPic_TwoColumnEvenWithPic_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    picUrl: "https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg",
+    picUrl: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/apps.png",
+    backgroundCSS: {
+      background: "url(https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/apps.png) right center"
+    },
     titleFirstWord: "WHO",
     restOfTitle: "WE SERVE",
     flexClass: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.flexReverse,
     restOfText: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 12
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 13
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.highlightedWords,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 14
       },
       __self: this
     }, "Enterprise customers"), " hire us to build and maintain the web apps critical to their operations."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.paragraph,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 17
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default.a.highlightedWords,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 18
       },
       __self: this
     }, "Tech startups"), " partner with us to build and maintain the web front-ends and back-ends at the core of their business.")),
@@ -1597,7 +1911,10 @@ var WhoWeServe = function WhoWeServe(props) {
 /***/ (function(module, exports) {
 
 module.exports = {
-	"startupCultureFeaturedPostContainer": "startupCultureFeaturedPostContainer___2yCGT"
+	"startupCultureFeaturedPostContainer": "startupCultureFeaturedPostContainer___2yCGT",
+	"bottomSectionContainer": "bottomSectionContainer___1X34r",
+	"founderCopyrightContainer": "founderCopyrightContainer___1Ddu9",
+	"copyrightFooter": "copyrightFooter___2pmRw"
 };
 
 /***/ }),
@@ -1665,6 +1982,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ "core-js/library/fn/object/set-prototype-of");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/promise.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/promise.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "core-js/library/fn/promise");
 
 /***/ }),
 
@@ -1828,6 +2156,58 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _asyncToGenerator; });
+/* harmony import */ var _core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+/* harmony import */ var _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
 }
 
 /***/ }),
@@ -2195,6 +2575,18 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/regenerator/index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/regenerator/index.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "regenerator-runtime");
+
 
 /***/ }),
 
@@ -3577,27 +3969,51 @@ module.exports = __webpack_require__(/*! ./dist/style */ "./node_modules/styled-
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header/Header */ "./components/Header/Header.js");
-/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Navbar/Navbar */ "./components/Navbar/Navbar.js");
-/* harmony import */ var _components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MainSection/MainSection */ "./components/MainSection/MainSection.js");
-/* harmony import */ var _components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam */ "./components/HireOurTeam/HireOurTeam.js");
-/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam.css */ "./components/HireOurTeam/HireOurTeam.css");
-/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/WhatWeDo/WhatWeDo */ "./components/WhatWeDo/WhatWeDo.js");
-/* harmony import */ var _components_WhoWeServe_WhoWeServe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/WhoWeServe/WhoWeServe */ "./components/WhoWeServe/WhoWeServe.js");
-/* harmony import */ var _components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/FoundingWebDevs/FoundingWebDevs */ "./components/FoundingWebDevs/FoundingWebDevs.js");
-/* harmony import */ var _components_StartupCulture_StartupCulture__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/StartupCulture/StartupCulture */ "./components/StartupCulture/StartupCulture.js");
-/* harmony import */ var _components_FeaturedPost_FeaturedPost__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/FeaturedPost/FeaturedPost */ "./components/FeaturedPost/FeaturedPost.js");
-/* harmony import */ var _css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../css-miscellaneous/css-miscellaneous.css */ "./css-miscellaneous/css-miscellaneous.css");
-/* harmony import */ var _css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _components_CaseStudies_CaseStudies__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/CaseStudies/CaseStudies */ "./components/CaseStudies/CaseStudies.js");
-/* harmony import */ var _components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/CaseStudies/PortfolioItem */ "./components/CaseStudies/PortfolioItem.js");
-/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! next-server/head */ "next-server/head");
-/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Header/Header */ "./components/Header/Header.js");
+/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Navbar/Navbar */ "./components/Navbar/Navbar.js");
+/* harmony import */ var _components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/MainSection/MainSection */ "./components/MainSection/MainSection.js");
+/* harmony import */ var _components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam */ "./components/HireOurTeam/HireOurTeam.js");
+/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam.css */ "./components/HireOurTeam/HireOurTeam.css");
+/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/WhatWeDo/WhatWeDo */ "./components/WhatWeDo/WhatWeDo.js");
+/* harmony import */ var _components_WhoWeServe_WhoWeServe__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/WhoWeServe/WhoWeServe */ "./components/WhoWeServe/WhoWeServe.js");
+/* harmony import */ var _components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/FoundingWebDevs/FoundingWebDevs */ "./components/FoundingWebDevs/FoundingWebDevs.js");
+/* harmony import */ var _components_StartupCulture_StartupCulture__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/StartupCulture/StartupCulture */ "./components/StartupCulture/StartupCulture.js");
+/* harmony import */ var _components_FeaturedPost_FeaturedPost__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/FeaturedPost/FeaturedPost */ "./components/FeaturedPost/FeaturedPost.js");
+/* harmony import */ var _css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../css-miscellaneous/css-miscellaneous.css */ "./css-miscellaneous/css-miscellaneous.css");
+/* harmony import */ var _css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _components_CaseStudies_CaseStudies__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../components/CaseStudies/CaseStudies */ "./components/CaseStudies/CaseStudies.js");
+/* harmony import */ var _components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../components/CaseStudies/PortfolioItem */ "./components/CaseStudies/PortfolioItem.js");
+/* harmony import */ var _components_TitleTextPicButton_TitleTextPicButton__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../components/TitleTextPicButton/TitleTextPicButton */ "./components/TitleTextPicButton/TitleTextPicButton.js");
+/* harmony import */ var _components_MeetOurFounder_MeetOurFounder__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../components/MeetOurFounder/MeetOurFounder */ "./components/MeetOurFounder/MeetOurFounder.js");
+/* harmony import */ var _components_MoreLinks_MoreLinks__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../components/MoreLinks/MoreLinks */ "./components/MoreLinks/MoreLinks.js");
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! next-server/head */ "next-server/head");
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_28__);
+
+
+
+
+
+
+
+
+
 var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js";
 
 
@@ -3616,213 +4032,279 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js";
 
 
 
-var Index = function Index() {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-850852382",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_15___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
-    className: "jsx-850852382",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, "Chiedo Labs: Custom Web Development - Node.js | React | Rails | PHP"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
-    name: "viewport",
-    content: "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no",
-    className: "jsx-850852382",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
-    rel: "shortcut icon",
-    href: "https://labs.chiedo.com/wp-content/themes/chiedolabs/favicon.ico?v=2",
-    className: "jsx-850852382",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
-    rel: "stylesheet",
-    href: "https://use.fontawesome.com/releases/v5.7.2/css/all.css",
-    integrity: "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr",
-    crossorigin: "anonymous",
-    className: "jsx-850852382",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "850852382",
-    __self: this
-  }, "body{font-family:\"Open Sans\",sans-serif;color:#2c343b;background-color:#f2f2f2;box-sizing:\"border-box\";}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9id2V4bGVyL0Rlc2t0b3AvV0RGL2NoaWVkb0xhYnMvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBb0N1QixBQUc2QyxtQ0FDdEIsY0FDVyx5QkFDRCx3QkFDMUIiLCJmaWxlIjoiL1VzZXJzL2J3ZXhsZXIvRGVza3RvcC9XREYvY2hpZWRvTGFicy9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkZXIgZnJvbSBcIi4uL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlclwiO1xuaW1wb3J0IE5hdmJhciBmcm9tIFwiLi4vY29tcG9uZW50cy9OYXZiYXIvTmF2YmFyXCI7XG5pbXBvcnQgTWFpblNlY3Rpb24gZnJvbSBcIi4uL2NvbXBvbmVudHMvTWFpblNlY3Rpb24vTWFpblNlY3Rpb25cIjtcbmltcG9ydCBIaXJlT3VyVGVhbSBmcm9tIFwiLi4vY29tcG9uZW50cy9IaXJlT3VyVGVhbS9IaXJlT3VyVGVhbVwiO1xuaW1wb3J0IEhpcmVPdXJUZWFtQ3NzIGZyb20gXCIuLi9jb21wb25lbnRzL0hpcmVPdXJUZWFtL0hpcmVPdXJUZWFtLmNzc1wiO1xuaW1wb3J0IFdoYXRXZURvIGZyb20gXCIuLi9jb21wb25lbnRzL1doYXRXZURvL1doYXRXZURvXCI7XG5pbXBvcnQgV2hvV2VTZXJ2ZSBmcm9tIFwiLi4vY29tcG9uZW50cy9XaG9XZVNlcnZlL1dob1dlU2VydmVcIjtcbmltcG9ydCBGb3VuZGluZ1dlYkRldnMgZnJvbSBcIi4uL2NvbXBvbmVudHMvRm91bmRpbmdXZWJEZXZzL0ZvdW5kaW5nV2ViRGV2c1wiO1xuaW1wb3J0IFN0YXJ0dXBDdWx0dXJlIGZyb20gXCIuLi9jb21wb25lbnRzL1N0YXJ0dXBDdWx0dXJlL1N0YXJ0dXBDdWx0dXJlXCI7XG5pbXBvcnQgRmVhdHVyZWRQb3N0IGZyb20gXCIuLi9jb21wb25lbnRzL0ZlYXR1cmVkUG9zdC9GZWF0dXJlZFBvc3RcIjtcbmltcG9ydCBjc3NNaXNjZWxsYW5lb3VzIGZyb20gXCIuLi9jc3MtbWlzY2VsbGFuZW91cy9jc3MtbWlzY2VsbGFuZW91cy5jc3NcIjtcbmltcG9ydCBDYXNlU3R1ZGllcyBmcm9tIFwiLi4vY29tcG9uZW50cy9DYXNlU3R1ZGllcy9DYXNlU3R1ZGllc1wiO1xuaW1wb3J0IFBvcnRmb2xpb0l0ZW0gZnJvbSBcIi4uL2NvbXBvbmVudHMvQ2FzZVN0dWRpZXMvUG9ydGZvbGlvSXRlbVwiO1xuaW1wb3J0IEhlYWQgZnJvbSBcIm5leHQvaGVhZFwiO1xuXG5jb25zdCBJbmRleCA9ICgpID0+IChcbiAgPGRpdj5cbiAgICA8SGVhZD5cbiAgICAgIDx0aXRsZT5cbiAgICAgICAgQ2hpZWRvIExhYnM6IEN1c3RvbSBXZWIgRGV2ZWxvcG1lbnQgLSBOb2RlLmpzIHwgUmVhY3QgfCBSYWlscyB8IFBIUFxuICAgICAgPC90aXRsZT5cbiAgICAgIDxtZXRhXG4gICAgICAgIG5hbWU9XCJ2aWV3cG9ydFwiXG4gICAgICAgIGNvbnRlbnQ9XCJtaW5pbXVtLXNjYWxlPTEsIGluaXRpYWwtc2NhbGU9MSwgd2lkdGg9ZGV2aWNlLXdpZHRoLCBzaHJpbmstdG8tZml0PW5vXCJcbiAgICAgIC8+XG4gICAgICA8bGlua1xuICAgICAgICByZWw9XCJzaG9ydGN1dCBpY29uXCJcbiAgICAgICAgaHJlZj1cImh0dHBzOi8vbGFicy5jaGllZG8uY29tL3dwLWNvbnRlbnQvdGhlbWVzL2NoaWVkb2xhYnMvZmF2aWNvbi5pY28/dj0yXCJcbiAgICAgIC8+XG4gICAgICA8bGlua1xuICAgICAgICByZWw9XCJzdHlsZXNoZWV0XCJcbiAgICAgICAgaHJlZj1cImh0dHBzOi8vdXNlLmZvbnRhd2Vzb21lLmNvbS9yZWxlYXNlcy92NS43LjIvY3NzL2FsbC5jc3NcIlxuICAgICAgICBpbnRlZ3JpdHk9XCJzaGEzODQtZm5tT0NxYlRsV0lsajhMeVRqbzdtT1VTdGpzS0M0cE9wUWJxeWk3UnJoTjd1ZGk5UndoS2tNSHB2TGJIRzlTclwiXG4gICAgICAgIGNyb3Nzb3JpZ2luPVwiYW5vbnltb3VzXCJcbiAgICAgIC8+XG4gICAgPC9IZWFkPlxuICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICBib2R5IHtcbiAgICAgICAgZm9udC1mYW1pbHk6IFwiT3BlbiBTYW5zXCIsIHNhbnMtc2VyaWY7XG4gICAgICAgIGNvbG9yOiAjMmMzNDNiO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyO1xuICAgICAgICBib3gtc2l6aW5nOiBcImJvcmRlci1ib3hcIjtcbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gICAgPEhlYWRlciBpbWFnZVVybD1cImh0dHBzOi8vbGFicy5jaGllZG8uY29tL3dwLWNvbnRlbnQvdGhlbWVzL2NoaWVkb2xhYnMvaW1nL2ItbG9nby13aGl0ZS5wbmc/dmVyPTEuMTFcIiAvPlxuXG4gICAgPE5hdmJhciAvPlxuICAgIDxNYWluU2VjdGlvblxuICAgICAgdGFnbGluZT17XG4gICAgICAgIDxkaXY+XG4gICAgICAgICAgWW91ciBOZXdcbiAgICAgICAgICA8YnIgLz5cbiAgICAgICAgICBXZWIgRGV2ZWxvcGVyc1xuICAgICAgICA8L2Rpdj5cbiAgICAgIH1cbiAgICAgIGRlc2NyaXB0aW9uPVwiV2XigJlyZSBhIHRlYW0gb2Ygd2ViIGRldmVsb3BlcnMgcGFzc2lvbmF0ZSBhYm91dCBidWlsZGluZyBzdGFibGUsIG1haW50YWluYWJsZSBzb2Z0d2FyZSBmb3IgdGVjaCBzdGFydHVwcyBhbmQgZW50ZXJwcmlzZSBjdXN0b21lcnMuXCJcbiAgICAvPlxuICAgIDxIaXJlT3VyVGVhbVxuICAgICAgY2xhc3NOYW1lcz17YCR7SGlyZU91clRlYW1Dc3MuRnVsbFdpZHRofSAke0hpcmVPdXJUZWFtQ3NzLmhpcmVPdXJUZWFtfWB9XG4gICAgLz5cbiAgICA8V2hhdFdlRG8gLz5cbiAgICA8Rm91bmRpbmdXZWJEZXZzIC8+XG4gICAgPFdob1dlU2VydmUgLz5cbiAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzTWlzY2VsbGFuZW91cy5zdGFydHVwQ3VsdHVyZUZlYXR1cmVkUG9zdENvbnRhaW5lcn0+XG4gICAgICA8U3RhcnR1cEN1bHR1cmUgLz5cbiAgICAgIDxGZWF0dXJlZFBvc3QgdGl0bGU9XCJIb3cgdG8gVXBncmFkZSBQSFAgaW4gYSBNQU1QIEVudmlyb25tZW50XCIgLz5cbiAgICA8L2Rpdj5cblxuICAgIDxDYXNlU3R1ZGllcz5cbiAgICAgIDxQb3J0Zm9saW9JdGVtIC8+XG4gICAgICA8UG9ydGZvbGlvSXRlbSAvPlxuICAgICAgPFBvcnRmb2xpb0l0ZW0gLz5cbiAgICAgIDxQb3J0Zm9saW9JdGVtIC8+XG4gICAgICA8UG9ydGZvbGlvSXRlbSAvPlxuICAgICAgPFBvcnRmb2xpb0l0ZW0gLz5cbiAgICAgIDxQb3J0Zm9saW9JdGVtIC8+XG4gICAgICA8UG9ydGZvbGlvSXRlbSAvPlxuICAgICAgPFBvcnRmb2xpb0l0ZW0gLz5cbiAgICAgIDxQb3J0Zm9saW9JdGVtIC8+XG4gICAgPC9DYXNlU3R1ZGllcz5cbiAgPC9kaXY+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBJbmRleDtcbiJdfQ== */\n/*@ sourceURL=/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    imageUrl: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/b-logo-white.png?ver=1.11",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    tagline: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "jsx-850852382",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50
-      },
-      __self: this
-    }, "Your New", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
-      className: "jsx-850852382",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 52
-      },
-      __self: this
-    }), "Web Developers"),
-    description: "We\u2019re a team of web developers passionate about building stable, maintainable software for tech startups and enterprise customers.",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    classNames: "".concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_6___default.a.FullWidth, " ").concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_6___default.a.hireOurTeam),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_WhoWeServe_WhoWeServe__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-850852382" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_12___default.a.startupCultureFeaturedPostContainer || ""),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_StartupCulture_StartupCulture__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_FeaturedPost_FeaturedPost__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    title: "How to Upgrade PHP in a MAMP Environment",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_CaseStudies__WEBPACK_IMPORTED_MODULE_13__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: this
-  })));
-};
+
+
+
+
+var Index =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(Index, _Component);
+
+  function Index() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Index);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Index)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "state", {
+      caseStudies: undefined
+    });
+
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Index, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_28___default()("http://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1", {
+        mode: "cors",
+        // no-cors,
+        credentials: 'include'
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+        className: "jsx-1771980103",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_27___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", {
+        className: "jsx-1771980103",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, "Chiedo Labs: Custom Web Development - Node.js | React | Rails | PHP"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("meta", {
+        name: "viewport",
+        content: "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no",
+        className: "jsx-1771980103",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
+        rel: "shortcut icon",
+        href: "https://labs.chiedo.com/wp-content/themes/chiedolabs/favicon.ico?v=2",
+        className: "jsx-1771980103",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_9___default.a, {
+        id: "1771980103",
+        __self: this
+      }, "body{font-family:\"Open Sans\",sans-serif;color:#2c343b;background-color:#f2f2f2;box-sizing:\"border-box\";overflow-x:hidden;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9id2V4bGVyL0Rlc2t0b3AvV0RGL2NoaWVkb0xhYnMvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBbUUyQixBQUdpRCxtQ0FDdEIsY0FDVyx5QkFDRCx3QkFDTixrQkFDcEIiLCJmaWxlIjoiL1VzZXJzL2J3ZXhsZXIvRGVza3RvcC9XREYvY2hpZWRvTGFicy9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tIFwicmVhY3RcIjtcblxuaW1wb3J0IEhlYWRlciBmcm9tIFwiLi4vY29tcG9uZW50cy9IZWFkZXIvSGVhZGVyXCI7XG5pbXBvcnQgTmF2YmFyIGZyb20gXCIuLi9jb21wb25lbnRzL05hdmJhci9OYXZiYXJcIjtcbmltcG9ydCBNYWluU2VjdGlvbiBmcm9tIFwiLi4vY29tcG9uZW50cy9NYWluU2VjdGlvbi9NYWluU2VjdGlvblwiO1xuaW1wb3J0IEhpcmVPdXJUZWFtIGZyb20gXCIuLi9jb21wb25lbnRzL0hpcmVPdXJUZWFtL0hpcmVPdXJUZWFtXCI7XG5pbXBvcnQgSGlyZU91clRlYW1Dc3MgZnJvbSBcIi4uL2NvbXBvbmVudHMvSGlyZU91clRlYW0vSGlyZU91clRlYW0uY3NzXCI7XG5pbXBvcnQgV2hhdFdlRG8gZnJvbSBcIi4uL2NvbXBvbmVudHMvV2hhdFdlRG8vV2hhdFdlRG9cIjtcbmltcG9ydCBXaG9XZVNlcnZlIGZyb20gXCIuLi9jb21wb25lbnRzL1dob1dlU2VydmUvV2hvV2VTZXJ2ZVwiO1xuaW1wb3J0IEZvdW5kaW5nV2ViRGV2cyBmcm9tIFwiLi4vY29tcG9uZW50cy9Gb3VuZGluZ1dlYkRldnMvRm91bmRpbmdXZWJEZXZzXCI7XG5pbXBvcnQgU3RhcnR1cEN1bHR1cmUgZnJvbSBcIi4uL2NvbXBvbmVudHMvU3RhcnR1cEN1bHR1cmUvU3RhcnR1cEN1bHR1cmVcIjtcbmltcG9ydCBGZWF0dXJlZFBvc3QgZnJvbSBcIi4uL2NvbXBvbmVudHMvRmVhdHVyZWRQb3N0L0ZlYXR1cmVkUG9zdFwiO1xuaW1wb3J0IGNzc01pc2NlbGxhbmVvdXMgZnJvbSBcIi4uL2Nzcy1taXNjZWxsYW5lb3VzL2Nzcy1taXNjZWxsYW5lb3VzLmNzc1wiO1xuaW1wb3J0IENhc2VTdHVkaWVzIGZyb20gXCIuLi9jb21wb25lbnRzL0Nhc2VTdHVkaWVzL0Nhc2VTdHVkaWVzXCI7XG5pbXBvcnQgUG9ydGZvbGlvSXRlbSBmcm9tIFwiLi4vY29tcG9uZW50cy9DYXNlU3R1ZGllcy9Qb3J0Zm9saW9JdGVtXCI7XG5cbmltcG9ydCBUaXRsZVRleHRQaWNCdXR0b24gZnJvbSBcIi4uL2NvbXBvbmVudHMvVGl0bGVUZXh0UGljQnV0dG9uL1RpdGxlVGV4dFBpY0J1dHRvblwiO1xuaW1wb3J0IE1lZXRPdXJGb3VuZGVyIGZyb20gXCIuLi9jb21wb25lbnRzL01lZXRPdXJGb3VuZGVyL01lZXRPdXJGb3VuZGVyXCI7XG5pbXBvcnQgTW9yZUxpbmtzIGZyb20gXCIuLi9jb21wb25lbnRzL01vcmVMaW5rcy9Nb3JlTGlua3NcIjtcbmltcG9ydCBIZWFkIGZyb20gXCJuZXh0L2hlYWRcIjtcbmltcG9ydCBmZXRjaCBmcm9tIFwiaXNvbW9ycGhpYy11bmZldGNoXCI7XG5cbmNsYXNzIEluZGV4IGV4dGVuZHMgQ29tcG9uZW50IHtcbiAgc3RhdGUgPSB7XG4gICAgY2FzZVN0dWRpZXM6IHVuZGVmaW5lZFxuICB9O1xuXG4gIHN0YXRpYyBhc3luYyBnZXRJbml0aWFsUHJvcHMoKSB7XG4gICAgY29uc3QgY2FzZVN0dWRpZXNSZXMgPSBhd2FpdCBmZXRjaChcbiAgICAgIFwiaHR0cHM6Ly9iZXRhLmNoaWVkby5jb20vd3AtanNvbi93cC92Mi9jYXNlLXN0dWRpZXM/X2VtYmVkXCJcbiAgICApO1xuICAgIGNvbnN0IGNhc2VTdHVkaWVzID0gYXdhaXQgY2FzZVN0dWRpZXNSZXMuanNvbigpO1xuXG4gICAgY29uc3QgZmVhdHVyZWRQb3N0c1JlcyA9IGF3YWl0IGZldGNoKFxuICAgICAgXCJodHRwczovL2JldGEuY2hpZWRvLmNvbS93cC1qc29uL3dwL3YyL3Bvc3RzP29yZGVyYnk9ZGF0ZSYmcGVyX3BhZ2U9MVwiXG4gICAgKTtcbiAgICBjb25zdCBmZWF0dXJlZFBvc3RzID0gYXdhaXQgZmVhdHVyZWRQb3N0c1Jlcy5qc29uKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgIGNhc2VTdHVkaWVzOiBjYXNlU3R1ZGllcyxcbiAgICAgIGZlYXR1cmVkUG9zdHM6IGZlYXR1cmVkUG9zdHNbMF1cbiAgICB9O1xuICB9XG5cbiAgY29tcG9uZW50RGlkTW91bnQoKXtcbiAgICBmZXRjaChcImh0dHA6Ly9iZXRhLmNoaWVkby5jb20vd3AtanNvbi93cC92Mi9wb3N0cz9vcmRlcmJ5PWRhdGUmJnBlcl9wYWdlPTFcIiwge1xuICAgICAgbW9kZTogXCJjb3JzXCIsIC8vIG5vLWNvcnMsXG4gICAgICBjcmVkZW50aWFsczogJ2luY2x1ZGUnICBcbiAgICB9KVxuICB9XG5cbiAgcmVuZGVyKCkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8SGVhZD5cbiAgICAgICAgICA8dGl0bGU+XG4gICAgICAgICAgICBDaGllZG8gTGFiczogQ3VzdG9tIFdlYiBEZXZlbG9wbWVudCAtIE5vZGUuanMgfCBSZWFjdCB8IFJhaWxzIHwgUEhQXG4gICAgICAgICAgPC90aXRsZT5cbiAgICAgICAgICA8bWV0YVxuICAgICAgICAgICAgbmFtZT1cInZpZXdwb3J0XCJcbiAgICAgICAgICAgIGNvbnRlbnQ9XCJtaW5pbXVtLXNjYWxlPTEsIGluaXRpYWwtc2NhbGU9MSwgd2lkdGg9ZGV2aWNlLXdpZHRoLCBzaHJpbmstdG8tZml0PW5vXCJcbiAgICAgICAgICAvPlxuICAgICAgICAgIDxsaW5rXG4gICAgICAgICAgICByZWw9XCJzaG9ydGN1dCBpY29uXCJcbiAgICAgICAgICAgIGhyZWY9XCJodHRwczovL2xhYnMuY2hpZWRvLmNvbS93cC1jb250ZW50L3RoZW1lcy9jaGllZG9sYWJzL2Zhdmljb24uaWNvP3Y9MlwiXG4gICAgICAgICAgLz5cbiAgICAgICAgXG4gICAgICAgIDwvSGVhZD5cbiAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcbiAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIk9wZW4gU2Fuc1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICAgICAgY29sb3I6ICMyYzM0M2I7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyO1xuICAgICAgICAgICAgYm94LXNpemluZzogXCJib3JkZXItYm94XCI7XG4gICAgICAgICAgICBvdmVyZmxvdy14OiBoaWRkZW47XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICAgIDxIZWFkZXIgaW1hZ2VVcmw9XCJodHRwczovL2xhYnMuY2hpZWRvLmNvbS93cC1jb250ZW50L3RoZW1lcy9jaGllZG9sYWJzL2ltZy9iLWxvZ28td2hpdGUucG5nP3Zlcj0xLjExXCIgLz5cblxuICAgICAgICA8TmF2YmFyIC8+XG4gICAgICAgIDxNYWluU2VjdGlvblxuICAgICAgICAgIHRhZ2xpbmU9e1xuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgWW91ciBOZXdcbiAgICAgICAgICAgICAgPGJyIC8+XG4gICAgICAgICAgICAgIFdlYiBEZXZlbG9wZXJzXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICB9XG4gICAgICAgICAgZGVzY3JpcHRpb249XCJXZeKAmXJlIGEgdGVhbSBvZiB3ZWIgZGV2ZWxvcGVycyBwYXNzaW9uYXRlIGFib3V0IGJ1aWxkaW5nIHN0YWJsZSwgbWFpbnRhaW5hYmxlIHNvZnR3YXJlIGZvciB0ZWNoIHN0YXJ0dXBzIGFuZCBlbnRlcnByaXNlIGN1c3RvbWVycy5cIlxuICAgICAgICAvPlxuICAgICAgICA8SGlyZU91clRlYW1cbiAgICAgICAgICBjbGFzc05hbWVzPXtgJHtIaXJlT3VyVGVhbUNzcy5GdWxsV2lkdGh9ICR7XG4gICAgICAgICAgICBIaXJlT3VyVGVhbUNzcy5oaXJlT3VyVGVhbVxuICAgICAgICAgIH1gfVxuICAgICAgICAvPlxuICAgICAgICA8V2hhdFdlRG8gLz5cbiAgICAgICAgPEZvdW5kaW5nV2ViRGV2cyAvPlxuICAgICAgICA8V2hvV2VTZXJ2ZSAvPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzTWlzY2VsbGFuZW91cy5zdGFydHVwQ3VsdHVyZUZlYXR1cmVkUG9zdENvbnRhaW5lcn0+XG4gICAgICAgICAgPFN0YXJ0dXBDdWx0dXJlIC8+XG4gICAgICAgICAgPEZlYXR1cmVkUG9zdFxuICAgICAgICAgICAgdGl0bGU9e3RoaXMucHJvcHMuZmVhdHVyZWRQb3N0cy50aXRsZS5yZW5kZXJlZH1cbiAgICAgICAgICAgIGhyZWY9e3RoaXMucHJvcHMuZmVhdHVyZWRQb3N0cy5saW5rfVxuICAgICAgICAgIC8+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxDYXNlU3R1ZGllcyBjYXNlU3R1ZGllc0FycmF5PXt0aGlzLnByb3BzLmNhc2VTdHVkaWVzfSAvPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzTWlzY2VsbGFuZW91cy5ib3R0b21TZWN0aW9uQ29udGFpbmVyfT5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzTWlzY2VsbGFuZW91cy5mb3VuZGVyQ29weXJpZ2h0Q29udGFpbmVyfT5cbiAgICAgICAgICAgIDxNZWV0T3VyRm91bmRlclxuICAgICAgICAgICAgICBpbWdTcmM9XCJodHRwczovL2xhYnMuY2hpZWRvLmNvbS93cC1jb250ZW50L3RoZW1lcy9jaGllZG9sYWJzL2ltZy93cC1sYW5kaW5nLXBhZ2UvY2hpZWRvLXNpdHRpbmctc21hbGwucG5nXCJcbiAgICAgICAgICAgICAgdGFnbGluZT1cIk1lZXQgT3VyIEZvdW5kZXJcIlxuICAgICAgICAgICAgICB0ZXh0PVwiSWYgeW91IG5lZWQgbmV3IHdlYiBkZXZlbG9wZXJzIG9yIHdhbnQgdG8gdGFsayBhYm91dCB5b3VyIHRlY2ggc3RhcnR1cCwgbGV0J3MgY29ubmVjdCBvbiBMaW5rZWRJbiBhbmQgbWVldCBmb3IgbHVuY2ggb3IgY29mZmVlIVwiXG4gICAgICAgICAgICAgIGJ1dHRvbkhyZWY9XCJodHRwczovL3d3dy5saW5rZWRpbi5jb20vaW4vY2hpZWRvL1wiXG4gICAgICAgICAgICAgIGJ1dHRvblRleHQ9XCJDT05ORUNUIE9OIExJTktFRElOXCJcbiAgICAgICAgICAgICAgYnV0dG9uU3R5bGU9e3sgZm9udFNpemU6IFwiMTNweFwiIH19XG4gICAgICAgICAgICAvPlxuXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzTWlzY2VsbGFuZW91cy5jb3B5cmlnaHRGb290ZXJ9PlxuICAgICAgICAgICAgICBDb3B5cmlnaHQgMjAxOSDCqSBDaGllZG8gTGFicywgTExDLlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPE1vcmVMaW5rcyAvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgSW5kZXg7XG4iXX0= */\n/*@ sourceURL=/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        imageUrl: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/b-logo-white.png?ver=1.11",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        tagline: react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+          className: "jsx-1771980103",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 82
+          },
+          __self: this
+        }, "Your New", react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("br", {
+          className: "jsx-1771980103",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 84
+          },
+          __self: this
+        }), "Web Developers"),
+        description: "We\u2019re a team of web developers passionate about building stable, maintainable software for tech startups and enterprise customers.",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        classNames: "".concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_15___default.a.FullWidth, " ").concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_15___default.a.hireOurTeam),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_16__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_18__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_WhoWeServe_WhoWeServe__WEBPACK_IMPORTED_MODULE_17__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_21___default.a.startupCultureFeaturedPostContainer || ""),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_StartupCulture_StartupCulture__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_FeaturedPost_FeaturedPost__WEBPACK_IMPORTED_MODULE_20__["default"], {
+        title: this.props.featuredPosts.title.rendered,
+        href: this.props.featuredPosts.link,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_CaseStudies_CaseStudies__WEBPACK_IMPORTED_MODULE_22__["default"], {
+        caseStudiesArray: this.props.caseStudies,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_21___default.a.bottomSectionContainer || ""),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 107
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_21___default.a.founderCopyrightContainer || ""),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_MeetOurFounder_MeetOurFounder__WEBPACK_IMPORTED_MODULE_25__["default"], {
+        imgSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/chiedo-sitting-small.png",
+        tagline: "Meet Our Founder",
+        text: "If you need new web developers or want to talk about your tech startup, let's connect on LinkedIn and meet for lunch or coffee!",
+        buttonHref: "https://www.linkedin.com/in/chiedo/",
+        buttonText: "CONNECT ON LINKEDIN",
+        buttonStyle: {
+          fontSize: "13px"
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_21___default.a.copyrightFooter || ""),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118
+        },
+        __self: this
+      }, "Copyright 2019 \xA9 Chiedo Labs, LLC.")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_MoreLinks_MoreLinks__WEBPACK_IMPORTED_MODULE_26__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122
+        },
+        __self: this
+      })));
+    }
+  }], [{
+    key: "getInitialProps",
+    value: function () {
+      var _getInitialProps = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+      /*#__PURE__*/
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var caseStudiesRes, caseStudies, featuredPostsRes, featuredPosts;
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_28___default()("https://beta.chiedo.com/wp-json/wp/v2/case-studies?_embed");
+
+              case 2:
+                caseStudiesRes = _context.sent;
+                _context.next = 5;
+                return caseStudiesRes.json();
+
+              case 5:
+                caseStudies = _context.sent;
+                _context.next = 8;
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_28___default()("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1");
+
+              case 8:
+                featuredPostsRes = _context.sent;
+                _context.next = 11;
+                return featuredPostsRes.json();
+
+              case 11:
+                featuredPosts = _context.sent;
+                return _context.abrupt("return", {
+                  caseStudies: caseStudies,
+                  featuredPosts: featuredPosts[0]
+                });
+
+              case 13:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function getInitialProps() {
+        return _getInitialProps.apply(this, arguments);
+      }
+
+      return getInitialProps;
+    }()
+  }]);
+
+  return Index;
+}(react__WEBPACK_IMPORTED_MODULE_10__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -3900,6 +4382,17 @@ module.exports = require("core-js/library/fn/object/set-prototype-of");
 
 /***/ }),
 
+/***/ "core-js/library/fn/promise":
+/*!*********************************************!*\
+  !*** external "core-js/library/fn/promise" ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/promise");
+
+/***/ }),
+
 /***/ "core-js/library/fn/reflect/construct":
 /*!*******************************************************!*\
   !*** external "core-js/library/fn/reflect/construct" ***!
@@ -3930,6 +4423,17 @@ module.exports = require("core-js/library/fn/symbol");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/symbol/iterator");
+
+/***/ }),
+
+/***/ "isomorphic-unfetch":
+/*!*************************************!*\
+  !*** external "isomorphic-unfetch" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 
@@ -4007,6 +4511,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "regenerator-runtime":
+/*!**************************************!*\
+  !*** external "regenerator-runtime" ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("regenerator-runtime");
 
 /***/ }),
 

@@ -9,16 +9,18 @@
 .itemContainer {
   height: 200px;
   width: 20%;
-  /* transition: background 1s; */
-  background: url(https://labs.chiedo.com/wp-content/uploads/2018/09/Bridgewater_logo.png) center no-repeat;
-  background-size: 100%;
   position: relative;
   box-sizing: border-box;
   align-items: center;
   overflow: hidden;
   
- 
 }
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 
 .textContainer {
     position: absolute;
@@ -42,7 +44,7 @@
 .techUsedContainer {
     /* display: flex; */
     margin-bottom: auto;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .itemTitle {
@@ -58,12 +60,6 @@
 
 }
 
-
-
-.itemContainer:hover {
-  /* background: rgba(175, 77, 86, 0.95); */
-  /* z-index: -1 */
-}
 
 @media only screen and (max-width: 768px) {
   .itemContainer {
