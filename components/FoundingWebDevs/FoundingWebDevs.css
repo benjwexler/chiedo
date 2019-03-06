@@ -4,9 +4,10 @@
     background: #B92C2C;
     /* display: flex; */
     box-sizing: border-box;
-    padding: 10px 0px;
+    padding: 0px 10px 15px 10px;
     margin: auto;
     text-align: center;
+
 }
 
 .sectionTitle {
@@ -15,7 +16,7 @@
     letter-spacing: 0.2em;
     color: white;
     font-size: 28.8px;
-    padding: 10px 0px;
+    padding: 20px 0px;
     font-weight: 100;
 }
 
@@ -24,8 +25,9 @@
     height: auto;
     display: flex;
     max-width: 1400px;
-    padding: 0 20px;
+    padding: 0 10px;
     margin: auto;
+    /* padding: 0px; */
     /* padding: 10px; */
     /* max-height: 300px; */
     
@@ -38,6 +40,20 @@
         flex-wrap: wrap;
     }
 
+    
+
   }
+
+
+@media only screen and (max-width: 700px) {
+    .FoundingWebDevs {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+
+    .cardsContainer {
+        padding: 0 15px;
+    }
+}
 
 

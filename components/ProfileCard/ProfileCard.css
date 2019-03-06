@@ -1,8 +1,8 @@
 .ProfileCard {
   width: 25vw;
-  height: 25vw;
+  height: 25%;
   /* border: 1px solid black; */
-  margin: 10px;
+  margin: 0px 10px;
   position: relative;
   text-align: center;
   flex-wrap: wrap;
@@ -40,6 +40,8 @@
   position: absolute;
   bottom: 0px;
   left: 0px;
+  /* left: 10px;
+    right: 10px; */
   width: 100%;
   height: auto;
   background: rgba(49, 49, 49, 0.91);
@@ -51,10 +53,15 @@
 
 .profileName {
   font-size: 20px;
+  letter-spacing: 1.6px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.945)
 }
 
 .jobDescription {
   font-style: italic;
-  font-size: 12.8px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.678);
+  letter-spacing: 1.6px;
+  font-weight: 100;
 }

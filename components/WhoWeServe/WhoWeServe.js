@@ -3,7 +3,8 @@ import TwoColumnEvenWithPic from "../TwoColumnEvenWithPic/TwoColumnEvenWithPic.j
 import css from "../TwoColumnEvenWithPic/TwoColumnEvenWithPic.css";
 const WhoWeServe = props => (
     <TwoColumnEvenWithPic
-    picUrl="https://i1.sndcdn.com/artworks-000478704579-o7peaj-t500x500.jpg"
+    picUrl="https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/apps.png"
+    backgroundCSS={{background: "url(https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/apps.png) right center"}}
       titleFirstWord="WHO"
       restOfTitle="WE SERVE"
       flexClass={css.flexReverse}

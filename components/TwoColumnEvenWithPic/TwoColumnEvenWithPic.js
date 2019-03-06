@@ -2,11 +2,11 @@ import css from "./TwoColumnEvenWithPic.css";
 import Button from "../Button/Button.js";
 
 const TwoColumnEvenWithPic = props => {
-  let backgroundImageCSS = { background: `url(${props.picUrl})` };
+  let backgroundImageCSS = { background: `url(${props.picUrl}) right center` };
 
   return (
     <div style={props.style} className={`${css.WhatWeDo} ${props.flexClass}`}>
-      <div style={backgroundImageCSS} className={css.pic} />
+      <div style={props.backgroundCSS} className={css.pic} />
       <div className={css.halfContainer}>
         <h2 className={css.sectionTitle}>
           <span className={css.what}>{props.titleFirstWord}</span>{" "}
