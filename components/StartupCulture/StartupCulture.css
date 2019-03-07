@@ -42,6 +42,7 @@
    font-size: 40px;
    margin-bottom: 20px;
    font-weight: 100;
+   color: rgba(255, 255, 255, 0.863);
    
    
 }
@@ -50,6 +51,7 @@
     letter-spacing: .8px;
     margin-bottom: 20px;
     margin-block-end: 20px;
+    color: rgba(255, 255, 255, 0.767);
 }
 
 @media only screen and (max-width: 800px) {
@@ -58,7 +60,9 @@
         flex-direction: column;
     }
 
-
+        .image {
+          margin: auto;
+        }
 
     .tagline {
         padding-top: 20px;
