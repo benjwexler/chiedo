@@ -1,38 +1,40 @@
+// npm modules & utils
+
 import React, { Component } from "react";
+import fetch from "isomorphic-unfetch";
+import Head from "next/head";
+
+// components
 
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import MainSection from "../components/MainSection/MainSection";
 import HireOurTeam from "../components/HireOurTeam/HireOurTeam";
-import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
-import WhoWeServe from "../components/WhoWeServe/WhoWeServe";
+import WhoWeServe from "../components/WhoWeServe/WhoWeServe2";
 import FoundingWebDevs from "../components/FoundingWebDevs/FoundingWebDevs";
 import StartupCulture from "../components/StartupCulture/StartupCulture";
 import FeaturedPost from "../components/FeaturedPost/FeaturedPost";
-import cssMiscellaneous from "../css-miscellaneous/css-miscellaneous.css";
 import CaseStudies from "../components/CaseStudies/CaseStudies";
-import PortfolioItem from "../components/CaseStudies/PortfolioItem";
-
-import TitleTextPicButton from "../components/TitleTextPicButton/TitleTextPicButton";
 import MeetOurFounder from "../components/MeetOurFounder/MeetOurFounder";
 import MoreLinks from "../components/MoreLinks/MoreLinks";
-import Head from "next/head";
-import fetch from "isomorphic-unfetch";
+
+// CSS
+
+import cssMiscellaneous from "../css-miscellaneous/css-miscellaneous.css";
+import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css";
+
 
 class Index extends Component {
-  state = {
-    caseStudies: undefined
-  };
 
   static async getInitialProps() {
     const caseStudiesRes = await fetch(
-      "https://beta.chiedo.com/wp-json/wp/v2/case-studies?_embed"
+      "https://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed"
     );
     const caseStudies = await caseStudiesRes.json();
 
     const featuredPostsRes = await fetch(
-      "https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
+      "https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
     );
     const featuredPosts = await featuredPostsRes.json();
     return {
@@ -41,12 +43,7 @@ class Index extends Component {
     };
   }
 
-  // componentDidMount(){
-  //   fetch("http://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1", {
-  //     mode: "cors", // no-cors,
-  //     credentials: 'include'  
-  //   })
-  // }
+
 
   render() {
     return (
@@ -94,9 +91,17 @@ class Index extends Component {
         />
         <WhatWeDo />
         <FoundingWebDevs />
-        <WhoWeServe />
+        <WhoWeServe 
+        />
         <div className={cssMiscellaneous.startupCultureFeaturedPostContainer}>
-          <StartupCulture />
+          <StartupCulture 
+            imgSrc="https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/img-ricardo-monicle.jpg"
+              tagline="Start-up Culture, Corporate-Grade Service."
+              text="We create an atmosphere that fosters creativity and professionalism. In this way, we allow our team to hone your vision with our digital strategy and build realities that will take your business to the next level."
+              buttonHref="https://labs.chiedo.com/page/contact/"
+              buttonText="Get A Quote"
+              buttonStyle={{ fontSize: "13px" }}
+          />
           <FeaturedPost
             title={this.props.featuredPosts.title.rendered}
             href={this.props.featuredPosts.link}

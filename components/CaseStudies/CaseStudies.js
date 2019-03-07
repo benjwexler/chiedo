@@ -7,9 +7,9 @@ const CaseStudies = props => {
     <PortfolioItem 
       name={item.title.rendered}
       bgImgUrl={item._embedded["wp:featuredmedia"][0].source_url}
-      linkToSite={item.meta_box.labs_linkdirectlytowebsiteurl}
-      typeOfProduct={item._embedded["wp:term"][1]}
-      techUsedArray={item._embedded["wp:term"][0]}
+      // linkToSite={item.meta_box.labs_linkdirectlytowebsiteurl}
+      // typeOfProduct={item._embedded["wp:term"][1]}
+      // techUsedArray={item._embedded["wp:term"][0]}
       key={index}
     />)
   })
