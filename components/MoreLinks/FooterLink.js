@@ -3,8 +3,10 @@ import Link from "next/link";
 
 
 const FooterLink = props => (
-    <Link href={props.href}>
-  <a className={css.aTag}>
+
+
+    <Link href={props.href} >
+  <a target={props.target} className={css.aTag}>
    {props.text}
   
   </a>

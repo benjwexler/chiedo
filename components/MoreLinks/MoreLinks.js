@@ -16,18 +16,22 @@ const MoreLinks = props => (
     <FooterLink
         text="Blog"
         href="https://labs.chiedo.com/page/blog/"
+        target="_self"
     />
      <FooterLink
         text="Join the Team"
-        href="https://labs.chiedo.com/page/blog/"
+        href="https://chiedolabs.typeform.com/to/UROn3m"
+        target="_blank"
     />
      <FooterLink
         text="Facebook"
-        href="https://labs.chiedo.com/page/blog/"
+        href="https://www.facebook.com/ChiedoLabs"
+        target="_blank"
     />
      <FooterLink
         text="Twiter"
-        href="https://labs.chiedo.com/page/blog/"
+        href="https://twitter.com/chiedolabs"
+        target="_blank"
     />
     </div>
     <div className={css.companyName}>CHIE<span style={{color: "#B92C2C"}}>DO</span> LABS</div>
