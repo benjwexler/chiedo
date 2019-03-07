@@ -11,9 +11,9 @@ const PortfolioItem = props => {
   let techUsedDivs = props.techUsedArray.map((item, index) => {
     return <div key={index}>{item.name}</div>
   })
-
+  // Link href={props.linkToSite}>
   return (
-    <Link href={props.linkToSite}>
+    <Link href="/">
   <a style={{background: `url(${props.bgImgUrl}) center no-repeat`, backgroundSize: "100%"}} target="_blank" className={css.itemContainer}>
     <div className={css.textContainer}>
       <h4 className={css.itemTitle}>{props.name}</h4>
