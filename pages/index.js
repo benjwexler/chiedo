@@ -32,7 +32,7 @@ import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css"
 
 
 
-console.log("trying to merge this to become new master")
+console.log("trying to merge this to become new master - ")
 
 class Index extends Component {
 
