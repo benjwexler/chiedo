@@ -11,6 +11,7 @@ const MeetOurFounder = props => (
           href={props.buttonHref}
           text={props.buttonText}
           style={props.buttonStyle}
+          target="_blank"
         />
     </div>
   </div>

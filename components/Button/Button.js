@@ -3,7 +3,7 @@ import css from "./Button.css";
 
 const Button = props => (
     <Link href={props.href}>
-     <a style={props.style} className={css.button}>{props.text}</a>
+     <a style={props.style} target={props.target} className={css.button}>{props.text}</a>
     </Link>
   );
   
