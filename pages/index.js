@@ -11,7 +11,7 @@ import Navbar from "../components/Navbar/Navbar";
 import MainSection from "../components/MainSection/MainSection";
 import HireOurTeam from "../components/HireOurTeam/HireOurTeam";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
-import WhoWeServe from "../components/WhoWeServe/WhoWeServe2";
+import WhoWeServe from "../components/WhoWeServe/WhoWeServe";
 import FoundingWebDevs from "../components/FoundingWebDevs/FoundingWebDevs";
 import StartupCulture from "../components/StartupCulture/StartupCulture";
 import FeaturedPost from "../components/FeaturedPost/FeaturedPost";

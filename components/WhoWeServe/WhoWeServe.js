@@ -1,28 +1,27 @@
-import css from "./WhoWeServe.css";
-import Button from "../Button/Button.js";
+// import Link from "next/link";
+import TwoColumnEvenWithPic from "../TwoColumnEvenWithPic/TwoColumnEvenWithPic.js";
+import css from "../TwoColumnEvenWithPic/TwoColumnEvenWithPic.css";
+const WhoWeServe = props => (
+    <TwoColumnEvenWithPic
+    picUrl="https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/apps.png"
+    backgroundCSS={{background: "url(https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/apps.png) right center"}}
+      titleFirstWord="WHO"
+      restOfTitle="WE SERVE"
+      flexClass={css.flexReverse}
+      restOfText={
+        <React.Fragment>
+          <p className={css.paragraph}>
+            <span className={css.highlightedWords}>Enterprise customers</span> hire us to build and maintain the web apps
+            critical to their operations.
+          </p>
+          <p className={css.paragraph}>
+          <span className={css.highlightedWords}>Tech startups</span> partner with us to build and maintain the web
+            front-ends and back-ends at the core of their business.
+          </p>
+        </React.Fragment>
+      }
+    />
 
-const WhoWeServe  = props => {
-  let backgroundImageCSS = { background: `url(${props.picUrl}) right center` };
+);
 
-  return (
-    <div style={props.style} className={`${css.WhatWeDo} ${props.flexClass}`}>
-      <div style={props.backgroundCSS} className={css.pic} />
-      <div className={css.halfContainer}>
-        <h2 className={css.sectionTitle}>
-          <span className={css.what}>{props.titleFirstWord}</span>{" "}
-          {props.restOfTitle}
-        </h2>
-
-        {props.restOfText}
-
-        <Button
-          href="https://labs.chiedo.com/page/contact/"
-          text="Get A Quote"
-          style={{fontSize: "13px"}}
-        />
-      </div>
-    </div>
-  );
-};
-
-export default WhoWeServe ;
+export default WhoWeServe;
