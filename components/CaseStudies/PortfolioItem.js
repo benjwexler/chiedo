@@ -12,8 +12,10 @@ const PortfolioItem = props => {
   //   return <div key={index}>{item.name}</div>
   // })
 
+
+
   return (
-    <Link href={props.linkToSite}>
+    <Link href="/">
   <a style={{background: `url(${props.bgImgUrl}) center no-repeat`, backgroundSize: "100%"}} target="_blank" className={css.itemContainer}>
     <div className={css.textContainer}>
       <h4 className={css.itemTitle}>{props.name}</h4>
