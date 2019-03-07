@@ -44,6 +44,7 @@ import withRedux from 'next-redux-wrapper'
 
 
 
+console.log("trying to merge this to become new master")
 
 class Index extends Component {
 
