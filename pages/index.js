@@ -34,8 +34,12 @@ import { connect, mapState } from 'react-redux'
 import withRedux from 'next-redux-wrapper'
 // import fetchData from '../redux/store.js';
 
+// import makeStore from './_app.js'
 
-const store = configureStore()
+
+// const store = configureStore()
+
+
 
 // console.log(store)
 
@@ -46,26 +50,34 @@ const store = configureStore()
 
 class Index extends Component {
 
-  constructor(props) {
-    super(props)
-    this.store = "27"
-  }
-  state = {
-    caseStudies: undefined
-    
-  };
+  
 
   
 
+//   Page.getInitialProps = async ({ store }) => {
+//     await store.dispatch(fetchItems());
+// };
 
-
-  // static async getInitialProps( store ) {
+  static async getInitialProps ({store, isServer, pathname, query} )  {
 
     // console.log(store)
 
     // console.log(process.browser) //If false request is from server
 
-    // return store.dispatch(fetchData())
+    console.log(store)
+
+       let data = await store.dispatch(fetchData("https://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts"))
+  //  data.then(({ data }) => data)
+  //   console.log("??????")
+  //   console.log(data)
+  //   console.log("??????")
+
+  return {data: data}
+
+  
+
+  }
+
 
     // console.log(this.state.caseStudies)
     // const caseStudiesRes = await fetch(
@@ -78,13 +90,13 @@ class Index extends Component {
     // );
     // const featuredPosts = await featuredPostsRes.json();
 
-
+   
     // return {
     //   caseStudies: caseStudies,
     //   featuredPosts: featuredPosts[0],
     // };
-  // }
-
+  
+  
   componentDidMount(){
     console.log(this.props)
   }
@@ -171,16 +183,35 @@ class Index extends Component {
   }
 }
 
-Index.getInitialProps = () => {
-  // console.log(process.browser)
-  return store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
+// Index.getInitialProps = () => {
+//   // console.log(process.browser)
+//   // store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
 
-  // if(!process.browser) {
-  //   return store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
-  // } else {
-  //   store.getStore()
-  // }
+//   // if(!process.browser) {
+//   //   return store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
+//   // } else {
+//   //   store.getStore()
+//   // }
  
-}
+// }
 
-export default connect(state => state)(Index);
+//   Index.getInitialProps = async ({ store }) => {
+//     await store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"))
+
+
+// // static async getInitialProps = ({store, isServer, pathname, query} ) => {
+
+//   // console.log(store)
+
+//   // console.log(process.browser) //If false request is from server
+
+   
+
+// }
+
+// Index.getInitialProps = ({ store }) => store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
+// console.log(store)
+export default connect(state => state )(Index);
+// export default withRedux(store)(Index);
+
+

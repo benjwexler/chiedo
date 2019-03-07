@@ -12,24 +12,38 @@ import fetch from "isomorphic-unfetch";
   }
 
   export function itemsFetchDataSuccess(data) {
+
+    console.log(data)
     return {
         type: 'ITEMS_FETCH_DATA_SUCCESS',
         data: data,
     };
 }
 
-  export const reducer = (state = initialState, action) => {
+ export const reducer = (state = initialState, action) => {
+
+  // console.log(state)
+  // console.log(action.type)
+  // console.log(action.data)
+  console.log(state)
+  console.log("Blddd")
     switch (action.type) {
       case 'ITEMS_FETCH_DATA_SUCCESS':
+          console.log("HITTING???")
 
-      console.log("wow")
-      console.log(action.data)
-      // return {}
-      // return action.data
+          // console.log(action.type)
+      // if (state === 'undefined') {
+      //   state = 0 // If state is undefined, initialize it with a default value
+      //   return state 
 
-        return Object.assign({}, state, {
-          data: action.data
-        })
+       
+      // }
+          console.log(action.data[0]);
+          return Object.assign({}, state, {
+            data: action.data[0]
+          })
+  
+
       default:
         return state
     } 
@@ -37,39 +51,29 @@ import fetch from "isomorphic-unfetch";
 
   export function fetchData (url)  {
 
-    console.log("blah")
 
-    return async (dispatch) => {
 
-      const caseStudiesRes = await fetch(
-          url
-        );
-        const caseStudies = await caseStudiesRes.json();
+    return (dispatch) => {
 
-        // return caseStudies
+      console.log("blah")
 
-        return dispatch(itemsFetchDataSuccess({ type: 'ITEMS_FETCH_DATA_SUCCESS', caseStudies }))
+      fetch(url)
+      .then((response) => response.json())
+     .then((items) => {return dispatch(itemsFetchDataSuccess( items ))})
+        .catch((error) => console.log(error));
+        // const caseStudies = await caseStudiesRes.json();
 
-        // return {}
-
-        // console.log(caseStudies)
-      // fetch(
-      //   "https://beta.chiedo.com/wp-json/wp/v2/case-studies?_embed"
-      // ).then(data => {
-      //   console.log("wtf")
-      //   console.log(data)
-      //   return data 
-      //   dispatch(itemsFetchDataSuccess({ type: 'ITEMS_FETCH_DATA_SUCCESS', data }))
-      // })
+        // dispatch(itemsFetchDataSuccess({ type: 'ITEMS_FETCH_DATA_SUCCESS', caseStudiesRes }))
     
-  };
+  }
   }
 
-  export default function configureStore(initialState) {
-    return createStore(
-        reducer,
-        initialState,
-        applyMiddleware(thunk)
-    );
-}
+//   export default function configureStore() {
+//     return createStore(
+//         reducer,
+
+//         applyMiddleware(thunk)
+//     );
+
+// }
   
