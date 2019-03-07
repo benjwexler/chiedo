@@ -66,10 +66,10 @@ var CaseStudies = function CaseStudies(props) {
   var portfolioItems = props.caseStudiesArray.map(function (item, index) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PortfolioItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
       name: item.title.rendered,
-      bgImgUrl: item._embedded["wp:featuredmedia"][0].source_url,
-      linkToSite: item.meta_box.labs_linkdirectlytowebsiteurl,
-      typeOfProduct: item._embedded["wp:term"][1],
-      techUsedArray: item._embedded["wp:term"][0],
+      bgImgUrl: item._embedded["wp:featuredmedia"][0].source_url // linkToSite={item.meta_box.labs_linkdirectlytowebsiteurl}
+      // typeOfProduct={item._embedded["wp:term"][1]}
+      // techUsedArray={item._embedded["wp:term"][0]}
+      ,
       key: index,
       __source: {
         fileName: _jsxFileName,
@@ -113,32 +113,17 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/CaseStudies
 
 
 var PortfolioItem = function PortfolioItem(props) {
-  var typeOfProduct = props.typeOfProduct.map(function (item, index) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: index,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 8
-      },
-      __self: this
-    }, item.name);
-  });
-  var techUsedDivs = props.techUsedArray.map(function (item, index) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: index,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12
-      },
-      __self: this
-    }, item.name);
-  }); // Link href={props.linkToSite}>
-
+  // let typeOfProduct = props.typeOfProduct.map((item, index) => {
+  //   return <div key={index}>{item.name}</div>
+  // })
+  // let techUsedDivs = props.techUsedArray.map((item, index) => {
+  //   return <div key={index}>{item.name}</div>
+  // })
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -150,31 +135,31 @@ var PortfolioItem = function PortfolioItem(props) {
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.itemContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.textContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.itemTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: this
   }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _CaseStudies_css__WEBPACK_IMPORTED_MODULE_1___default.a.techUsedContainer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: this
-  }, typeOfProduct, techUsedDivs))));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PortfolioItem);
@@ -1177,62 +1162,24 @@ var ProfileCard = function ProfileCard(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _TitleTextPicButton_TitleTextPicButton_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../TitleTextPicButton/TitleTextPicButton.js */ "./components/TitleTextPicButton/TitleTextPicButton.js");
+/* harmony import */ var _StartupCulture_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./StartupCulture.css */ "./components/StartupCulture/StartupCulture.css");
+/* harmony import */ var _StartupCulture_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_StartupCulture_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Button/Button.js */ "./components/Button/Button.js");
 var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/StartupCulture/StartupCulture.js";
 
 
 
+
 var StartupCulture = function StartupCulture(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TitleTextPicButton_TitleTextPicButton_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    imgSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/img-ricardo-monicle.jpg",
-    tagline: "Start-up Culture, Corporate-Grade Service.",
-    text: "We create an atmosphere that fosters creativity and professionalism. In this way, we allow our team to hone your vision with our digital strategy and build realities that will take your business to the next level.",
-    buttonHref: "https://labs.chiedo.com/page/contact/",
-    buttonText: "Get A Quote",
-    buttonStyle: {
-      fontSize: "13px"
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (StartupCulture);
-
-/***/ }),
-
-/***/ "./components/TitleTextPicButton/TitleTextPicButton.js":
-/*!*************************************************************!*\
-  !*** ./components/TitleTextPicButton/TitleTextPicButton.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _TitleTextPicButton_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TitleTextPicButton.css */ "./components/TitleTextPicButton/TitleTextPicButton.css");
-/* harmony import */ var _TitleTextPicButton_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TitleTextPicButton_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Button_Button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Button/Button.js */ "./components/Button/Button.js");
-var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/TitleTextPicButton/TitleTextPicButton.js";
-
-
-
-
-var TitleTextPicButton = function TitleTextPicButton(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _TitleTextPicButton_css__WEBPACK_IMPORTED_MODULE_1___default.a.container,
+    className: _StartupCulture_css__WEBPACK_IMPORTED_MODULE_1___default.a.container,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: _TitleTextPicButton_css__WEBPACK_IMPORTED_MODULE_1___default.a.image,
+    className: _StartupCulture_css__WEBPACK_IMPORTED_MODULE_1___default.a.image,
     src: props.imgSrc,
     __source: {
       fileName: _jsxFileName,
@@ -1240,21 +1187,21 @@ var TitleTextPicButton = function TitleTextPicButton(props) {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _TitleTextPicButton_css__WEBPACK_IMPORTED_MODULE_1___default.a.rightHalfContainer,
+    className: _StartupCulture_css__WEBPACK_IMPORTED_MODULE_1___default.a.rightHalfContainer,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _TitleTextPicButton_css__WEBPACK_IMPORTED_MODULE_1___default.a.tagline,
+    className: _StartupCulture_css__WEBPACK_IMPORTED_MODULE_1___default.a.tagline,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
   }, props.tagline), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _TitleTextPicButton_css__WEBPACK_IMPORTED_MODULE_1___default.a.text,
+    className: _StartupCulture_css__WEBPACK_IMPORTED_MODULE_1___default.a.text,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -1272,7 +1219,7 @@ var TitleTextPicButton = function TitleTextPicButton(props) {
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (TitleTextPicButton);
+/* harmony default export */ __webpack_exports__["default"] = (StartupCulture);
 
 /***/ }),
 
@@ -1502,10 +1449,10 @@ var WhatWeDo = function WhatWeDo(props) {
 
 /***/ }),
 
-/***/ "./components/WhoWeServe/WhoWeServe.js":
-/*!*********************************************!*\
-  !*** ./components/WhoWeServe/WhoWeServe.js ***!
-  \*********************************************/
+/***/ "./components/WhoWeServe/WhoWeServe2.js":
+/*!**********************************************!*\
+  !*** ./components/WhoWeServe/WhoWeServe2.js ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1516,7 +1463,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../TwoColumnEvenWithPic/TwoColumnEvenWithPic.js */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.js");
 /* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../TwoColumnEvenWithPic/TwoColumnEvenWithPic.css */ "./components/TwoColumnEvenWithPic/TwoColumnEvenWithPic.css");
 /* harmony import */ var _TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_TwoColumnEvenWithPic_TwoColumnEvenWithPic_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/WhoWeServe/WhoWeServe.js";
+var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/components/WhoWeServe/WhoWeServe2.js";
 
 // import Link from "next/link";
 
@@ -16333,32 +16280,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Header/Header */ "./components/Header/Header.js");
-/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/Navbar/Navbar */ "./components/Navbar/Navbar.js");
-/* harmony import */ var _components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/MainSection/MainSection */ "./components/MainSection/MainSection.js");
-/* harmony import */ var _components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam */ "./components/HireOurTeam/HireOurTeam.js");
-/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam.css */ "./components/HireOurTeam/HireOurTeam.css");
-/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/WhatWeDo/WhatWeDo */ "./components/WhatWeDo/WhatWeDo.js");
-/* harmony import */ var _components_WhoWeServe_WhoWeServe__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/WhoWeServe/WhoWeServe */ "./components/WhoWeServe/WhoWeServe.js");
-/* harmony import */ var _components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/FoundingWebDevs/FoundingWebDevs */ "./components/FoundingWebDevs/FoundingWebDevs.js");
-/* harmony import */ var _components_StartupCulture_StartupCulture__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/StartupCulture/StartupCulture */ "./components/StartupCulture/StartupCulture.js");
-/* harmony import */ var _components_FeaturedPost_FeaturedPost__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../components/FeaturedPost/FeaturedPost */ "./components/FeaturedPost/FeaturedPost.js");
-/* harmony import */ var _css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../css-miscellaneous/css-miscellaneous.css */ "./css-miscellaneous/css-miscellaneous.css");
-/* harmony import */ var _css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _components_CaseStudies_CaseStudies__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../components/CaseStudies/CaseStudies */ "./components/CaseStudies/CaseStudies.js");
-/* harmony import */ var _components_CaseStudies_PortfolioItem__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../components/CaseStudies/PortfolioItem */ "./components/CaseStudies/PortfolioItem.js");
-/* harmony import */ var _components_TitleTextPicButton_TitleTextPicButton__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../components/TitleTextPicButton/TitleTextPicButton */ "./components/TitleTextPicButton/TitleTextPicButton.js");
-/* harmony import */ var _components_MeetOurFounder_MeetOurFounder__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../components/MeetOurFounder/MeetOurFounder */ "./components/MeetOurFounder/MeetOurFounder.js");
-/* harmony import */ var _components_MoreLinks_MoreLinks__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../components/MoreLinks/MoreLinks */ "./components/MoreLinks/MoreLinks.js");
-/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! next-server/head */ "./node_modules/next-server/head.js");
-/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_29__);
-/* harmony import */ var _redux_store_js__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../redux/store.js */ "./redux/store.js");
-/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! next-redux-wrapper */ "./node_modules/next-redux-wrapper/es6/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _redux_store_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../redux/store.js */ "./redux/store.js");
+/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! next-redux-wrapper */ "./node_modules/next-redux-wrapper/es6/index.js");
+/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Header/Header */ "./components/Header/Header.js");
+/* harmony import */ var _components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/Navbar/Navbar */ "./components/Navbar/Navbar.js");
+/* harmony import */ var _components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/MainSection/MainSection */ "./components/MainSection/MainSection.js");
+/* harmony import */ var _components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam */ "./components/HireOurTeam/HireOurTeam.js");
+/* harmony import */ var _components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/WhatWeDo/WhatWeDo */ "./components/WhatWeDo/WhatWeDo.js");
+/* harmony import */ var _components_WhoWeServe_WhoWeServe2__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/WhoWeServe/WhoWeServe2 */ "./components/WhoWeServe/WhoWeServe2.js");
+/* harmony import */ var _components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../components/FoundingWebDevs/FoundingWebDevs */ "./components/FoundingWebDevs/FoundingWebDevs.js");
+/* harmony import */ var _components_StartupCulture_StartupCulture__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../components/StartupCulture/StartupCulture */ "./components/StartupCulture/StartupCulture.js");
+/* harmony import */ var _components_FeaturedPost_FeaturedPost__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../components/FeaturedPost/FeaturedPost */ "./components/FeaturedPost/FeaturedPost.js");
+/* harmony import */ var _components_CaseStudies_CaseStudies__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../components/CaseStudies/CaseStudies */ "./components/CaseStudies/CaseStudies.js");
+/* harmony import */ var _components_MeetOurFounder_MeetOurFounder__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../components/MeetOurFounder/MeetOurFounder */ "./components/MeetOurFounder/MeetOurFounder.js");
+/* harmony import */ var _components_MoreLinks_MoreLinks__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../components/MoreLinks/MoreLinks */ "./components/MoreLinks/MoreLinks.js");
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! next-server/head */ "./node_modules/next-server/head.js");
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../css-miscellaneous/css-miscellaneous.css */ "./css-miscellaneous/css-miscellaneous.css");
+/* harmony import */ var _css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../components/HireOurTeam/HireOurTeam.css */ "./components/HireOurTeam/HireOurTeam.css");
+/* harmony import */ var _components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_29__);
 
 
 
@@ -16368,10 +16313,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js";
 
-
-
- // import { createStore} from 'redux'
-
+// npm modules & utils
 
 
 
@@ -16380,7 +16322,7 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js";
 
 
 
-
+ // Components
 
 
 
@@ -16390,18 +16332,14 @@ var _jsxFileName = "/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js";
 
 
 
- // import reducer from "../redux/store";
-// import React from 'react';
-// import { render } from 'react-dom';
-// import { Provider } from 'react-redux';
 
 
 
 
- // import fetchData from '../redux/store.js';
-// import makeStore from './_app.js'
-// const store = configureStore()
-// console.log(store)
+
+
+
+console.log("trying to merge this to become new master");
 
 var Index =
 /*#__PURE__*/
@@ -16439,20 +16377,20 @@ function (_Component) {
         className: "jsx-1771980103",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 92
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_28___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_27___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 93
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("title", {
         className: "jsx-1771980103",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 94
         },
         __self: this
       }, "Chiedo Labs: Custom Web Development - Node.js | React | Rails | PHP"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("meta", {
@@ -16461,7 +16399,7 @@ function (_Component) {
         className: "jsx-1771980103",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 97
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
@@ -16470,108 +16408,116 @@ function (_Component) {
         className: "jsx-1771980103",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 101
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_7___default.a, {
         id: "1771980103",
         __self: this
-      }, "body{font-family:\"Open Sans\",sans-serif;color:#2c343b;background-color:#f2f2f2;box-sizing:\"border-box\";overflow-x:hidden;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9id2V4bGVyL0Rlc2t0b3AvV0RGL2NoaWVkb0xhYnMvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBd0gyQixBQUdpRCxtQ0FDdEIsY0FDVyx5QkFDRCx3QkFDTixrQkFDcEIiLCJmaWxlIjoiL1VzZXJzL2J3ZXhsZXIvRGVza3RvcC9XREYvY2hpZWRvTGFicy9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7IFByb3ZpZGVyIH0gZnJvbSAncmVhY3QtcmVkdXgnO1xuaW1wb3J0IHJlZHV4IGZyb20gJ3JlZHV4Jztcbi8vIGltcG9ydCB7IGNyZWF0ZVN0b3JlfSBmcm9tICdyZWR1eCdcbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcblxuaW1wb3J0IEhlYWRlciBmcm9tIFwiLi4vY29tcG9uZW50cy9IZWFkZXIvSGVhZGVyXCI7XG5pbXBvcnQgTmF2YmFyIGZyb20gXCIuLi9jb21wb25lbnRzL05hdmJhci9OYXZiYXJcIjtcbmltcG9ydCBNYWluU2VjdGlvbiBmcm9tIFwiLi4vY29tcG9uZW50cy9NYWluU2VjdGlvbi9NYWluU2VjdGlvblwiO1xuaW1wb3J0IEhpcmVPdXJUZWFtIGZyb20gXCIuLi9jb21wb25lbnRzL0hpcmVPdXJUZWFtL0hpcmVPdXJUZWFtXCI7XG5pbXBvcnQgSGlyZU91clRlYW1Dc3MgZnJvbSBcIi4uL2NvbXBvbmVudHMvSGlyZU91clRlYW0vSGlyZU91clRlYW0uY3NzXCI7XG5pbXBvcnQgV2hhdFdlRG8gZnJvbSBcIi4uL2NvbXBvbmVudHMvV2hhdFdlRG8vV2hhdFdlRG9cIjtcbmltcG9ydCBXaG9XZVNlcnZlIGZyb20gXCIuLi9jb21wb25lbnRzL1dob1dlU2VydmUvV2hvV2VTZXJ2ZVwiO1xuaW1wb3J0IEZvdW5kaW5nV2ViRGV2cyBmcm9tIFwiLi4vY29tcG9uZW50cy9Gb3VuZGluZ1dlYkRldnMvRm91bmRpbmdXZWJEZXZzXCI7XG5pbXBvcnQgU3RhcnR1cEN1bHR1cmUgZnJvbSBcIi4uL2NvbXBvbmVudHMvU3RhcnR1cEN1bHR1cmUvU3RhcnR1cEN1bHR1cmVcIjtcbmltcG9ydCBGZWF0dXJlZFBvc3QgZnJvbSBcIi4uL2NvbXBvbmVudHMvRmVhdHVyZWRQb3N0L0ZlYXR1cmVkUG9zdFwiO1xuaW1wb3J0IGNzc01pc2NlbGxhbmVvdXMgZnJvbSBcIi4uL2Nzcy1taXNjZWxsYW5lb3VzL2Nzcy1taXNjZWxsYW5lb3VzLmNzc1wiO1xuaW1wb3J0IENhc2VTdHVkaWVzIGZyb20gXCIuLi9jb21wb25lbnRzL0Nhc2VTdHVkaWVzL0Nhc2VTdHVkaWVzXCI7XG5pbXBvcnQgUG9ydGZvbGlvSXRlbSBmcm9tIFwiLi4vY29tcG9uZW50cy9DYXNlU3R1ZGllcy9Qb3J0Zm9saW9JdGVtXCI7XG5cbmltcG9ydCBUaXRsZVRleHRQaWNCdXR0b24gZnJvbSBcIi4uL2NvbXBvbmVudHMvVGl0bGVUZXh0UGljQnV0dG9uL1RpdGxlVGV4dFBpY0J1dHRvblwiO1xuaW1wb3J0IE1lZXRPdXJGb3VuZGVyIGZyb20gXCIuLi9jb21wb25lbnRzL01lZXRPdXJGb3VuZGVyL01lZXRPdXJGb3VuZGVyXCI7XG5pbXBvcnQgTW9yZUxpbmtzIGZyb20gXCIuLi9jb21wb25lbnRzL01vcmVMaW5rcy9Nb3JlTGlua3NcIjtcbmltcG9ydCBIZWFkIGZyb20gXCJuZXh0L2hlYWRcIjtcbmltcG9ydCBmZXRjaCBmcm9tIFwiaXNvbW9ycGhpYy11bmZldGNoXCI7XG4vLyBpbXBvcnQgcmVkdWNlciBmcm9tIFwiLi4vcmVkdXgvc3RvcmVcIjtcblxuLy8gaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0Jztcbi8vIGltcG9ydCB7IHJlbmRlciB9IGZyb20gJ3JlYWN0LWRvbSc7XG4vLyBpbXBvcnQgeyBQcm92aWRlciB9IGZyb20gJ3JlYWN0LXJlZHV4JztcbmltcG9ydCB7cmVkdWNlciwgZmV0Y2hEYXRhLCBpdGVtc0ZldGNoRGF0YVN1Y2Nlc3N9IGZyb20gJy4uL3JlZHV4L3N0b3JlLmpzJztcbmltcG9ydCBjb25maWd1cmVTdG9yZSBmcm9tICcuLi9yZWR1eC9zdG9yZS5qcyc7XG5pbXBvcnQgeyBjb25uZWN0LCBtYXBTdGF0ZSB9IGZyb20gJ3JlYWN0LXJlZHV4J1xuaW1wb3J0IHdpdGhSZWR1eCBmcm9tICduZXh0LXJlZHV4LXdyYXBwZXInXG4vLyBpbXBvcnQgZmV0Y2hEYXRhIGZyb20gJy4uL3JlZHV4L3N0b3JlLmpzJztcblxuLy8gaW1wb3J0IG1ha2VTdG9yZSBmcm9tICcuL19hcHAuanMnXG5cblxuLy8gY29uc3Qgc3RvcmUgPSBjb25maWd1cmVTdG9yZSgpXG5cblxuXG4vLyBjb25zb2xlLmxvZyhzdG9yZSlcblxuXG5cblxuXG5cbmNsYXNzIEluZGV4IGV4dGVuZHMgQ29tcG9uZW50IHtcblxuICBcblxuICBcblxuLy8gICBQYWdlLmdldEluaXRpYWxQcm9wcyA9IGFzeW5jICh7IHN0b3JlIH0pID0+IHtcbi8vICAgICBhd2FpdCBzdG9yZS5kaXNwYXRjaChmZXRjaEl0ZW1zKCkpO1xuLy8gfTtcblxuICBzdGF0aWMgYXN5bmMgZ2V0SW5pdGlhbFByb3BzICh7c3RvcmUsIGlzU2VydmVyLCBwYXRobmFtZSwgcXVlcnl9ICkgIHtcblxuICAgIC8vIGNvbnNvbGUubG9nKHN0b3JlKVxuXG4gICAgLy8gY29uc29sZS5sb2cocHJvY2Vzcy5icm93c2VyKSAvL0lmIGZhbHNlIHJlcXVlc3QgaXMgZnJvbSBzZXJ2ZXJcblxuICAgIGNvbnNvbGUubG9nKHN0b3JlKVxuXG4gICAgICAgbGV0IGRhdGEgPSBhd2FpdCBzdG9yZS5kaXNwYXRjaChmZXRjaERhdGEoXCJodHRwczovL3B1YmxpYy1hcGkud29yZHByZXNzLmNvbS9yZXN0L3YxL3NpdGVzL3NhbXdjb2Rpbmcud29yZHByZXNzLmNvbS9wb3N0c1wiKSlcbiAgLy8gIGRhdGEudGhlbigoeyBkYXRhIH0pID0+IGRhdGEpXG4gIC8vICAgY29uc29sZS5sb2coXCI/Pz8/Pz9cIilcbiAgLy8gICBjb25zb2xlLmxvZyhkYXRhKVxuICAvLyAgIGNvbnNvbGUubG9nKFwiPz8/Pz8/XCIpXG5cbiAgcmV0dXJuIHtkYXRhOiBkYXRhfVxuXG4gIFxuXG4gIH1cblxuXG4gICAgLy8gY29uc29sZS5sb2codGhpcy5zdGF0ZS5jYXNlU3R1ZGllcylcbiAgICAvLyBjb25zdCBjYXNlU3R1ZGllc1JlcyA9IGF3YWl0IGZldGNoKFxuICAgIC8vICAgXCJodHRwczovL2JldGEuY2hpZWRvLmNvbS93cC1qc29uL3dwL3YyL2Nhc2Utc3R1ZGllcz9fZW1iZWRcIlxuICAgIC8vICk7XG4gICAgLy8gY29uc3QgY2FzZVN0dWRpZXMgPSBhd2FpdCBjYXNlU3R1ZGllc1Jlcy5qc29uKCk7XG5cbiAgICAvLyBjb25zdCBmZWF0dXJlZFBvc3RzUmVzID0gYXdhaXQgZmV0Y2goXG4gICAgLy8gICBcImh0dHBzOi8vYmV0YS5jaGllZG8uY29tL3dwLWpzb24vd3AvdjIvcG9zdHM/b3JkZXJieT1kYXRlJiZwZXJfcGFnZT0xXCJcbiAgICAvLyApO1xuICAgIC8vIGNvbnN0IGZlYXR1cmVkUG9zdHMgPSBhd2FpdCBmZWF0dXJlZFBvc3RzUmVzLmpzb24oKTtcblxuICAgXG4gICAgLy8gcmV0dXJuIHtcbiAgICAvLyAgIGNhc2VTdHVkaWVzOiBjYXNlU3R1ZGllcyxcbiAgICAvLyAgIGZlYXR1cmVkUG9zdHM6IGZlYXR1cmVkUG9zdHNbMF0sXG4gICAgLy8gfTtcbiAgXG4gIFxuICBjb21wb25lbnREaWRNb3VudCgpe1xuICAgIGNvbnNvbGUubG9nKHRoaXMucHJvcHMpXG4gIH1cblxuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG4gICAgICAgIDxIZWFkPlxuICAgICAgICAgIDx0aXRsZT5cbiAgICAgICAgICAgIENoaWVkbyBMYWJzOiBDdXN0b20gV2ViIERldmVsb3BtZW50IC0gTm9kZS5qcyB8IFJlYWN0IHwgUmFpbHMgfCBQSFBcbiAgICAgICAgICA8L3RpdGxlPlxuICAgICAgICAgIDxtZXRhXG4gICAgICAgICAgICBuYW1lPVwidmlld3BvcnRcIlxuICAgICAgICAgICAgY29udGVudD1cIm1pbmltdW0tc2NhbGU9MSwgaW5pdGlhbC1zY2FsZT0xLCB3aWR0aD1kZXZpY2Utd2lkdGgsIHNocmluay10by1maXQ9bm9cIlxuICAgICAgICAgIC8+XG4gICAgICAgICAgPGxpbmtcbiAgICAgICAgICAgIHJlbD1cInNob3J0Y3V0IGljb25cIlxuICAgICAgICAgICAgaHJlZj1cImh0dHBzOi8vbGFicy5jaGllZG8uY29tL3dwLWNvbnRlbnQvdGhlbWVzL2NoaWVkb2xhYnMvZmF2aWNvbi5pY28/dj0yXCJcbiAgICAgICAgICAvPlxuICAgICAgICBcbiAgICAgICAgPC9IZWFkPlxuICAgICAgICA8c3R5bGUganN4IGdsb2JhbD57YFxuICAgICAgICAgIGJvZHkge1xuICAgICAgICAgICAgZm9udC1mYW1pbHk6IFwiT3BlbiBTYW5zXCIsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgICBjb2xvcjogIzJjMzQzYjtcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmMmYyZjI7XG4gICAgICAgICAgICBib3gtc2l6aW5nOiBcImJvcmRlci1ib3hcIjtcbiAgICAgICAgICAgIG92ZXJmbG93LXg6IGhpZGRlbjtcbiAgICAgICAgICB9XG4gICAgICAgIGB9PC9zdHlsZT5cbiAgICAgICAgPEhlYWRlciBpbWFnZVVybD1cImh0dHBzOi8vbGFicy5jaGllZG8uY29tL3dwLWNvbnRlbnQvdGhlbWVzL2NoaWVkb2xhYnMvaW1nL2ItbG9nby13aGl0ZS5wbmc/dmVyPTEuMTFcIiAvPlxuXG4gICAgICAgIDxOYXZiYXIgLz5cbiAgICAgICAgPE1haW5TZWN0aW9uXG4gICAgICAgICAgdGFnbGluZT17XG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICBZb3VyIE5ld1xuICAgICAgICAgICAgICA8YnIgLz5cbiAgICAgICAgICAgICAgV2ViIERldmVsb3BlcnNcbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIH1cbiAgICAgICAgICBkZXNjcmlwdGlvbj1cIldl4oCZcmUgYSB0ZWFtIG9mIHdlYiBkZXZlbG9wZXJzIHBhc3Npb25hdGUgYWJvdXQgYnVpbGRpbmcgc3RhYmxlLCBtYWludGFpbmFibGUgc29mdHdhcmUgZm9yIHRlY2ggc3RhcnR1cHMgYW5kIGVudGVycHJpc2UgY3VzdG9tZXJzLlwiXG4gICAgICAgIC8+XG4gICAgICAgIDxIaXJlT3VyVGVhbVxuICAgICAgICAgIGNsYXNzTmFtZXM9e2Ake0hpcmVPdXJUZWFtQ3NzLkZ1bGxXaWR0aH0gJHtcbiAgICAgICAgICAgIEhpcmVPdXJUZWFtQ3NzLmhpcmVPdXJUZWFtXG4gICAgICAgICAgfWB9XG4gICAgICAgIC8+XG4gICAgICAgIDxXaGF0V2VEbyAvPlxuICAgICAgICA8Rm91bmRpbmdXZWJEZXZzIC8+XG4gICAgICAgIDxXaG9XZVNlcnZlIC8+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPXtjc3NNaXNjZWxsYW5lb3VzLnN0YXJ0dXBDdWx0dXJlRmVhdHVyZWRQb3N0Q29udGFpbmVyfT5cbiAgICAgICAgICA8U3RhcnR1cEN1bHR1cmUgLz5cbiAgICAgICAgICA8RmVhdHVyZWRQb3N0XG4gICAgICAgICAgICAvLyB0aXRsZT17dGhpcy5wcm9wcy5mZWF0dXJlZFBvc3RzLnRpdGxlLnJlbmRlcmVkfVxuICAgICAgICAgICAgLy8gaHJlZj17dGhpcy5wcm9wcy5mZWF0dXJlZFBvc3RzLmxpbmt9XG4gICAgICAgICAgLz5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgey8qIDxDYXNlU3R1ZGllcyBjYXNlU3R1ZGllc0FycmF5PXt0aGlzLnByb3BzLmNhc2VTdHVkaWVzfSAvPiAqL31cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e2Nzc01pc2NlbGxhbmVvdXMuYm90dG9tU2VjdGlvbkNvbnRhaW5lcn0+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2Nzc01pc2NlbGxhbmVvdXMuZm91bmRlckNvcHlyaWdodENvbnRhaW5lcn0+XG4gICAgICAgICAgICA8TWVldE91ckZvdW5kZXJcbiAgICAgICAgICAgICAgaW1nU3JjPVwiaHR0cHM6Ly9sYWJzLmNoaWVkby5jb20vd3AtY29udGVudC90aGVtZXMvY2hpZWRvbGFicy9pbWcvd3AtbGFuZGluZy1wYWdlL2NoaWVkby1zaXR0aW5nLXNtYWxsLnBuZ1wiXG4gICAgICAgICAgICAgIHRhZ2xpbmU9XCJNZWV0IE91ciBGb3VuZGVyXCJcbiAgICAgICAgICAgICAgdGV4dD1cIklmIHlvdSBuZWVkIG5ldyB3ZWIgZGV2ZWxvcGVycyBvciB3YW50IHRvIHRhbGsgYWJvdXQgeW91ciB0ZWNoIHN0YXJ0dXAsIGxldCdzIGNvbm5lY3Qgb24gTGlua2VkSW4gYW5kIG1lZXQgZm9yIGx1bmNoIG9yIGNvZmZlZSFcIlxuICAgICAgICAgICAgICBidXR0b25IcmVmPVwiaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2NoaWVkby9cIlxuICAgICAgICAgICAgICBidXR0b25UZXh0PVwiQ09OTkVDVCBPTiBMSU5LRURJTlwiXG4gICAgICAgICAgICAgIGJ1dHRvblN0eWxlPXt7IGZvbnRTaXplOiBcIjEzcHhcIiB9fVxuICAgICAgICAgICAgLz5cblxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2Nzc01pc2NlbGxhbmVvdXMuY29weXJpZ2h0Rm9vdGVyfT5cbiAgICAgICAgICAgIDxMaW5rIGhyZWY9XCIvdGVzdFwiPlxuICAgICAgICAgICAgPGE+XG4gICAgICAgICAgICAgIENvcHlyaWdodCAyMDE5IMKpIENoaWVkbyBMYWJzLCBMTEMuXG4gICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgPC9MaW5rPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPE1vcmVMaW5rcyAvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH1cbn1cblxuLy8gSW5kZXguZ2V0SW5pdGlhbFByb3BzID0gKCkgPT4ge1xuLy8gICAvLyBjb25zb2xlLmxvZyhwcm9jZXNzLmJyb3dzZXIpXG4vLyAgIC8vIHN0b3JlLmRpc3BhdGNoKGZldGNoRGF0YShcImh0dHBzOi8vYmV0YS5jaGllZG8uY29tL3dwLWpzb24vd3AvdjIvcG9zdHM/b3JkZXJieT1kYXRlJiZwZXJfcGFnZT0xXCIpKTtcblxuLy8gICAvLyBpZighcHJvY2Vzcy5icm93c2VyKSB7XG4vLyAgIC8vICAgcmV0dXJuIHN0b3JlLmRpc3BhdGNoKGZldGNoRGF0YShcImh0dHBzOi8vYmV0YS5jaGllZG8uY29tL3dwLWpzb24vd3AvdjIvcG9zdHM/b3JkZXJieT1kYXRlJiZwZXJfcGFnZT0xXCIpKTtcbi8vICAgLy8gfSBlbHNlIHtcbi8vICAgLy8gICBzdG9yZS5nZXRTdG9yZSgpXG4vLyAgIC8vIH1cbiBcbi8vIH1cblxuLy8gICBJbmRleC5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyBzdG9yZSB9KSA9PiB7XG4vLyAgICAgYXdhaXQgc3RvcmUuZGlzcGF0Y2goZmV0Y2hEYXRhKFwiaHR0cHM6Ly9iZXRhLmNoaWVkby5jb20vd3AtanNvbi93cC92Mi9wb3N0cz9vcmRlcmJ5PWRhdGUmJnBlcl9wYWdlPTFcIikpXG5cblxuLy8gLy8gc3RhdGljIGFzeW5jIGdldEluaXRpYWxQcm9wcyA9ICh7c3RvcmUsIGlzU2VydmVyLCBwYXRobmFtZSwgcXVlcnl9ICkgPT4ge1xuXG4vLyAgIC8vIGNvbnNvbGUubG9nKHN0b3JlKVxuXG4vLyAgIC8vIGNvbnNvbGUubG9nKHByb2Nlc3MuYnJvd3NlcikgLy9JZiBmYWxzZSByZXF1ZXN0IGlzIGZyb20gc2VydmVyXG5cbiAgIFxuXG4vLyB9XG5cbi8vIEluZGV4LmdldEluaXRpYWxQcm9wcyA9ICh7IHN0b3JlIH0pID0+IHN0b3JlLmRpc3BhdGNoKGZldGNoRGF0YShcImh0dHBzOi8vYmV0YS5jaGllZG8uY29tL3dwLWpzb24vd3AvdjIvcG9zdHM/b3JkZXJieT1kYXRlJiZwZXJfcGFnZT0xXCIpKTtcbi8vIGNvbnNvbGUubG9nKHN0b3JlKVxuZXhwb3J0IGRlZmF1bHQgY29ubmVjdChzdGF0ZSA9PiBzdGF0ZSApKEluZGV4KTtcbi8vIGV4cG9ydCBkZWZhdWx0IHdpdGhSZWR1eChzdG9yZSkoSW5kZXgpO1xuXG5cbiJdfQ== */\n/*@ sourceURL=/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }, "body{font-family:\"Open Sans\",sans-serif;color:#2c343b;background-color:#f2f2f2;box-sizing:\"border-box\";overflow-x:hidden;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9id2V4bGVyL0Rlc2t0b3AvV0RGL2NoaWVkb0xhYnMvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBMEcyQixBQUdpRCxtQ0FDdEIsY0FDVyx5QkFDRCx3QkFDTixrQkFDcEIiLCJmaWxlIjoiL1VzZXJzL2J3ZXhsZXIvRGVza3RvcC9XREYvY2hpZWRvTGFicy9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIG5wbSBtb2R1bGVzICYgdXRpbHNcblxuaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgUHJvdmlkZXIgfSBmcm9tICdyZWFjdC1yZWR1eCc7XG5pbXBvcnQgcmVkdXggZnJvbSAncmVkdXgnO1xuaW1wb3J0IGZldGNoIGZyb20gXCJpc29tb3JwaGljLXVuZmV0Y2hcIjtcbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcIjtcbmltcG9ydCB7cmVkdWNlciwgZmV0Y2hEYXRhLCBpdGVtc0ZldGNoRGF0YVN1Y2Nlc3N9IGZyb20gJy4uL3JlZHV4L3N0b3JlLmpzJztcbmltcG9ydCBjb25maWd1cmVTdG9yZSBmcm9tICcuLi9yZWR1eC9zdG9yZS5qcyc7XG5pbXBvcnQgeyBjb25uZWN0LCBtYXBTdGF0ZSB9IGZyb20gJ3JlYWN0LXJlZHV4J1xuaW1wb3J0IHdpdGhSZWR1eCBmcm9tICduZXh0LXJlZHV4LXdyYXBwZXInXG5cbi8vIENvbXBvbmVudHNcblxuaW1wb3J0IEhlYWRlciBmcm9tIFwiLi4vY29tcG9uZW50cy9IZWFkZXIvSGVhZGVyXCI7XG5pbXBvcnQgTmF2YmFyIGZyb20gXCIuLi9jb21wb25lbnRzL05hdmJhci9OYXZiYXJcIjtcbmltcG9ydCBNYWluU2VjdGlvbiBmcm9tIFwiLi4vY29tcG9uZW50cy9NYWluU2VjdGlvbi9NYWluU2VjdGlvblwiO1xuaW1wb3J0IEhpcmVPdXJUZWFtIGZyb20gXCIuLi9jb21wb25lbnRzL0hpcmVPdXJUZWFtL0hpcmVPdXJUZWFtXCI7XG5pbXBvcnQgV2hhdFdlRG8gZnJvbSBcIi4uL2NvbXBvbmVudHMvV2hhdFdlRG8vV2hhdFdlRG9cIjtcbmltcG9ydCBXaG9XZVNlcnZlIGZyb20gXCIuLi9jb21wb25lbnRzL1dob1dlU2VydmUvV2hvV2VTZXJ2ZTJcIjtcbmltcG9ydCBGb3VuZGluZ1dlYkRldnMgZnJvbSBcIi4uL2NvbXBvbmVudHMvRm91bmRpbmdXZWJEZXZzL0ZvdW5kaW5nV2ViRGV2c1wiO1xuaW1wb3J0IFN0YXJ0dXBDdWx0dXJlIGZyb20gXCIuLi9jb21wb25lbnRzL1N0YXJ0dXBDdWx0dXJlL1N0YXJ0dXBDdWx0dXJlXCI7XG5pbXBvcnQgRmVhdHVyZWRQb3N0IGZyb20gXCIuLi9jb21wb25lbnRzL0ZlYXR1cmVkUG9zdC9GZWF0dXJlZFBvc3RcIjtcbmltcG9ydCBDYXNlU3R1ZGllcyBmcm9tIFwiLi4vY29tcG9uZW50cy9DYXNlU3R1ZGllcy9DYXNlU3R1ZGllc1wiO1xuaW1wb3J0IE1lZXRPdXJGb3VuZGVyIGZyb20gXCIuLi9jb21wb25lbnRzL01lZXRPdXJGb3VuZGVyL01lZXRPdXJGb3VuZGVyXCI7XG5pbXBvcnQgTW9yZUxpbmtzIGZyb20gXCIuLi9jb21wb25lbnRzL01vcmVMaW5rcy9Nb3JlTGlua3NcIjtcbmltcG9ydCBIZWFkIGZyb20gXCJuZXh0L2hlYWRcIjtcblxuXG5pbXBvcnQgY3NzTWlzY2VsbGFuZW91cyBmcm9tIFwiLi4vY3NzLW1pc2NlbGxhbmVvdXMvY3NzLW1pc2NlbGxhbmVvdXMuY3NzXCJcbmltcG9ydCBIaXJlT3VyVGVhbUNzcyBmcm9tIFwiLi4vY29tcG9uZW50cy9IaXJlT3VyVGVhbS9IaXJlT3VyVGVhbS5jc3NcIlxuXG5cblxuY29uc29sZS5sb2coXCJ0cnlpbmcgdG8gbWVyZ2UgdGhpcyB0byBiZWNvbWUgbmV3IG1hc3RlclwiKVxuXG5jbGFzcyBJbmRleCBleHRlbmRzIENvbXBvbmVudCB7XG5cbiAgXG5cbiAgXG5cbi8vICAgUGFnZS5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyBzdG9yZSB9KSA9PiB7XG4vLyAgICAgYXdhaXQgc3RvcmUuZGlzcGF0Y2goZmV0Y2hJdGVtcygpKTtcbi8vIH07XG5cbiAgc3RhdGljIGFzeW5jIGdldEluaXRpYWxQcm9wcyAoe3N0b3JlLCBpc1NlcnZlciwgcGF0aG5hbWUsIHF1ZXJ5fSApICB7XG5cbiAgICAvLyBjb25zb2xlLmxvZyhzdG9yZSlcblxuICAgIC8vIGNvbnNvbGUubG9nKHByb2Nlc3MuYnJvd3NlcikgLy9JZiBmYWxzZSByZXF1ZXN0IGlzIGZyb20gc2VydmVyXG5cbiAgICBjb25zb2xlLmxvZyhzdG9yZSlcblxuICAgICAgIGxldCBkYXRhID0gYXdhaXQgc3RvcmUuZGlzcGF0Y2goZmV0Y2hEYXRhKFwiaHR0cHM6Ly9wdWJsaWMtYXBpLndvcmRwcmVzcy5jb20vcmVzdC92MS9zaXRlcy9zYW13Y29kaW5nLndvcmRwcmVzcy5jb20vcG9zdHNcIikpXG4gIC8vICBkYXRhLnRoZW4oKHsgZGF0YSB9KSA9PiBkYXRhKVxuICAvLyAgIGNvbnNvbGUubG9nKFwiPz8/Pz8/XCIpXG4gIC8vICAgY29uc29sZS5sb2coZGF0YSlcbiAgLy8gICBjb25zb2xlLmxvZyhcIj8/Pz8/P1wiKVxuXG4gIHJldHVybiB7ZGF0YTogZGF0YX1cblxuICBcblxuICB9XG5cblxuICAgIC8vIGNvbnNvbGUubG9nKHRoaXMuc3RhdGUuY2FzZVN0dWRpZXMpXG4gICAgLy8gY29uc3QgY2FzZVN0dWRpZXNSZXMgPSBhd2FpdCBmZXRjaChcbiAgICAvLyAgIFwiaHR0cHM6Ly9iZXRhLmNoaWVkby5jb20vd3AtanNvbi93cC92Mi9jYXNlLXN0dWRpZXM/X2VtYmVkXCJcbiAgICAvLyApO1xuICAgIC8vIGNvbnN0IGNhc2VTdHVkaWVzID0gYXdhaXQgY2FzZVN0dWRpZXNSZXMuanNvbigpO1xuXG4gICAgLy8gY29uc3QgZmVhdHVyZWRQb3N0c1JlcyA9IGF3YWl0IGZldGNoKFxuICAgIC8vICAgXCJodHRwczovL2JldGEuY2hpZWRvLmNvbS93cC1qc29uL3dwL3YyL3Bvc3RzP29yZGVyYnk9ZGF0ZSYmcGVyX3BhZ2U9MVwiXG4gICAgLy8gKTtcbiAgICAvLyBjb25zdCBmZWF0dXJlZFBvc3RzID0gYXdhaXQgZmVhdHVyZWRQb3N0c1Jlcy5qc29uKCk7XG5cbiAgIFxuICAgIC8vIHJldHVybiB7XG4gICAgLy8gICBjYXNlU3R1ZGllczogY2FzZVN0dWRpZXMsXG4gICAgLy8gICBmZWF0dXJlZFBvc3RzOiBmZWF0dXJlZFBvc3RzWzBdLFxuICAgIC8vIH07XG4gIFxuICBcbiAgY29tcG9uZW50RGlkTW91bnQoKXtcbiAgICBjb25zb2xlLmxvZyh0aGlzLnByb3BzKVxuICB9XG5cbiAgcmVuZGVyKCkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8SGVhZD5cbiAgICAgICAgICA8dGl0bGU+XG4gICAgICAgICAgICBDaGllZG8gTGFiczogQ3VzdG9tIFdlYiBEZXZlbG9wbWVudCAtIE5vZGUuanMgfCBSZWFjdCB8IFJhaWxzIHwgUEhQXG4gICAgICAgICAgPC90aXRsZT5cbiAgICAgICAgICA8bWV0YVxuICAgICAgICAgICAgbmFtZT1cInZpZXdwb3J0XCJcbiAgICAgICAgICAgIGNvbnRlbnQ9XCJtaW5pbXVtLXNjYWxlPTEsIGluaXRpYWwtc2NhbGU9MSwgd2lkdGg9ZGV2aWNlLXdpZHRoLCBzaHJpbmstdG8tZml0PW5vXCJcbiAgICAgICAgICAvPlxuICAgICAgICAgIDxsaW5rXG4gICAgICAgICAgICByZWw9XCJzaG9ydGN1dCBpY29uXCJcbiAgICAgICAgICAgIGhyZWY9XCJodHRwczovL2xhYnMuY2hpZWRvLmNvbS93cC1jb250ZW50L3RoZW1lcy9jaGllZG9sYWJzL2Zhdmljb24uaWNvP3Y9MlwiXG4gICAgICAgICAgLz5cbiAgICAgICAgXG4gICAgICAgIDwvSGVhZD5cbiAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcbiAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIk9wZW4gU2Fuc1wiLCBzYW5zLXNlcmlmO1xuICAgICAgICAgICAgY29sb3I6ICMyYzM0M2I7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyO1xuICAgICAgICAgICAgYm94LXNpemluZzogXCJib3JkZXItYm94XCI7XG4gICAgICAgICAgICBvdmVyZmxvdy14OiBoaWRkZW47XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICAgIDxIZWFkZXIgaW1hZ2VVcmw9XCJodHRwczovL2xhYnMuY2hpZWRvLmNvbS93cC1jb250ZW50L3RoZW1lcy9jaGllZG9sYWJzL2ltZy9iLWxvZ28td2hpdGUucG5nP3Zlcj0xLjExXCIgLz5cblxuICAgICAgICA8TmF2YmFyIC8+XG4gICAgICAgIDxNYWluU2VjdGlvblxuICAgICAgICAgIHRhZ2xpbmU9e1xuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgWW91ciBOZXdcbiAgICAgICAgICAgICAgPGJyIC8+XG4gICAgICAgICAgICAgIFdlYiBEZXZlbG9wZXJzXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICB9XG4gICAgICAgICAgZGVzY3JpcHRpb249XCJXZeKAmXJlIGEgdGVhbSBvZiB3ZWIgZGV2ZWxvcGVycyBwYXNzaW9uYXRlIGFib3V0IGJ1aWxkaW5nIHN0YWJsZSwgbWFpbnRhaW5hYmxlIHNvZnR3YXJlIGZvciB0ZWNoIHN0YXJ0dXBzIGFuZCBlbnRlcnByaXNlIGN1c3RvbWVycy5cIlxuICAgICAgICAvPlxuICAgICAgICA8SGlyZU91clRlYW1cbiAgICAgICAgICBjbGFzc05hbWVzPXtgJHtIaXJlT3VyVGVhbUNzcy5GdWxsV2lkdGh9ICR7XG4gICAgICAgICAgICBIaXJlT3VyVGVhbUNzcy5oaXJlT3VyVGVhbVxuICAgICAgICAgIH1gfVxuICAgICAgICAvPlxuICAgICAgICA8V2hhdFdlRG8gLz5cbiAgICAgICAgPEZvdW5kaW5nV2ViRGV2cyAvPlxuICAgICAgICA8V2hvV2VTZXJ2ZSBcbiAgICAgICAgLz5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e2Nzc01pc2NlbGxhbmVvdXMuc3RhcnR1cEN1bHR1cmVGZWF0dXJlZFBvc3RDb250YWluZXJ9PlxuICAgICAgICAgIDxTdGFydHVwQ3VsdHVyZSBcbiAgICAgICAgICAgIGltZ1NyYz1cImh0dHBzOi8vbGFicy5jaGllZG8uY29tL3dwLWNvbnRlbnQvdGhlbWVzL2NoaWVkb2xhYnMvaW1nL3dwLWxhbmRpbmctcGFnZS9pbWctcmljYXJkby1tb25pY2xlLmpwZ1wiXG4gICAgICAgICAgICAgIHRhZ2xpbmU9XCJTdGFydC11cCBDdWx0dXJlLCBDb3Jwb3JhdGUtR3JhZGUgU2VydmljZS5cIlxuICAgICAgICAgICAgICB0ZXh0PVwiV2UgY3JlYXRlIGFuIGF0bW9zcGhlcmUgdGhhdCBmb3N0ZXJzIGNyZWF0aXZpdHkgYW5kIHByb2Zlc3Npb25hbGlzbS4gSW4gdGhpcyB3YXksIHdlIGFsbG93IG91ciB0ZWFtIHRvIGhvbmUgeW91ciB2aXNpb24gd2l0aCBvdXIgZGlnaXRhbCBzdHJhdGVneSBhbmQgYnVpbGQgcmVhbGl0aWVzIHRoYXQgd2lsbCB0YWtlIHlvdXIgYnVzaW5lc3MgdG8gdGhlIG5leHQgbGV2ZWwuXCJcbiAgICAgICAgICAgICAgYnV0dG9uSHJlZj1cImh0dHBzOi8vbGFicy5jaGllZG8uY29tL3BhZ2UvY29udGFjdC9cIlxuICAgICAgICAgICAgICBidXR0b25UZXh0PVwiR2V0IEEgUXVvdGVcIlxuICAgICAgICAgICAgICBidXR0b25TdHlsZT17eyBmb250U2l6ZTogXCIxM3B4XCIgfX1cbiAgICAgICAgICAvPlxuICAgICAgICAgIDxGZWF0dXJlZFBvc3RcbiAgICAgICAgICAgIC8vIHRpdGxlPXt0aGlzLnByb3BzLmZlYXR1cmVkUG9zdHMudGl0bGUucmVuZGVyZWR9XG4gICAgICAgICAgICAvLyBocmVmPXt0aGlzLnByb3BzLmZlYXR1cmVkUG9zdHMubGlua31cbiAgICAgICAgICAvPlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICB7LyogPENhc2VTdHVkaWVzIGNhc2VTdHVkaWVzQXJyYXk9e3RoaXMucHJvcHMuY2FzZVN0dWRpZXN9IC8+ICovfVxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzTWlzY2VsbGFuZW91cy5ib3R0b21TZWN0aW9uQ29udGFpbmVyfT5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzTWlzY2VsbGFuZW91cy5mb3VuZGVyQ29weXJpZ2h0Q29udGFpbmVyfT5cbiAgICAgICAgICAgIDxNZWV0T3VyRm91bmRlclxuICAgICAgICAgICAgICBpbWdTcmM9XCJodHRwczovL2xhYnMuY2hpZWRvLmNvbS93cC1jb250ZW50L3RoZW1lcy9jaGllZG9sYWJzL2ltZy93cC1sYW5kaW5nLXBhZ2UvY2hpZWRvLXNpdHRpbmctc21hbGwucG5nXCJcbiAgICAgICAgICAgICAgdGFnbGluZT1cIk1lZXQgT3VyIEZvdW5kZXJcIlxuICAgICAgICAgICAgICB0ZXh0PVwiSWYgeW91IG5lZWQgbmV3IHdlYiBkZXZlbG9wZXJzIG9yIHdhbnQgdG8gdGFsayBhYm91dCB5b3VyIHRlY2ggc3RhcnR1cCwgbGV0J3MgY29ubmVjdCBvbiBMaW5rZWRJbiBhbmQgbWVldCBmb3IgbHVuY2ggb3IgY29mZmVlIVwiXG4gICAgICAgICAgICAgIGJ1dHRvbkhyZWY9XCJodHRwczovL3d3dy5saW5rZWRpbi5jb20vaW4vY2hpZWRvL1wiXG4gICAgICAgICAgICAgIGJ1dHRvblRleHQ9XCJDT05ORUNUIE9OIExJTktFRElOXCJcbiAgICAgICAgICAgICAgYnV0dG9uU3R5bGU9e3sgZm9udFNpemU6IFwiMTNweFwiIH19XG4gICAgICAgICAgICAvPlxuXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y3NzTWlzY2VsbGFuZW91cy5jb3B5cmlnaHRGb290ZXJ9PlxuICAgICAgICAgICAgPExpbmsgaHJlZj1cIi90ZXN0XCI+XG4gICAgICAgICAgICA8YT5cbiAgICAgICAgICAgICAgQ29weXJpZ2h0IDIwMTkgwqkgQ2hpZWRvIExhYnMsIExMQy5cbiAgICAgICAgICAgICAgPC9hPlxuICAgICAgICAgICAgICA8L0xpbms+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8TW9yZUxpbmtzIC8+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxufVxuXG4vLyBJbmRleC5nZXRJbml0aWFsUHJvcHMgPSAoKSA9PiB7XG4vLyAgIC8vIGNvbnNvbGUubG9nKHByb2Nlc3MuYnJvd3Nlcilcbi8vICAgLy8gc3RvcmUuZGlzcGF0Y2goZmV0Y2hEYXRhKFwiaHR0cHM6Ly9iZXRhLmNoaWVkby5jb20vd3AtanNvbi93cC92Mi9wb3N0cz9vcmRlcmJ5PWRhdGUmJnBlcl9wYWdlPTFcIikpO1xuXG4vLyAgIC8vIGlmKCFwcm9jZXNzLmJyb3dzZXIpIHtcbi8vICAgLy8gICByZXR1cm4gc3RvcmUuZGlzcGF0Y2goZmV0Y2hEYXRhKFwiaHR0cHM6Ly9iZXRhLmNoaWVkby5jb20vd3AtanNvbi93cC92Mi9wb3N0cz9vcmRlcmJ5PWRhdGUmJnBlcl9wYWdlPTFcIikpO1xuLy8gICAvLyB9IGVsc2Uge1xuLy8gICAvLyAgIHN0b3JlLmdldFN0b3JlKClcbi8vICAgLy8gfVxuIFxuLy8gfVxuXG4vLyAgIEluZGV4LmdldEluaXRpYWxQcm9wcyA9IGFzeW5jICh7IHN0b3JlIH0pID0+IHtcbi8vICAgICBhd2FpdCBzdG9yZS5kaXNwYXRjaChmZXRjaERhdGEoXCJodHRwczovL2JldGEuY2hpZWRvLmNvbS93cC1qc29uL3dwL3YyL3Bvc3RzP29yZGVyYnk9ZGF0ZSYmcGVyX3BhZ2U9MVwiKSlcblxuXG4vLyAvLyBzdGF0aWMgYXN5bmMgZ2V0SW5pdGlhbFByb3BzID0gKHtzdG9yZSwgaXNTZXJ2ZXIsIHBhdGhuYW1lLCBxdWVyeX0gKSA9PiB7XG5cbi8vICAgLy8gY29uc29sZS5sb2coc3RvcmUpXG5cbi8vICAgLy8gY29uc29sZS5sb2cocHJvY2Vzcy5icm93c2VyKSAvL0lmIGZhbHNlIHJlcXVlc3QgaXMgZnJvbSBzZXJ2ZXJcblxuICAgXG5cbi8vIH1cblxuLy8gSW5kZXguZ2V0SW5pdGlhbFByb3BzID0gKHsgc3RvcmUgfSkgPT4gc3RvcmUuZGlzcGF0Y2goZmV0Y2hEYXRhKFwiaHR0cHM6Ly9iZXRhLmNoaWVkby5jb20vd3AtanNvbi93cC92Mi9wb3N0cz9vcmRlcmJ5PWRhdGUmJnBlcl9wYWdlPTFcIikpO1xuLy8gY29uc29sZS5sb2coc3RvcmUpXG5leHBvcnQgZGVmYXVsdCBjb25uZWN0KHN0YXRlID0+IHN0YXRlICkoSW5kZXgpO1xuLy8gZXhwb3J0IGRlZmF1bHQgd2l0aFJlZHV4KHN0b3JlKShJbmRleCk7XG5cblxuIl19 */\n/*@ sourceURL=/Users/bwexler/Desktop/WDF/chiedoLabs/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_15__["default"], {
         imageUrl: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/b-logo-white.png?ver=1.11",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 116
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_16__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 118
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_MainSection_MainSection__WEBPACK_IMPORTED_MODULE_17__["default"], {
         tagline: react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           className: "jsx-1771980103",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 135
+            lineNumber: 121
           },
           __self: this
         }, "Your New", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
           className: "jsx-1771980103",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 137
+            lineNumber: 123
           },
           __self: this
         }), "Web Developers"),
         description: "We\u2019re a team of web developers passionate about building stable, maintainable software for tech startups and enterprise customers.",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 119
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_15__["default"], {
-        classNames: "".concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_16___default.a.FullWidth, " ").concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_16___default.a.hireOurTeam),
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_HireOurTeam_HireOurTeam__WEBPACK_IMPORTED_MODULE_18__["default"], {
+        classNames: "".concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_29___default.a.FullWidth, " ").concat(_components_HireOurTeam_HireOurTeam_css__WEBPACK_IMPORTED_MODULE_29___default.a.hireOurTeam),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 129
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_WhatWeDo_WhatWeDo__WEBPACK_IMPORTED_MODULE_19__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 134
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_FoundingWebDevs_FoundingWebDevs__WEBPACK_IMPORTED_MODULE_21__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 135
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_WhoWeServe_WhoWeServe__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_WhoWeServe_WhoWeServe2__WEBPACK_IMPORTED_MODULE_20__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 136
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_22___default.a.startupCultureFeaturedPostContainer || ""),
+        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_28___default.a.startupCultureFeaturedPostContainer || ""),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 138
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_StartupCulture_StartupCulture__WEBPACK_IMPORTED_MODULE_20__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_StartupCulture_StartupCulture__WEBPACK_IMPORTED_MODULE_22__["default"], {
+        imgSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/img-ricardo-monicle.jpg",
+        tagline: "Start-up Culture, Corporate-Grade Service.",
+        text: "We create an atmosphere that fosters creativity and professionalism. In this way, we allow our team to hone your vision with our digital strategy and build realities that will take your business to the next level.",
+        buttonHref: "https://labs.chiedo.com/page/contact/",
+        buttonText: "Get A Quote",
+        buttonStyle: {
+          fontSize: "13px"
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 139
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_FeaturedPost_FeaturedPost__WEBPACK_IMPORTED_MODULE_21__["default"] // title={this.props.featuredPosts.title.rendered}
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_FeaturedPost_FeaturedPost__WEBPACK_IMPORTED_MODULE_23__["default"] // title={this.props.featuredPosts.title.rendered}
       // href={this.props.featuredPosts.link}
       , {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 147
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_22___default.a.bottomSectionContainer || ""),
+        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_28___default.a.bottomSectionContainer || ""),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 154
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_22___default.a.founderCopyrightContainer || ""),
+        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_28___default.a.founderCopyrightContainer || ""),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 155
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_MeetOurFounder_MeetOurFounder__WEBPACK_IMPORTED_MODULE_26__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_MeetOurFounder_MeetOurFounder__WEBPACK_IMPORTED_MODULE_25__["default"], {
         imgSrc: "https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/chiedo-sitting-small.png",
         tagline: "Meet Our Founder",
         text: "If you need new web developers or want to talk about your tech startup, let's connect on LinkedIn and meet for lunch or coffee!",
@@ -16582,34 +16528,34 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 156
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_22___default.a.copyrightFooter || ""),
+        className: "jsx-1771980103" + " " + (_css_miscellaneous_css_miscellaneous_css__WEBPACK_IMPORTED_MODULE_28___default.a.copyrightFooter || ""),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171
+          lineNumber: 165
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_11___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
         href: "/test",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 172
+          lineNumber: 166
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         className: "jsx-1771980103",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 173
+          lineNumber: 167
         },
         __self: this
-      }, "Copyright 2019 \xA9 Chiedo Labs, LLC.")))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_MoreLinks_MoreLinks__WEBPACK_IMPORTED_MODULE_27__["default"], {
+      }, "Copyright 2019 \xA9 Chiedo Labs, LLC.")))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_MoreLinks_MoreLinks__WEBPACK_IMPORTED_MODULE_26__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179
+          lineNumber: 173
         },
         __self: this
       })));
@@ -16633,7 +16579,7 @@ function (_Component) {
                 // console.log(process.browser) //If false request is from server
                 console.log(store);
                 _context.next = 4;
-                return store.dispatch(Object(_redux_store_js__WEBPACK_IMPORTED_MODULE_30__["fetchData"])("https://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts"));
+                return store.dispatch(Object(_redux_store_js__WEBPACK_IMPORTED_MODULE_13__["fetchData"])("https://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts"));
 
               case 4:
                 data = _context.sent;

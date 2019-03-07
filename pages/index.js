@@ -3,8 +3,14 @@
 import React, { Component } from "react";
 import { Provider } from 'react-redux';
 import redux from 'redux';
-// import { createStore} from 'redux'
+import fetch from "isomorphic-unfetch";
 import Link from "next/link";
+import {reducer, fetchData, itemsFetchDataSuccess} from '../redux/store.js';
+import configureStore from '../redux/store.js';
+import { connect, mapState } from 'react-redux'
+import withRedux from 'next-redux-wrapper'
+
+// Components
 
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
@@ -19,28 +25,10 @@ import CaseStudies from "../components/CaseStudies/CaseStudies";
 import MeetOurFounder from "../components/MeetOurFounder/MeetOurFounder";
 import MoreLinks from "../components/MoreLinks/MoreLinks";
 import Head from "next/head";
-import fetch from "isomorphic-unfetch";
-// import reducer from "../redux/store";
-
-// import React from 'react';
-// import { render } from 'react-dom';
-// import { Provider } from 'react-redux';
-import {reducer, fetchData, itemsFetchDataSuccess} from '../redux/store.js';
-import configureStore from '../redux/store.js';
-import { connect, mapState } from 'react-redux'
-import withRedux from 'next-redux-wrapper'
-// import fetchData from '../redux/store.js';
-
-// import makeStore from './_app.js'
 
 
-// const store = configureStore()
-
-
-
-// console.log(store)
-
-
+import cssMiscellaneous from "../css-miscellaneous/css-miscellaneous.css"
+import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css"
 
 
 
