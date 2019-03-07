@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { Provider } from 'react-redux';
+import redux from 'redux';
+// import { createStore} from 'redux'
+import Link from "next/link";
 
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
@@ -19,34 +23,71 @@ import MeetOurFounder from "../components/MeetOurFounder/MeetOurFounder";
 import MoreLinks from "../components/MoreLinks/MoreLinks";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
+// import reducer from "../redux/store";
+
+// import React from 'react';
+// import { render } from 'react-dom';
+// import { Provider } from 'react-redux';
+import {reducer, fetchData, itemsFetchDataSuccess} from '../redux/store.js';
+import configureStore from '../redux/store.js';
+import { connect, mapState } from 'react-redux'
+import withRedux from 'next-redux-wrapper'
+// import fetchData from '../redux/store.js';
+
+
+const store = configureStore()
+
+// console.log(store)
+
+
+
+
+
 
 class Index extends Component {
+
+  constructor(props) {
+    super(props)
+    this.store = "27"
+  }
   state = {
     caseStudies: undefined
+    
   };
 
-  static async getInitialProps() {
-    const caseStudiesRes = await fetch(
-      "https://beta.chiedo.com/wp-json/wp/v2/case-studies?_embed"
-    );
-    const caseStudies = await caseStudiesRes.json();
+  
 
-    const featuredPostsRes = await fetch(
-      "https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
-    );
-    const featuredPosts = await featuredPostsRes.json();
-    return {
-      caseStudies: caseStudies,
-      featuredPosts: featuredPosts[0]
-    };
-  }
 
-  // componentDidMount(){
-  //   fetch("http://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1", {
-  //     mode: "cors", // no-cors,
-  //     credentials: 'include'  
-  //   })
+
+  // static async getInitialProps( store ) {
+
+    // console.log(store)
+
+    // console.log(process.browser) //If false request is from server
+
+    // return store.dispatch(fetchData())
+
+    // console.log(this.state.caseStudies)
+    // const caseStudiesRes = await fetch(
+    //   "https://beta.chiedo.com/wp-json/wp/v2/case-studies?_embed"
+    // );
+    // const caseStudies = await caseStudiesRes.json();
+
+    // const featuredPostsRes = await fetch(
+    //   "https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
+    // );
+    // const featuredPosts = await featuredPostsRes.json();
+
+
+    // return {
+    //   caseStudies: caseStudies,
+    //   featuredPosts: featuredPosts[0],
+    // };
   // }
+
+  componentDidMount(){
+    console.log(this.props)
+  }
 
   render() {
     return (
@@ -98,12 +139,12 @@ class Index extends Component {
         <div className={cssMiscellaneous.startupCultureFeaturedPostContainer}>
           <StartupCulture />
           <FeaturedPost
-            title={this.props.featuredPosts.title.rendered}
-            href={this.props.featuredPosts.link}
+            // title={this.props.featuredPosts.title.rendered}
+            // href={this.props.featuredPosts.link}
           />
         </div>
 
-        <CaseStudies caseStudiesArray={this.props.caseStudies} />
+        {/* <CaseStudies caseStudiesArray={this.props.caseStudies} /> */}
         <div className={cssMiscellaneous.bottomSectionContainer}>
           <div className={cssMiscellaneous.founderCopyrightContainer}>
             <MeetOurFounder
@@ -116,7 +157,11 @@ class Index extends Component {
             />
 
             <div className={cssMiscellaneous.copyrightFooter}>
+            <Link href="/test">
+            <a>
               Copyright 2019 © Chiedo Labs, LLC.
+              </a>
+              </Link>
             </div>
           </div>
           <MoreLinks />
@@ -126,4 +171,16 @@ class Index extends Component {
   }
 }
 
-export default Index;
+Index.getInitialProps = () => {
+  // console.log(process.browser)
+  return store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
+
+  // if(!process.browser) {
+  //   return store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
+  // } else {
+  //   store.getStore()
+  // }
+ 
+}
+
+export default connect(state => state)(Index);
