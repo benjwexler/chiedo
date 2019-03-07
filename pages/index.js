@@ -24,7 +24,7 @@ import MoreLinks from "../components/MoreLinks/MoreLinks";
 import cssMiscellaneous from "../css-miscellaneous/css-miscellaneous.css";
 import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css";
 
-console.log("trying to merge this to become new master")
+console.log("trying to merge this to become new master - ")
 
 class Index extends Component {
 
