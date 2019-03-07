@@ -1,10 +1,10 @@
 // npm modules & utils
 
 import React, { Component } from "react";
-import fetch from "isomorphic-unfetch";
-import Head from "next/head";
-
-// components
+import { Provider } from 'react-redux';
+import redux from 'redux';
+// import { createStore} from 'redux'
+import Link from "next/link";
 
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
@@ -18,32 +18,85 @@ import FeaturedPost from "../components/FeaturedPost/FeaturedPost";
 import CaseStudies from "../components/CaseStudies/CaseStudies";
 import MeetOurFounder from "../components/MeetOurFounder/MeetOurFounder";
 import MoreLinks from "../components/MoreLinks/MoreLinks";
+import Head from "next/head";
+import fetch from "isomorphic-unfetch";
+// import reducer from "../redux/store";
 
-// CSS
+// import React from 'react';
+// import { render } from 'react-dom';
+// import { Provider } from 'react-redux';
+import {reducer, fetchData, itemsFetchDataSuccess} from '../redux/store.js';
+import configureStore from '../redux/store.js';
+import { connect, mapState } from 'react-redux'
+import withRedux from 'next-redux-wrapper'
+// import fetchData from '../redux/store.js';
 
-import cssMiscellaneous from "../css-miscellaneous/css-miscellaneous.css";
-import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css";
+// import makeStore from './_app.js'
+
+
+// const store = configureStore()
+
+
+
+// console.log(store)
+
+
+
+
 
 
 class Index extends Component {
 
-  static async getInitialProps() {
-    const caseStudiesRes = await fetch(
-      "https://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed"
-    );
-    const caseStudies = await caseStudiesRes.json();
+  
 
-    const featuredPostsRes = await fetch(
-      "https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
-    );
-    const featuredPosts = await featuredPostsRes.json();
-    return {
-      caseStudies: caseStudies,
-      featuredPosts: featuredPosts[0]
-    };
+  
+
+//   Page.getInitialProps = async ({ store }) => {
+//     await store.dispatch(fetchItems());
+// };
+
+  static async getInitialProps ({store, isServer, pathname, query} )  {
+
+    // console.log(store)
+
+    // console.log(process.browser) //If false request is from server
+
+    console.log(store)
+
+       let data = await store.dispatch(fetchData("https://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts"))
+  //  data.then(({ data }) => data)
+  //   console.log("??????")
+  //   console.log(data)
+  //   console.log("??????")
+
+  return {data: data}
+
+  
+
   }
 
 
+    // console.log(this.state.caseStudies)
+    // const caseStudiesRes = await fetch(
+    //   "https://beta.chiedo.com/wp-json/wp/v2/case-studies?_embed"
+    // );
+    // const caseStudies = await caseStudiesRes.json();
+
+    // const featuredPostsRes = await fetch(
+    //   "https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
+    // );
+    // const featuredPosts = await featuredPostsRes.json();
+
+   
+    // return {
+    //   caseStudies: caseStudies,
+    //   featuredPosts: featuredPosts[0],
+    // };
+  
+  
+  componentDidMount(){
+    console.log(this.props)
+  }
 
   render() {
     return (
@@ -103,12 +156,12 @@ class Index extends Component {
               buttonStyle={{ fontSize: "13px" }}
           />
           <FeaturedPost
-            title={this.props.featuredPosts.title.rendered}
-            href={this.props.featuredPosts.link}
+            // title={this.props.featuredPosts.title.rendered}
+            // href={this.props.featuredPosts.link}
           />
         </div>
 
-        <CaseStudies caseStudiesArray={this.props.caseStudies} />
+        {/* <CaseStudies caseStudiesArray={this.props.caseStudies} /> */}
         <div className={cssMiscellaneous.bottomSectionContainer}>
           <div className={cssMiscellaneous.founderCopyrightContainer}>
             <MeetOurFounder
@@ -121,7 +174,11 @@ class Index extends Component {
             />
 
             <div className={cssMiscellaneous.copyrightFooter}>
+            <Link href="/test">
+            <a>
               Copyright 2019 © Chiedo Labs, LLC.
+              </a>
+              </Link>
             </div>
           </div>
           <MoreLinks />
@@ -131,4 +188,35 @@ class Index extends Component {
   }
 }
 
-export default Index;
+// Index.getInitialProps = () => {
+//   // console.log(process.browser)
+//   // store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
+
+//   // if(!process.browser) {
+//   //   return store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
+//   // } else {
+//   //   store.getStore()
+//   // }
+ 
+// }
+
+//   Index.getInitialProps = async ({ store }) => {
+//     await store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"))
+
+
+// // static async getInitialProps = ({store, isServer, pathname, query} ) => {
+
+//   // console.log(store)
+
+//   // console.log(process.browser) //If false request is from server
+
+   
+
+// }
+
+// Index.getInitialProps = ({ store }) => store.dispatch(fetchData("https://beta.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"));
+// console.log(store)
+export default connect(state => state )(Index);
+// export default withRedux(store)(Index);
+
+
