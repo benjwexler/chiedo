@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-unfetch";
 import Head from "next/head";
+import {connect} from "react-redux";
 
 // components
 
@@ -27,7 +28,11 @@ import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css";
 
 class Index extends Component {
 
-  static async getInitialProps() {
+  static async getInitialProps({store, isServer, pathname, query}) {
+
+    store.dispatch({type: 'FOO', payload: 'foo'}); // component will be able to read from store's state when rendered
+        // return {custom: 'custom'}; // you can pass some custom props to component from here
+
     const caseStudiesRes = await fetch(
       "https://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed"
     );
@@ -37,10 +42,14 @@ class Index extends Component {
       "https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
     );
     const featuredPosts = await featuredPostsRes.json();
+
+    
     return {
       caseStudies: caseStudies,
       featuredPosts: featuredPosts[0]
     };
+
+    
   }
 
 
@@ -103,12 +112,12 @@ class Index extends Component {
               buttonStyle={{ fontSize: "13px" }}
           />
           <FeaturedPost
-            title={this.props.featuredPosts.title.rendered}
-            href={this.props.featuredPosts.link}
+            // title={this.props.featuredPosts.title.rendered}
+            // href={this.props.featuredPosts.link}
           />
         </div>
 
-        <CaseStudies caseStudiesArray={this.props.caseStudies} />
+        {/* <CaseStudies caseStudiesArray={this.props.caseStudies} /> */}
         <div className={cssMiscellaneous.bottomSectionContainer}>
           <div className={cssMiscellaneous.founderCopyrightContainer}>
             <MeetOurFounder
@@ -131,4 +140,5 @@ class Index extends Component {
   }
 }
 
-export default Index;
+// export default Index;
+export default connect(state => state)(Index);
