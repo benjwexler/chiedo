@@ -6,7 +6,7 @@ import Head from "next/head";
 import {connect} from "react-redux";
 
 // import {fetchData} from './_app.js'
-import{fetchData} from '../lib/store'
+import{fetchData, fetchData2} from '../lib/store'
 
 import App from '../lib/with-redux-store'
 
@@ -35,49 +35,22 @@ class Index extends Component {
 
   static async getInitialProps({ store }) {
 
+
+    const featuredPost = await store.dispatch(fetchData("http://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1", "latestPost"))
+
+
+    const caseStudies = await store.dispatch(fetchData("http://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed", "caseStudies"))
     
-
-    // let data = await store.dispatch(fetchData("https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"))
-
-    const data = await store.dispatch(fetchData("https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"))
-    // return {
-    //   pageProps: (Component.getInitialProps ? await Component.getInitialProps(ctx) : {})
-    // }
-    // return data
-
-
-    
-    
-    // store.dispatch({type: 'FOO', payload: 'foo'}); // component will be able to read from store's state when rendered
-        // return {custom: 'custom'}; // you can pass some custom props to component from here
-        // let data = await store.dispatch(fetchData("https://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts"))
-    // const caseStudiesRes = await fetch(
-    //   "https://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed"
-    // );
-    // const caseStudies = await caseStudiesRes.json();
-
-
-    // const featuredPostsRes = await fetch(
-    //   "https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
-    // );
-    // const featuredPosts = await featuredPostsRes.json();
-
-  
-
-    return {
-      27: "b;ah"
-      // caseStudies: caseStudies,
-    
-      // featuredPosts: featuredPosts[0]
-    };
+    return {featuredPost, caseStudies};
 
     
   }
 
   componentDidMount(){
     console.log(this.props)
+    console.log(this.props.latestPost.title.rendered)
 
-    console.log(__NEXT_REDUX_STORE__.getState())
+    // console.log(__NEXT_REDUX_STORE__.getState())
   }
 
 
@@ -141,12 +114,12 @@ class Index extends Component {
               buttonStyle={{ fontSize: "13px" }}
           />
           <FeaturedPost
-            // title={this.props.featuredPosts.title.rendered}
-            // href={this.props.featuredPosts.link}
+          title={this.props.latestPost.title.rendered}
+          href={this.props.latestPost.link}
           />
         </div>
 
-        {/* <CaseStudies caseStudiesArray={this.props.caseStudies} /> */}
+        <CaseStudies caseStudiesArray={this.props.caseStudies} />
         <div className={cssMiscellaneous.bottomSectionContainer}>
           <div className={cssMiscellaneous.founderCopyrightContainer}>
             <MeetOurFounder
