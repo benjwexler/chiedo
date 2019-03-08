@@ -36,7 +36,8 @@ class Index extends Component {
   static async getInitialProps({ store }) {
 
 
-    const featuredPost = await store.dispatch(fetchData("http://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1", "latestPost"))
+
+    const featuredPost = await store.dispatch(fetchData("http://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1", "featuredPost"))
 
 
     const caseStudies = await store.dispatch(fetchData("http://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed", "caseStudies"))
@@ -48,7 +49,7 @@ class Index extends Component {
 
   componentDidMount(){
     console.log(this.props)
-    console.log(this.props.latestPost.title.rendered)
+    console.log(this.props.featuredPost.title.rendered)
 
     // console.log(__NEXT_REDUX_STORE__.getState())
   }
@@ -114,8 +115,8 @@ class Index extends Component {
               buttonStyle={{ fontSize: "13px" }}
           />
           <FeaturedPost
-          title={this.props.latestPost.title.rendered}
-          href={this.props.latestPost.link}
+          title={this.props.featuredPost.title.rendered}
+          href={this.props.featuredPost.link}
           />
         </div>
 
