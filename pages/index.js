@@ -5,6 +5,11 @@ import fetch from "isomorphic-unfetch";
 import Head from "next/head";
 import {connect} from "react-redux";
 
+// import {fetchData} from './_app.js'
+import{fetchData} from '../lib/store'
+
+import App from '../lib/with-redux-store'
+
 // components
 
 import Header from "../components/Header/Header";
@@ -28,28 +33,51 @@ import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css";
 
 class Index extends Component {
 
-  static async getInitialProps({store, isServer, pathname, query}) {
-
-    store.dispatch({type: 'FOO', payload: 'foo'}); // component will be able to read from store's state when rendered
-        // return {custom: 'custom'}; // you can pass some custom props to component from here
-
-    const caseStudiesRes = await fetch(
-      "https://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed"
-    );
-    const caseStudies = await caseStudiesRes.json();
-
-    const featuredPostsRes = await fetch(
-      "https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
-    );
-    const featuredPosts = await featuredPostsRes.json();
+  static async getInitialProps({ store }) {
 
     
+
+    // let data = await store.dispatch(fetchData("https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"))
+
+    const data = await store.dispatch(fetchData("https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"))
+    // return {
+    //   pageProps: (Component.getInitialProps ? await Component.getInitialProps(ctx) : {})
+    // }
+    // return data
+
+
+    
+    
+    // store.dispatch({type: 'FOO', payload: 'foo'}); // component will be able to read from store's state when rendered
+        // return {custom: 'custom'}; // you can pass some custom props to component from here
+        // let data = await store.dispatch(fetchData("https://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts"))
+    // const caseStudiesRes = await fetch(
+    //   "https://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed"
+    // );
+    // const caseStudies = await caseStudiesRes.json();
+
+
+    // const featuredPostsRes = await fetch(
+    //   "https://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1"
+    // );
+    // const featuredPosts = await featuredPostsRes.json();
+
+  
+
     return {
-      caseStudies: caseStudies,
-      featuredPosts: featuredPosts[0]
+      27: "b;ah"
+      // caseStudies: caseStudies,
+    
+      // featuredPosts: featuredPosts[0]
     };
 
     
+  }
+
+  componentDidMount(){
+    console.log(this.props)
+
+    console.log(__NEXT_REDUX_STORE__.getState())
   }
 
 
@@ -57,6 +85,7 @@ class Index extends Component {
   render() {
     return (
       <div>
+     
         <Head>
           <title>
             Chiedo Labs: Custom Web Development - Node.js | React | Rails | PHP
