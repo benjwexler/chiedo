@@ -1,14 +1,9 @@
 // npm modules & utils
 
 import React, { Component } from "react";
-import fetch from "isomorphic-unfetch";
 import Head from "next/head";
-import {connect} from "react-redux";
-
-// import {fetchData} from './_app.js'
-import{fetchData, fetchData2} from '../lib/store'
-
-import App from '../lib/with-redux-store'
+import { connect } from "react-redux";
+import { fetchData} from "../lib/store";
 
 // components
 
@@ -30,36 +25,27 @@ import MoreLinks from "../components/MoreLinks/MoreLinks";
 import cssMiscellaneous from "../css-miscellaneous/css-miscellaneous.css";
 import HireOurTeamCss from "../components/HireOurTeam/HireOurTeam.css";
 
-
 class Index extends Component {
-
   static async getInitialProps({ store }) {
+    const featuredPost = await store.dispatch(
+      fetchData(
+        "http://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1",
+        "featuredPost"
+      )
+    );
+    const caseStudies = await store.dispatch(
+      fetchData(
+        "http://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed",
+        "caseStudies"
+      )
+    );
 
-
-
-    const featuredPost = await store.dispatch(fetchData("http://labs.chiedo.com/wp-json/wp/v2/posts?orderby=date&&per_page=1", "featuredPost"))
-
-
-    const caseStudies = await store.dispatch(fetchData("http://labs.chiedo.com/wp-json/wp/v2/case-studies?_embed", "caseStudies"))
-    
-    return {featuredPost, caseStudies};
-
-    
+    return { featuredPost, caseStudies };
   }
-
-  componentDidMount(){
-    console.log(this.props)
-    console.log(this.props.featuredPost.title.rendered)
-
-    // console.log(__NEXT_REDUX_STORE__.getState())
-  }
-
-
 
   render() {
     return (
       <div>
-     
         <Head>
           <title>
             Chiedo Labs: Custom Web Development - Node.js | React | Rails | PHP
@@ -72,7 +58,6 @@ class Index extends Component {
             rel="shortcut icon"
             href="https://labs.chiedo.com/wp-content/themes/chiedolabs/favicon.ico?v=2"
           />
-        
         </Head>
         <style jsx global>{`
           body {
@@ -103,20 +88,19 @@ class Index extends Component {
         />
         <WhatWeDo />
         <FoundingWebDevs />
-        <WhoWeServe 
-        />
+        <WhoWeServe />
         <div className={cssMiscellaneous.startupCultureFeaturedPostContainer}>
-          <StartupCulture 
+          <StartupCulture
             imgSrc="https://labs.chiedo.com/wp-content/themes/chiedolabs/img/wp-landing-page/img-ricardo-monicle.jpg"
-              tagline="Start-up Culture, Corporate-Grade Service."
-              text="We create an atmosphere that fosters creativity and professionalism. In this way, we allow our team to hone your vision with our digital strategy and build realities that will take your business to the next level."
-              buttonHref="https://labs.chiedo.com/page/contact/"
-              buttonText="Get A Quote"
-              buttonStyle={{ fontSize: "13px" }}
+            tagline="Start-up Culture, Corporate-Grade Service."
+            text="We create an atmosphere that fosters creativity and professionalism. In this way, we allow our team to hone your vision with our digital strategy and build realities that will take your business to the next level."
+            buttonHref="https://labs.chiedo.com/page/contact/"
+            buttonText="Get A Quote"
+            buttonStyle={{ fontSize: "13px" }}
           />
           <FeaturedPost
-          title={this.props.featuredPost.title.rendered}
-          href={this.props.featuredPost.link}
+            title={this.props.featuredPost.title.rendered}
+            href={this.props.featuredPost.link}
           />
         </div>
 
@@ -131,7 +115,6 @@ class Index extends Component {
               buttonText="CONNECT ON LINKEDIN"
               buttonStyle={{ fontSize: "13px" }}
             />
-
             <div className={cssMiscellaneous.copyrightFooter}>
               Copyright 2019 © Chiedo Labs, LLC.
             </div>
