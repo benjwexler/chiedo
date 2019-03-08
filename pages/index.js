@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import Head from "next/head";
 import { connect } from "react-redux";
-import { fetchData} from "../lib/store";
+import { fetchData} from "../redux/store";
 
 // components
 

@@ -2,6 +2,8 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 
+import fetch from 'isomorphic-unfetch'
+
 export function initializeStore (initialState = {}) {
     return createStore(
       reducer,
@@ -45,7 +47,6 @@ export  function caseStudiesFetchSuccess(data) {
     case 'CASE_STUDIES_FETCH_SUCCESS':
           return Object.assign({}, state, {
             caseStudies: action.data
-            // data: 27
           })
     
 

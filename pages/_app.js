@@ -2,7 +2,7 @@ import React from "react";
 import {Provider} from "react-redux";
 import App, {Container} from "next/app";
 import withRedux from "next-redux-wrapper";
-import{initializeStore} from '../lib/store'
+import{initializeStore} from '../redux/store'
 
 /**
 * @param {object} initialState
